@@ -1,0 +1,297 @@
+#
+#  ReaxFF force field
+#
+#  Original paper:
+#
+#  A.C.T. van Duin, S. Dasgupta, F. Lorant and W.A. Goddard III,
+#  J. Phys. Chem. A, 105, 9396-9409 (2001)
+#
+#  These parameters from:
+#
+#  M. Raju, P. Ganesh, P.R.C. Kent and A.C.T. van Duin, 
+#  Journal of Computational and Theoretical Chemistry 11, 2156-2166 (2015)
+#
+#  Cutoffs for VDW & Coulomb terms
+#
+reaxFFvdwcutoff      10.0000
+reaxFFqcutoff        10.0000
+#
+#  Bond order threshold - check anglemin as this is cutof2 given in control file
+#
+reaxFFtol       0.0000100000 0.001
+#
+#  Species independent parameters 
+#
+reaxff0_bond        50.000000     9.546900
+reaxff0_over        50.000000     0.699100     1.058800    12.117600    13.305600
+reaxff0_valence     33.866700     1.851200     1.056300     2.038400
+reaxff0_penalty      6.929000     0.398900     3.995400
+reaxff0_torsion      5.779600    10.000000     1.948700     2.164500
+reaxff0_vdw          1.559100
+reaxff0_lonepair     6.089100
+#
+#  Species parameters 
+#
+reaxff1_radii 
+H  core   0.8930  -0.1000  -0.1000
+O  core   1.2450   1.0548   0.9049
+Vi core   2.2977   1.2962  -1.0000
+Gl core   2.1967  -1.6836  -1.0000
+Li core   1.9141  -0.1000  -1.0000
+C  core   1.3817   1.1341   1.2114
+reaxff1_valence 
+H  core   1.0000   1.0000   1.0000   1.0000
+O  core   2.0000   4.0000   6.0000   4.0000
+Vi core   4.0000   4.0000   4.0000   4.0000
+Gl core   3.0000   8.0000   3.0000   3.0000
+Li core   1.0000   1.0000   1.0000   1.0000
+C  core   4.0000   4.0000   4.0000   4.0000
+reaxff1_over 
+H  core   2.4197   3.0408   0.0003 -19.4571
+O  core   0.7640   3.5027   0.0021  -3.5500
+Vi core  23.8188   9.0751   0.8381  -4.1684
+Gl core   0.2500  20.0000   0.0000 -23.1826
+Li core   6.9107   5.4409   0.1973  -5.5602
+C  core  34.9289   8.9539  13.5366  -2.8983
+reaxff1_under kcal 
+H  core   0.0000
+O  core  37.5000
+Vi core  21.7115
+Gl core   0.0076
+Li core   0.0000
+C  core  34.9350
+reaxff1_lonepair kcal 
+H  core   0.0000   0.0000
+O  core   2.0000   0.4056
+Vi core   0.0000   0.0000
+Gl core   0.0000   0.0000
+Li core   0.0000   0.0000
+C  core   0.0000   0.0000
+reaxff1_angle 
+H  core   4.2733   2.8793
+O  core   2.9000   2.9225
+Vi core   2.0754   2.5791
+Gl core   1.5000   2.5791
+Li core   2.2989   2.8103
+C  core   2.5000   2.9663
+reaxff1_morse kcal 
+H  core   8.2230   0.0930   1.3550  33.2894
+O  core   9.7300   0.1000   2.3890  13.8449
+Vi core  11.7318   0.1837   1.8329   5.2054
+Gl core   9.4002   0.2328   2.3738   1.6831
+Li core   9.0000   0.4000   1.7220   1.3258
+C  core   9.7559   0.1838   1.8903   2.1346
+#
+#  Element parameters 
+#
+reaxff_chi  
+H  core   3.7248
+O  core   8.5000
+Vi core   4.2033
+Gl core  -0.3343
+Li core  -0.4081
+C  core   5.4088
+reaxff_mu  
+H  core   9.6093
+O  core   8.3122
+Vi core   5.5558
+Gl core   6.5000
+Li core  12.4492
+C  core   6.0000
+reaxff_gamma  
+H  core   0.8203
+O  core   1.0898
+Vi core   0.5947
+Gl core   0.4961
+Li core   1.2000
+C  core   0.6544
+#
+#  Bond parameters 
+#
+reaxff2_bo over bo13
+O  core O  core  -0.1225   5.5000  -0.1055   9.0000  -0.1000  29.7503
+O  core Vi core  -0.1130   8.4790  -0.2572  28.8153  -0.3000  36.0000
+Vi core C  core  -0.0999   5.5138  -0.2313   7.8448  -0.5558  17.2117
+C  core C  core  -0.0777   6.7268  -0.1000   9.1628  -0.4550  37.6117
+reaxff2_bo bo13
+H  core H  core  -0.0790   6.0552   0.0000   0.0000   0.0000   6.0000
+H  core O  core  -0.0920   4.2790   0.0000   0.0000   0.0000   6.0000
+H  core Vi core  -0.0731   7.4983   0.0000   0.0000   0.0000   6.0000
+Vi core Vi core  -0.0965   8.7733  -0.8055   7.1248  -0.3000  16.0000
+H  core C  core  -0.0500   6.9136   0.0000   0.0000   0.0000   6.0000
+reaxff2_bo 
+H  core Gl core  -0.0842   7.1758  -0.3500  25.0000  -0.3000  36.0000
+O  core Gl core  -0.2000   6.1462  -0.3500  25.0000  -0.3000  36.0000
+Vi core Gl core  -0.2000  10.0000   0.0000  12.0000   0.3000  26.0000
+Gl core Gl core  -0.1463   6.1608  -0.4197  14.3085  -0.3000  16.0000
+H  core Li core  -0.0682   5.0968   0.0000  12.0000   0.0000   6.0000
+O  core Li core  -0.1276   7.8656  -0.2500  11.9965   0.3000   6.0000
+Vi core Li core  -0.3000   4.5001   0.0000  12.0000   0.3000  26.0000
+Gl core Li core  -0.2000  10.0000   0.0000  12.0000   0.3000  26.0000
+Li core Li core  -0.1533   4.0001   0.0000  12.0000   0.3000  26.0000
+Li core C  core  -0.1991   5.1849  -0.2500  11.9965   0.3000   6.0000
+reaxff2_bond kcal 
+H  core H  core 153.3934   0.0000   0.0000  -0.4600   6.2500
+O  core O  core 142.2858 145.0000  50.8293   0.2506   0.3451
+H  core O  core 160.0000   0.0000   0.0000  -0.5725   1.1150
+H  core Vi core 250.0000   0.0000   0.0000  -0.7128  18.5790
+O  core Vi core 274.8339   5.0000   0.0000  -0.5884   9.9772
+Vi core Vi core  70.3209  54.0531  30.0000   0.2206   0.0035
+H  core Gl core  92.8579   0.0000   0.0000  -0.6528  10.0663
+O  core Gl core 181.1998   0.0000   0.0000  -0.2276   0.2086
+Vi core Gl core   0.0000   0.0000   0.0000   1.0000   0.5000
+Gl core Gl core  34.0777   0.0000   0.0000   0.4832   6.4631
+H  core Li core  61.6321   0.0000   0.0000   0.0086   0.3389
+O  core Li core  78.3666  -0.0200   0.0000  -1.0000   0.2022
+Vi core Li core   4.1909   0.0000   0.0000   0.4456   0.5708
+Gl core Li core   0.0000   0.0000   0.0000   1.0000   0.5000
+Li core Li core  32.8667   0.0000   0.0000   0.5993   0.6414
+H  core C  core 169.4760   0.0000   0.0000  -0.6083   5.2290
+Vi core C  core  97.2691  22.7629   0.0000   0.3127   0.7141
+Li core C  core  82.8122  -0.0200   0.0000   0.9497  -0.0401
+C  core C  core 158.2004  99.1897  78.0000  -0.7738   0.4590
+reaxff2_over 
+H  core H  core   0.7300
+O  core O  core   0.6051
+H  core O  core   0.5626
+H  core Vi core   0.1186
+O  core Vi core   0.2131
+Vi core Vi core   0.0159
+H  core Gl core   0.1551
+O  core Gl core   0.1925
+Vi core Gl core   1.0000
+Gl core Gl core   0.5154
+H  core Li core   0.4993
+O  core Li core   0.3228
+Vi core Li core   0.8467
+Gl core Li core   1.0000
+Li core Li core   0.5672
+H  core C  core   0.7652
+Vi core C  core   0.5002
+Li core C  core   0.5847
+C  core C  core   0.4147
+reaxff2_morse kcal 
+H  core O  core   0.0283  10.9190   1.2885   0.9215  -1.0000  -1.0000
+H  core Vi core   0.2000  12.9535   1.5207   1.2125  -1.0000  -1.0000
+O  core Vi core   0.1836  10.9070   1.9157   1.7073   1.2375  -1.0000
+H  core Gl core   0.0564  12.0744   1.4937   1.7276  -1.0000  -1.0000
+O  core Gl core   0.2017  11.0700   1.8458   1.6009  -1.0000  -1.0000
+Vi core Gl core   0.1000  10.3237   1.8500  -1.0000  -1.0000  -1.0000
+H  core Li core   0.2966  10.2920   1.2550   1.1989  -1.0000  -1.0000
+O  core Li core   0.0790   9.0491   2.2000   1.8165  -1.0000   1.0000
+Vi core Li core   0.0581  12.9998   1.8768   1.6340   1.0000   1.0000
+Gl core Li core   0.1146   9.7537   2.2000  -1.0000   1.0000   1.0000
+H  core C  core   0.1239   9.8467   1.4004   1.1210  -1.0000  -1.0000
+Vi core C  core   0.0250  11.6825   1.7089   1.5919   1.4184  -1.0000
+Li core C  core   0.2964  10.8828   1.9000   1.5947   1.0000   1.0000
+#
+#  Angle parameters 
+#
+reaxff3_angle kcal 
+H  core H  core H  core   0.0000  27.9213   5.8635   1.0400   0.0000
+O  core O  core O  core  80.7324  30.4554   0.9953   1.0783   1.6310
+O  core H  core O  core  75.6935  50.0000   2.0000   1.1680   1.0000
+O  core H  core H  core  85.8000   9.8453   2.2720   1.5800   2.8635
+H  core O  core O  core   0.0000  15.0000   2.8900   2.8774   0.0000
+H  core H  core O  core   0.0000   8.5744   3.0000   1.0421   0.0000
+Vi core Vi core Vi core  78.5339  36.4328   1.0067   1.6608   0.1694
+Vi core H  core Vi core  77.2616   5.0190   7.8944   1.0400   4.0000
+Vi core H  core H  core  75.7983  14.4132   2.8640   1.0400   4.0000
+Vi core O  core Vi core  86.3294  18.3879   5.8529   1.2310   1.7361
+Vi core H  core O  core  73.6998  40.0000   1.8782   1.1290   4.0000
+Vi core O  core O  core  79.5581  34.9140   1.0801   2.2206   0.1632
+O  core Vi core Vi core  82.3364   4.7350   1.3544   1.0400   1.4627
+O  core H  core Vi core  90.0000   6.6857   1.6689   1.0400   2.5771
+O  core O  core Vi core  92.1207  24.3937   0.5000   3.0000   1.7208
+H  core H  core Vi core   0.0000  47.1300   6.0000   1.0400   1.6371
+H  core Vi core Vi core   0.0000  27.4206   6.0000   1.0400   1.6371
+H  core O  core Vi core   0.0000   5.0000   1.0000   1.2500   1.0000
+H  core O  core Gl core   0.0000   4.2750   1.0250   1.4750   1.3750
+H  core H  core Gl core   0.0000   3.0000   1.0000   1.2500   1.0000
+H  core Gl core Gl core   0.0000  20.2391   0.1328   1.0870   2.9860
+O  core H  core Gl core  88.1144  13.2143   1.5068   1.0100   3.0000
+O  core O  core Gl core  34.4326  25.9544   5.1239   1.7141   2.7500
+O  core Gl core Gl core  20.7204  13.4875   4.0000   1.4098   0.6619
+Gl core H  core H  core  67.4229   4.5148   5.9702   2.6879   3.0000
+Gl core H  core O  core  41.8108  17.3800   2.6618   1.0100   0.7372
+Gl core O  core O  core  59.5433  20.0000   4.0000   2.0988   3.0000
+Gl core H  core Gl core  78.2279  37.6504   0.4809   2.9475   1.0000
+O  core O  core Li core  81.6233  30.0000   2.0000   1.0000   1.0000
+O  core Li core Li core  67.5247   6.4512   4.0000   2.8079   1.0000
+O  core Gl core Li core  50.9423   7.0901   3.9271   2.5544   1.0000
+O  core Vi core Gl core  18.0953   5.3220   4.0000   1.0139   1.0000
+O  core Vi core Li core  62.6634   8.4441   2.5120   1.0000   1.0000
+C  core Vi core C  core  62.2717  39.8026   0.5357   2.3220   2.2239
+Vi core C  core C  core  60.0000  40.0000   0.6116   1.8571   0.0100
+C  core Vi core Vi core  60.3108  40.0000   2.0584   1.8415   0.0100
+Vi core Vi core C  core  70.2566  32.9172   1.0828   1.7062   0.0100
+C  core C  core C  core  59.0573  30.7029   0.7606   1.1244   0.7180
+C  core H  core C  core  65.7758  14.5234   6.2481   1.6255   0.5665
+C  core H  core H  core  70.2607  25.2202   3.7312   2.7500   0.0050
+H  core C  core C  core   0.0000   3.4110   7.7350   1.0400   0.0000
+reaxff3_penalty kcal 
+H  core H  core H  core   0.0000
+O  core O  core O  core  50.0000
+O  core H  core O  core   0.0000
+O  core H  core H  core   0.0000
+H  core O  core O  core   0.0000
+H  core H  core O  core   0.0000
+Vi core Vi core Vi core   0.0000
+Vi core H  core Vi core   0.0000
+Vi core H  core H  core   0.0000
+Vi core O  core Vi core   0.0000
+Vi core H  core O  core   0.0000
+Vi core O  core O  core   0.0000
+O  core Vi core Vi core   0.0000
+O  core H  core Vi core   0.0000
+O  core O  core Vi core   0.0000
+H  core H  core Vi core   0.0000
+H  core Vi core Vi core   0.0000
+H  core O  core Vi core   0.0000
+H  core O  core Gl core   0.0000
+H  core H  core Gl core   0.0000
+H  core Gl core Gl core   0.0000
+O  core H  core Gl core   0.0000
+O  core O  core Gl core   0.0000
+O  core Gl core Gl core   0.0000
+Gl core H  core H  core   0.0000
+Gl core H  core O  core   0.0000
+Gl core O  core O  core   0.0000
+Gl core H  core Gl core   0.0000
+Gl core H  core Gl core   0.0000
+Li core O  core O  core   0.0000
+O  core O  core Li core   0.0000
+O  core Li core Li core   0.0000
+O  core Gl core Li core   0.0000
+O  core Vi core Gl core   0.0000
+O  core Vi core Li core   0.0000
+C  core Vi core C  core   0.0000
+Vi core C  core C  core   0.0000
+C  core Vi core Vi core   0.0000
+Vi core Vi core C  core   0.0000
+C  core C  core C  core   6.2933
+C  core H  core C  core   0.0000
+C  core H  core H  core   0.0000
+H  core H  core C  core   0.0000
+H  core C  core C  core   0.0000
+reaxff3_conjugation kcal 
+#
+#  Hydrogen bond parameters 
+#
+reaxff3_hbond kcal 
+H  core O  core O  core   2.1200  -3.5800   1.4500  19.5000
+#
+#  Torsion parameters 
+#
+reaxff4_torsion kcal 
+H  core O  core O  core O  core   0.8302  -4.0000  -0.7763  -2.5000  -1.0000
+O  core O  core O  core O  core  -2.5000  -4.0000   1.0000  -2.5000  -1.0000
+X  core H  core H  core X  core   0.0000   0.0000   0.0000   0.0000   0.0000
+X  core H  core O  core X  core   0.0000   0.1000   0.0200  -2.5415   0.0000
+X  core O  core O  core X  core   0.5511  25.4150   1.1330  -5.1903  -1.0000
+H  core Vi core Vi core H  core   0.0000   0.0000   0.0640  -2.4426   0.0000
+H  core Vi core Vi core Vi core   0.0000   0.0000   0.1587  -2.4426   0.0000
+X  core H  core Vi core X  core   0.0000   0.0000   0.1200  -2.4847   0.0000
+C  core C  core C  core C  core  -0.2500  34.7453   0.0288  -6.3507  -1.6000
+H  core C  core C  core C  core  -0.2500  29.2131   0.2945  -4.9581  -2.1802
+H  core C  core C  core H  core  -0.2500  31.2081   0.4539  -4.8923  -2.2677

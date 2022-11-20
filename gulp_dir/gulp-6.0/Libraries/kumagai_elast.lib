@@ -1,0 +1,19 @@
+#
+#  Tersoff bond order potentials for Si from the work of Kumagai et al,
+#  Comp. Mat. Sci., 39, 457 (2007)
+#
+#  Note that the above paper has 2 parameter sets, ELAST and MELT & this
+#  library contains the ELAST set. 
+#
+#  NB: This Version of the library must be used with GULP 6.0 onwards!!!!
+#
+species
+Si core 0.0
+boonebody
+Si core 0.0 1.0 0.71493555 0.71493555
+botwobody murty
+Si core Si core 1884.3288 451.68053 2.5105461 1.7322451 2.55 3.25
+borepulsive
+Si core Si core 3 1.0 1.7322451
+boattractive kumagai
+Si core Si core 3 1.0 0.0 0.0 139147.88 1000000.0 0.0 0.0 -0.50792836

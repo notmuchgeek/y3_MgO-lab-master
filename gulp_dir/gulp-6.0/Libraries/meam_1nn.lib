@@ -1,0 +1,315 @@
+#
+#  Modified Embedded Atom Model parameters
+#
+#  M.I. Baskes, 
+#  Modified embedded-atom potentials for cubic materials and impurities,
+#  Phys. Rev. B, 46, 2727 (1992)
+#
+#  NB: In this first version of MEAM the value of rho0 is taken to be 1
+#
+#  Important: This original set of parameters has a number of failings and so 
+#             the revised forms of MEAM involving second nearest neighbours
+#             are recommended instead.
+#
+#  Also important: Note that the cut-offs used here are only approximately
+#                  set and so the user may need to adjust according to their
+#                  particular problem. 
+#
+species
+Cu core  0.0
+Ag core  0.0
+Au core  0.0
+Ni core  0.0
+Pd core  0.0
+Pt core  0.0
+Al core  0.0
+Pb core  0.0
+Rh core  0.0
+Ir core  0.0
+Li core  0.0
+Na core  0.0
+K  core  0.0
+V  core  0.0
+Nb core  0.0
+Ta core  0.0
+Cr core  0.0
+Mo core  0.0
+W  core  0.0
+Fe core  0.0
+C  core  0.0
+Si core  0.0
+Ge core  0.0
+H  core  0.0
+N  core  0.0
+O  core  0.0
+#
+#  Note that a taper function has been added here relative to previous versions
+#
+manybody
+Cu core Cu core  0.1 0.0 4.0
+Ag core Ag core  0.1 0.0 4.5
+Au core Au core  0.1 0.0 4.5
+Ni core Ni core  0.1 0.0 4.0
+Pd core Pd core  0.1 0.0 4.5
+Pt core Pt core  0.1 0.0 4.5
+Al core Al core  0.1 0.0 4.5
+Pb core Pb core  0.1 0.0 5.5
+Rh core Rh core  0.1 0.0 4.5
+Ir core Ir core  0.1 0.0 4.5
+Li core Li core  0.1 0.0 4.5
+Na core Na core  0.1 0.0 4.5
+K  core K  core  0.1 0.0 4.5
+V  core V  core  0.1 0.0 4.5
+Nb core Nb core  0.1 0.0 4.5
+Ta core Ta core  0.1 0.0 4.5
+Cr core Cr core  0.1 0.0 4.5
+Mo core Mo core  0.1 0.0 4.5
+W  core W  core  0.1 0.0 4.5
+Fe core Fe core  0.1 0.0 4.5
+C  core C  core  0.1 0.0 4.0
+Si core Si core  0.1 0.0 4.0
+Ge core Ge core  0.1 0.0 4.5
+H  core H  core  0.1 0.0 4.0
+N  core N  core  0.1 0.0 4.0
+O  core O  core  0.1 0.0 4.0
+#
+#  MEAM functional - here the parameter is A*E0 from the original paper
+#
+meam_functional baskes 3 
+Cu core  3.540 1.07 12.0
+         1.00  3.14  2.49  2.95
+Ag core  2.850 1.06 12.0
+         1.00  5.54  2.45  1.29
+Au core  3.930 1.04 12.0
+         1.00  1.59  1.51  2.61
+Ni core  4.450 1.10 12.0
+         1.00  3.57  1.60  3.70
+Pd core  3.910 1.01 12.0
+         1.00  2.34  1.38  4.48
+Pt core  5.770 1.04 12.0
+         1.00  2.73 -1.38  3.29
+Al core  3.580 1.07 12.0
+         1.00 -1.78 -2.21  8.01
+Pb core  2.040 1.01 12.0
+         1.00  2.74  3.06  1.20
+Rh core  5.750 1.05 12.0
+         1.00  2.99  4.61  4.80
+Ir core  6.930 1.05 12.0
+         1.00  1.50  8.10  4.80
+Li core  1.650 0.87 8.0
+         1.00  0.26  0.44 -0.20
+Na core  1.130 0.90 8.0
+         1.00  3.55  0.69 -0.20
+K  core  0.941 0.92 8.0
+         1.00  5.10  0.69 -0.20
+V  core  5.300 1.00 8.0
+         1.00  4.20  4.10 -1.00
+Nb core  7.470 1.00 8.0
+         1.00  3.76  3.83 -1.00
+Ta core  8.089 0.99 8.0
+         1.00  4.69  3.35 -1.50
+Cr core  4.100 0.94 8.0
+         1.00 -0.21 12.26 -1.90
+Mo core  6.810 0.99 8.0
+         1.00  3.48  9.49 -2.90
+W  core  8.660 0.98 8.0
+         1.00  3.16  8.25 -2.70
+Fe core  4.290 0.89 8.0
+         1.00  3.94  4.12 -1.50
+C  core  7.370 1.80 4.0
+         1.00  5.57  1.94 -0.77
+Si core  4.630 1.00 4.0
+         1.00  3.13  4.47 -1.80
+Ge core  3.850 1.00 4.0
+         1.00  4.02  5.23 -1.60
+H  core  2.225 2.50 1.0
+         1.00  0.20 -0.10  0.00
+N  core  4.880 1.50 1.0
+         1.00  0.05  0.00  0.00
+O  core  2.558 1.50 1.0
+         1.00  0.09  0.10  0.00
+#
+#  MEAM density
+#
+meam_density baskes 3
+Cu core 1.0 3.63 2.56 
+        1.0 2.20 2.56 
+        1.0 6.00 2.56 
+        1.0 2.20 2.56 
+Ag core 1.0 4.46 2.88 
+        1.0 2.20 2.88 
+        1.0 6.00 2.88 
+        1.0 2.20 2.88 
+Au core 1.0 5.45 2.88 
+        1.0 2.20 2.88 
+        1.0 6.00 2.88 
+        1.0 2.20 2.88 
+Ni core 1.0 2.45 2.49 
+        1.0 2.20 2.49 
+        1.0 6.00 2.49 
+        1.0 2.20 2.49 
+Pd core 1.0 4.98 2.75 
+        1.0 2.20 2.75 
+        1.0 6.00 2.75 
+        1.0 2.20 2.75 
+Pt core 1.0 4.67 2.77 
+        1.0 2.20 2.77 
+        1.0 6.00 2.77 
+        1.0 2.20 2.77 
+Al core 1.0 2.21 2.86 
+        1.0 2.20 2.86 
+        1.0 6.00 2.86 
+        1.0 2.20 2.86 
+Pb core 1.0 5.31 3.50 
+        1.0 2.20 3.50 
+        1.0 6.00 3.50 
+        1.0 2.20 3.50 
+Rh core 1.0 1.13 2.69 
+        1.0 1.00 2.69 
+        1.0 2.00 2.69 
+        1.0 1.00 2.69 
+Ir core 1.0 1.13 2.72 
+        1.0 1.00 2.72 
+        1.0 2.00 2.72 
+        1.0 1.00 2.72 
+Li core 1.0 1.43 3.04 
+        1.0 1.00 3.04 
+        1.0 1.00 3.04 
+        1.0 1.00 3.04 
+Na core 1.0 2.31 3.72 
+        1.0 1.00 3.72 
+        1.0 1.00 3.72 
+        1.0 1.00 3.72 
+K  core 1.0 2.69 4.63 
+        1.0 1.00 4.63 
+        1.0 1.00 4.63 
+        1.0 1.00 4.63 
+V  core 1.0 4.11 2.63 
+        1.0 1.00 2.63 
+        1.0 1.00 2.63 
+        1.0 1.00 2.63 
+Nb core 1.0 4.37 2.86 
+        1.0 1.00 2.86 
+        1.0 1.00 2.86 
+        1.0 1.00 2.86 
+Ta core 1.0 3.71 2.86 
+        1.0 1.00 2.86 
+        1.0 1.00 2.86 
+        1.0 1.00 2.86 
+Cr core 1.0 3.22 2.50 
+        1.0 1.00 2.50 
+        1.0 1.00 2.50 
+        1.0 1.00 2.50 
+Mo core 1.0 4.48 2.73 
+        1.0 1.00 2.73 
+        1.0 1.00 2.73 
+        1.0 1.00 2.73 
+W  core 1.0 3.98 2.74 
+        1.0 1.00 2.74 
+        1.0 1.00 2.74 
+        1.0 1.00 2.74 
+Fe core 1.0 2.94 2.48 
+        1.0 1.00 2.48 
+        1.0 1.00 2.48 
+        1.0 1.00 2.48 
+C  core 1.0 5.50 1.54 
+        1.0 4.30 1.54 
+        1.0 3.10 1.54 
+        1.0 6.00 1.54 
+Si core 1.0 4.40 2.35 
+        1.0 5.50 2.35 
+        1.0 5.50 2.35 
+        1.0 5.50 2.35 
+Ge core 1.0 4.55 2.45 
+        1.0 5.50 2.45 
+        1.0 5.50 2.45 
+        1.0 5.50 2.45 
+meam_density baskes 2
+H  core 1.0 2.96 0.74 
+        1.0 3.00 0.74 
+        1.0 3.00 0.74 
+O  core 1.0 6.49 1.21 
+        1.0 6.50 1.21 
+        1.0 6.50 1.21 
+meam_density baskes 1
+N  core 1.0 4.00 1.10 
+        1.0 4.00 1.10 
+#
+#  MEAM density type
+#
+meam_rhotype t21 sum
+#
+#  Effective twobody potential - depends on choice of reference phase
+#
+#
+#  FCC structures
+#
+baskes
+Cu core Cu core 3.540 1.07 5.11 2.56 12 1.0 0.0 0.0 3.1
+Ag core Ag core 2.850 1.06 5.89 2.88 12 1.0 0.0 0.0 3.5
+Au core Au core 3.930 1.04 6.34 2.88 12 1.0 0.0 0.0 3.5
+Ni core Ni core 4.450 1.10 4.99 2.49 12 1.0 0.0 0.0 3.0
+Pd core Pd core 3.910 1.01 6.43 2.75 12 1.0 0.0 0.0 3.3
+Pt core Pt core 5.770 1.04 6.44 2.77 12 1.0 0.0 0.0 3.3
+Al core Al core 3.580 1.07 4.61 2.86 12 1.0 0.0 0.0 3.4
+Pb core Pb core 2.040 1.01 6.06 3.50 12 1.0 0.0 0.0 4.2
+Rh core Rh core 5.750 1.05 6.00 2.69 12 1.0 0.0 0.0 3.2
+Ir core Ir core 6.930 1.05 6.52 2.72 12 1.0 0.0 0.0 3.3
+#
+#  BCC structures
+#
+baskes
+Li core Li core 1.650 0.87 2.97 3.04 8 1.0 0.0 0.0 3.3
+Na core Na core 1.130 0.90 3.64 3.72 8 1.0 0.0 0.0 4.1
+K  core K  core 0.941 0.92 3.90 4.63 8 1.0 0.0 0.0 5.1
+V  core V  core 5.300 1.00 4.83 2.63 8 1.0 0.0 0.0 2.9
+Nb core Nb core 7.470 1.00 4.79 2.86 8 1.0 0.0 0.0 3.1
+Ta core Ta core 8.089 0.99 4.90 2.86 8 1.0 0.0 0.0 3.1
+Cr core Cr core 4.100 0.94 5.12 2.50 8 1.0 0.0 0.0 2.8
+Mo core Mo core 6.810 0.99 5.85 2.73 8 1.0 0.0 0.0 3.1
+W  core W  core 8.660 0.98 5.63 2.74 8 1.0 0.0 0.0 3.0
+Fe core Fe core 4.290 0.89 5.07 2.48 8 1.0 0.0 0.0 2.7
+#
+#  Diamond structures
+#
+baskes
+C  core C  core 7.370 1.80 4.31 1.54 4 1.0 0.0 0.0 1.8
+Si core Si core 4.630 1.00 4.87 2.35 4 1.0 0.0 0.0 2.6
+Ge core Ge core 3.850 1.00 4.98 2.45 4 1.0 0.0 0.0 2.8
+#
+#  Dimer structures
+#
+baskes
+H  core H  core 2.225 2.50 2.96 0.74 1 1.0 0.0 0.0 1.5
+N  core N  core 4.880 1.50 5.96 1.10 1 1.0 0.0 0.0 2.0
+O  core O  core 2.558 1.50 6.49 1.21 1 1.0 0.0 0.0 2.0
+#
+#  Screening function from original paper
+#
+meam_screening
+Cu core  2.0 2.8
+Ag core  2.0 2.8
+Au core  2.0 2.8
+Ni core  2.0 2.8
+Pd core  2.0 2.8
+Pt core  2.0 2.8
+Al core  2.0 2.8
+Pb core  2.0 2.8
+Rh core  2.0 2.8
+Ir core  2.0 2.8
+Li core  2.0 2.8
+Na core  2.0 2.8
+K  core  2.0 2.8
+V  core  2.0 2.8
+Nb core  2.0 2.8
+Ta core  2.0 2.8
+Cr core  2.0 2.8
+Mo core  2.0 2.8
+W  core  2.0 2.8
+Fe core  2.0 2.8
+C  core  2.0 2.8
+Si core  2.0 2.8
+Ge core  2.0 2.8
+H  core  2.0 2.8
+N  core  2.0 2.8
+O  core  2.0 2.8

@@ -1,0 +1,167 @@
+#! /bin/sh
+#
+# This script is to help in the automated running of GULP-Alamode
+# to perform a calculation of the thermal conductivity.
+# By calling GULP and Alamode separately it is possible to use both
+# in parallel without any potential issues.
+#
+# Julian Gale, Curtin University, September 2019
+#
+# IMPORTANT NOTES:
+# 1) In the original GULP input file the following line should be present:
+#
+#    ala_mode pattern
+#
+# 2) The executable for GULP should be visible in your path or set below
+# 3) The executables for alm and anphon from Alamode should be visible in 
+#    your path or set below
+# 4) The route name of the input should be supplied via -i 
+#    (i.e. the filename without the .gin extension)
+# 5) If the "-p" flag is specified followed by a number of processors then
+#    GULP and anphon will be run in parallel assuming that they have been
+#    compiled with MPI (-m option for mkgulp)
+# 6) This script is currently very light on error checking so beware!
+#
+# Set the executable name for GULP here (with path if necessary):
+#
+gulp="gulp"
+#
+# Set the executable names for Alamode here (with path if necessary):
+#
+alm="alm"
+anphon="anphon"
+#
+# Initialise other variables
+#
+name=
+proc=
+mpi=
+inp="gulp"
+
+#
+#  Parse arguments to runalamode
+#
+while getopts p:i: option; do
+  case "$option" in
+    p)
+       mpi="mpirun -np "
+       proc="1"
+       proc=$OPTARG
+       ;;
+    i)
+       inp=$OPTARG
+       ;;
+    *)
+       echo "Invalid option supplied to runalamode"
+       exit
+       ;;
+  esac
+done
+#
+#  Header
+#
+echo "-----------------------"
+echo "GULP-Alamode run script"
+echo "-----------------------"
+#
+#  Check that ala_mode is pattern
+#
+
+#
+#  Find name from input file
+#
+inpgin="${inp}.gin"
+name="$(grep -m 1 -i name example67.gin | sed -n -e 's/.*name //p')"
+#
+#  If name is blank then use gulp as the default name
+#
+if [[ -z "${name// }" ]]; then
+  name="gulp"
+fi
+#
+#  First call to GULP to generate Alamode input for pattern
+#
+echo "Step 1:"
+echo "Run GULP to generate pattern input..."
+echo "Command = " $mpi $proc $gulp $inp
+$mpi $proc $gulp $inp
+#
+#  Run alm to generate patterns
+#
+inpalm="${name}_alm.in"
+echo "Step 2:"
+echo "Run Alamode to generate patterns..."
+echo "Command = " $alm $inpalm ">& alm_pattern.log"
+$alm $inpalm >& alm_pattern.log
+#
+#  Copy GULP restart file to new GULP input file
+#
+gulpres="${inp}.res"
+inp2="${inp}_displace"
+inp2gin="${inp2}.gin"
+cp $gulpres $inp2gin
+#
+#  Change ala_mode from pattern to displace
+#
+sed -i -e 's/pattern/displace/' $inp2gin
+#
+#  Second call to GULP to perform displacements 
+#
+echo "Step 3:"
+echo "Run GULP to perform displacements..."
+echo "Command = " $mpi $proc $gulp $inp2
+$mpi $proc $gulp $inp2
+#
+#  Copy GULP input file from displacements to new GULP input file
+#
+inp3="${inp}_fit"
+inp3gin="${inp3}.gin"
+cp $inp2gin $inp3gin
+#
+#  Change ala_mode from displace to fit_cubic
+#
+sed -i -e 's/displace/fit_cubic/' $inp3gin
+#
+#  Third call to GULP to fit the cubic force constants
+#
+echo "Step 4:"
+echo "Run GULP to generate the input to fit cubic force constants..."
+echo "Command = " $mpi $proc $gulp $inp3
+$mpi $proc $gulp $inp3
+#
+#  Run alm to fit the cubic force constants
+#
+inpalm="${name}_alm.in"
+echo "Step 5:"
+echo "Run Alamode to fit the cubic force constants..."
+echo "Command = " $alm $inpalm ">& alm_fit.log"
+$alm $inpalm >& alm_fit.log
+#
+#  Copy GULP input file from displacements to new GULP input file for BTE
+#
+inp4="${inp}_bte"
+inp4gin="${inp4}.gin"
+cp $inp2gin $inp4gin
+#
+#  Change ala_mode from displace to fit_cubic
+#
+sed -i -e 's/displace/bte/' $inp4gin
+#
+#  Fourth call to GULP to generate the input for BTE
+#
+echo "Step 6:"
+echo "Run GULP to generate the input for thermal conductivity via BTE..."
+echo "Command = " $mpi $proc $gulp $inp4
+$mpi $proc $gulp $inp4
+#
+#  Run alm to solve the BTE and compute the thermal conductivity
+#
+inpanphon="${name}_anphon.in"
+echo "Step 7:"
+echo "Run Alamode to compute the thermal conductivity..."
+echo "Command = " $mpi $proc $anphon $inpanphon ">& anphon.log"
+$mpi $proc $anphon $inpanphon >& anphon.log
+#
+#  Finished
+#
+echo "Calculation of thermal conductivity using GULP-Alamode complete!"

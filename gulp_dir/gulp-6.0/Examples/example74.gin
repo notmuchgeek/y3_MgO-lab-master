@@ -1,0 +1,28 @@
+opti molecule conp prop c6 rigid ocell prt_var
+pressure 1.0 GPa
+title
+example of a molecular crystal - urea
+end
+cell
+   5.565000   5.565000   4.684000  90.000000  90.000000  90.000000
+fractional
+C     core 0.0000000 0.5000000 0.3260000  0.380
+O     core 0.0000000 0.5000000 0.5953000 -0.380
+N     core 0.1459000 0.6459000 0.1766000 -0.830
+H     core 0.2575000 0.7575000 0.2827000  0.415
+H     core 0.1441000 0.6441000 0.9620000  0.415
+space
+P -4 21 M
+lennard 12  6 inter
+C    core O    core   39031.570000      35.266000  0.000 40.000
+lennard 12  6 inter
+C    core N    core  112494.667000      55.387000  0.000 40.000
+lennard 12  6 inter
+O    core O    core   11833.864000      21.633000  0.000 40.000
+lennard 12  6 inter
+N    core O    core   34106.919000      33.977000  0.000 40.000
+lennard 12  6 inter
+N    core N    core   98301.108000      53.362000  0.000 40.000
+lennard 12  6 inter
+C    core C    core  128737.614000      57.488000  0.000 40.000
+dump every example74.res

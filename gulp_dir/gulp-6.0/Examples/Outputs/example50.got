@@ -1,0 +1,1539 @@
+********************************************************************************
+*                       GENERAL UTILITY LATTICE PROGRAM                        *
+*                                 Julian Gale                                  *
+*                       Curtin Institute for Computation                       *
+*                    School of Molecular and Life Sciences                     *
+*                    Curtin University, Western Australia                      *
+********************************************************************************
+* Version = 6.0.0 * Last modified =   7th July 2020                            *
+********************************************************************************
+*  gradient     - perform gradient run                                         *
+*  conv         - constant volume calculation                                  *
+*  molmec       - molecule option activated, Coulomb subtract 1-2/1-3 terms    *
+*  noautobond   - do not compute bonds based on covalent radii                 *
+********************************************************************************
+* GULP calculation from Materials Studio for ACBUOL                            *
+********************************************************************************
+
+
+  Job Started  at 11:50.42  8th July       2020                               
+
+  Number of CPUs =     1
+
+  Host name      = M-A0034725                              
+
+
+  Total number of configurations input =      1
+
+********************************************************************************
+*  Input for Configuration =   1 : ACBUOL                                      *
+********************************************************************************
+
+  Formula = C18O4H29N2                                                  
+
+  Number of irreducible atoms/shells =      53
+
+
+  Total number atoms/shells =      53
+
+  Dimensionality = 0               :  Cluster
+
+
+  Charge on cluster =   0.000030
+
+
+  Initial cluster dipoles : x =      0.155620 e.Angs
+                            y =     -1.376463 e.Angs
+                            z =      0.502028 e.Angs
+
+  Temperature of configuration =   0.00     K 
+
+  Symmetry number =      1
+
+  Cartesian coordinates of cluster :
+
+--------------------------------------------------------------------------------
+   No.  Atomic       x           y          z         Charge      Occupancy
+        Label      (Angs)      (Angs)     (Angs)        (e)         (Frac)  
+--------------------------------------------------------------------------------
+      1 C1    c     -5.2357      3.0275      5.2812     0.27339    1.000000    
+      2 C1    c     -6.3094 *    3.9713 *    5.2575 *   0.04267    1.000000    
+      3 C1    c     -7.2937 *    3.8203 *    4.2392 *  -0.05873    1.000000    
+      4 C1    c     -7.2366 *    2.7994 *    3.2641 *   0.13654    1.000000    
+      5 C1    c     -6.1922 *    1.8638 *    3.3419 *  -0.14907    1.000000    
+      6 C1    c     -5.2055 *    1.9795 *    4.3299 *  -0.12829    1.000000    
+      7 O1    c     -4.2360 *    3.1266 *    6.2099 *  -0.60778    1.000000    
+      8 C2    c     -3.0389 *    2.3415 *    6.3603 *   0.02382    1.000000    
+      9 C2    c     -2.1336 *    2.8626 *    7.5038 *   0.10742    1.000000    
+     10 O2    c     -1.7994 *    4.2289 *    7.2627 *  -0.68397    1.000000    
+     11 C2    c     -2.7625 *    2.6996 *    8.9105 *  -0.17398    1.000000    
+     12 H1    c     -3.6919 *    3.2655 *    8.9579 *   0.17973    1.000000    
+     13 N1    c     -1.8221 *    3.1768 *    9.9512 *  -0.66012    1.000000    
+     14 C2    c     -2.2828 *    3.1059 *   11.3624 *  -0.07873    1.000000    
+     15 C2    c     -1.0383 *    3.1604 *   12.2830 *  -0.40790    1.000000    
+     16 C2    c     -3.2716 *    4.2518 *   11.7045 *  -0.38513    1.000000    
+     17 C1    c     -6.4528 *    5.0508 *    6.1784 *   0.32024    1.000000    
+     18 O3    c     -7.5138 *    5.7234 *    6.2016 *  -0.50415    1.000000    
+     19 C2    c     -5.4344 *    5.4969 *    7.1552 *  -0.28882    1.000000    
+     20 N2    c     -8.1386 *    2.6326 *    2.2618 *  -0.51175    1.000000    
+     21 C1    c     -8.8616 *    3.5756 *    1.6058 *   0.46140    1.000000    
+     22 O3    c     -8.7226 *    4.8034 *    1.8193 *  -0.48124    1.000000    
+     23 C2    c     -9.8250 *    3.1586 *    0.5628 *  -0.19374    1.000000    
+     24 C2    c    -11.2934 *    3.5498 *    0.8802 *  -0.29080    1.000000    
+     25 C2    c    -11.8693 *    2.8549 *    2.1357 *  -0.42769    1.000000    
+     26 H1    c     -8.0860 *    4.4627 *    4.2036 *   0.20842    1.000000    
+     27 H1    c     -6.1350 *    1.0938 *    2.6694 *   0.12009    1.000000    
+     28 H1    c     -4.4585 *    1.2836 *    4.3412 *   0.10726    1.000000    
+     29 H1    c     -3.3049 *    1.2993 *    6.5534 *   0.08165    1.000000    
+     30 H1    c     -2.4717 *    2.3857 *    5.4266 *   0.14347    1.000000    
+     31 H1    c     -1.2006 *    2.2921 *    7.4795 *   0.14406    1.000000    
+     32 H2    c     -2.6504 *    4.7119 *    7.3055 *   0.35871    1.000000    
+     33 H1    c     -2.9879 *    1.6446 *    9.0850 *   0.12043    1.000000    
+     34 H2    c     -0.9722 *    2.6138 *    9.8709 *   0.24907    1.000000    
+     35 H2    c     -1.5722 *    4.1463 *    9.7444 *   0.29999    1.000000    
+     36 H1    c     -2.7805 *    2.1473 *   11.5407 *   0.18497    1.000000    
+     37 H1    c     -0.3627 *    2.3346 *   12.0503 *   0.13308    1.000000    
+     38 H1    c     -0.4994 *    4.1007 *   12.1469 *   0.15796    1.000000    
+     39 H1    c     -1.3340 *    3.0735 *   13.3308 *   0.13407    1.000000    
+     40 H1    c     -2.8201 *    5.2225 *   11.4899 *   0.15263    1.000000    
+     41 H1    c     -3.5426 *    4.2171 *   12.7617 *   0.13144    1.000000    
+     42 H1    c     -4.1877 *    4.1559 *   11.1208 *   0.13465    1.000000    
+     43 H1    c     -5.7436 *    6.4056 *    7.6782 *   0.14698    1.000000    
+     44 H1    c     -4.4957 *    5.7118 *    6.6435 *   0.12563    1.000000    
+     45 H1    c     -5.2820 *    4.7235 *    7.9059 *   0.11909    1.000000    
+     46 H2    c     -8.2585 *    1.7206 *    1.9524 *   0.20407    1.000000    
+     47 H1    c     -9.5324 *    3.6306 *   -0.3786 *   0.12835    1.000000    
+     48 H1    c     -9.7758 *    2.0770 *    0.4088 *   0.09571    1.000000    
+     49 H1    c    -11.9146 *    3.2755 *    0.0232 *   0.14140    1.000000    
+     50 H1    c    -11.3677 *    4.6335 *    1.0059 *   0.19275    1.000000    
+     51 H1    c    -12.9155 *    3.1378 *    2.2661 *   0.14335    1.000000    
+     52 H1    c    -11.8123 *    1.7699 *    2.0293 *   0.14829    1.000000    
+     53 H1    c    -11.3161 *    3.1546 *    3.0277 *   0.17914    1.000000    
+--------------------------------------------------------------------------------
+
+
+
+  Molecule list generated from bond lengths :
+
+  Total number of molecules =     1
+
+--------------------------------------------------------------------------------
+Molecule No./:  Atoms
+Periodicity  :  
+--------------------------------------------------------------------------------
+     1  0    : C1   c     1 C1   c     2 C1   c     3 C1   c     4 C1   c     5
+             : C1   c     6 O1   c     7 C2   c     8 C2   c     9 O2   c    10
+             : C2   c    11 H1   c    12 N1   c    13 C2   c    14 C2   c    15
+             : C2   c    16 C1   c    17 O3   c    18 C2   c    19 N2   c    20
+             : C1   c    21 O3   c    22 C2   c    23 C2   c    24 C2   c    25
+             : H1   c    26 H1   c    27 H1   c    28 H1   c    29 H1   c    30
+             : H1   c    31 H2   c    32 H1   c    33 H2   c    34 H2   c    35
+             : H1   c    36 H1   c    37 H1   c    38 H1   c    39 H1   c    40
+             : H1   c    41 H1   c    42 H1   c    43 H1   c    44 H1   c    45
+             : H2   c    46 H1   c    47 H1   c    48 H1   c    49 H1   c    50
+             : H1   c    51 H1   c    52 H1   c    53
+--------------------------------------------------------------------------------
+
+
+********************************************************************************
+*  General input information                                                   *
+********************************************************************************
+
+  Species output for all configurations : 
+
+--------------------------------------------------------------------------------
+  Species    Type    Atomic    Atomic    Charge       Radii (Angs)     Library
+                     Number     Mass       (e)     Cova   Ionic  VDW   Symbol
+--------------------------------------------------------------------------------
+    C2       Core        6      12.01   0.000000   0.770  0.000  1.530 C_3      
+    C1       Core        6      12.01   0.000000   0.770  0.000  1.530 C_R      
+    H1       Core        1       1.01   0.000000   0.420  0.000  1.080 H_       
+    H2       Core        1       1.01   0.000000   0.420  0.000  1.080 H___A    
+    N1       Core        7      14.01   0.000000   0.702  0.000  1.480 N_3      
+    N2       Core        7      14.01   0.000000   0.702  0.000  1.480 N_R      
+    O3       Core        8      16.00   0.000000   0.800  0.000  1.360 O_2      
+    O2       Core        8      16.00   0.000000   0.800  0.000  1.360 O_3      
+    O1       Core        8      16.00   0.000000   0.800  0.000  1.360 O_R      
+--------------------------------------------------------------------------------
+
+
+  Accuracy factor for short range sums = 12.000
+
+  Electrostatics method = Direct Coulomb
+
+  Analytic derivatives to be used
+
+  Time limit = Infinity
+
+  Maximum range for interatomic potentials =    100000.000000 Angstroms
+
+  General interatomic potentials :
+
+--------------------------------------------------------------------------------
+Atom  Types   Potential      Parameter       Value         Units   Cutoffs(Ang)
+  1     2                                                            Min /  Max 
+--------------------------------------------------------------------------------
+H1   c H1   c Lenn/es       Lennard epsilon 0.65913937E-03eV        3Bond 12.500
+                            Lennard sigma/m  3.1950000    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+H1   c H2   c Lenn/es       Lennard epsilon 0.53463262E-04eV        3Bond 12.500
+                            Lennard sigma/m  3.1950000    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+H2   c H2   c Lenn/es       Lennard epsilon 0.43364432E-05eV        3Bond 12.500
+                            Lennard sigma/m  3.1950000    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+H1   c C2   c Lenn/es       Lennard epsilon 0.16487155E-02eV        3Bond 12.500
+                            Lennard sigma/m  3.5466500    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+H2   c C2   c Lenn/es       Lennard epsilon 0.13372848E-03eV        3Bond 12.500
+                            Lennard sigma/m  3.5466500    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+C2   c C2   c Lenn/es       Lennard epsilon 0.41239575E-02eV        3Bond 12.500
+                            Lennard sigma/m  3.8983000    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+H1   c C1   c Lenn/es       Lennard epsilon 0.16487155E-02eV        3Bond 12.500
+                            Lennard sigma/m  3.5466500    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+H2   c C1   c Lenn/es       Lennard epsilon 0.13372848E-03eV        3Bond 12.500
+                            Lennard sigma/m  3.5466500    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+C1   c C2   c Lenn/es       Lennard epsilon 0.41239575E-02eV        3Bond 12.500
+                            Lennard sigma/m  3.8983000    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+C1   c C1   c Lenn/es       Lennard epsilon 0.41239575E-02eV        3Bond 12.500
+                            Lennard sigma/m  3.8983000    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+H1   c N1   c Lenn/es       Lennard epsilon 0.14873937E-02eV        3Bond 12.500
+                            Lennard sigma/m  3.4285500    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+H2   c N1   c Lenn/es       Lennard epsilon 0.12064356E-03eV        3Bond 12.500
+                            Lennard sigma/m  3.4285500    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+C2   c N1   c Lenn/es       Lennard epsilon 0.37204408E-02eV        3Bond 12.500
+                            Lennard sigma/m  3.7802000    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+C1   c N1   c Lenn/es       Lennard epsilon 0.37204408E-02eV        3Bond 12.500
+                            Lennard sigma/m  3.7802000    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+N1   c N1   c Lenn/es       Lennard epsilon 0.33564070E-02eV        3Bond 12.500
+                            Lennard sigma/m  3.6621000    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+H1   c N2   c Lenn/es       Lennard epsilon 0.14873937E-02eV        3Bond 12.500
+                            Lennard sigma/m  3.4285500    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+H2   c N2   c Lenn/es       Lennard epsilon 0.12064356E-03eV        3Bond 12.500
+                            Lennard sigma/m  3.4285500    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+C2   c N2   c Lenn/es       Lennard epsilon 0.37204408E-02eV        3Bond 12.500
+                            Lennard sigma/m  3.7802000    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+C1   c N2   c Lenn/es       Lennard epsilon 0.37204408E-02eV        3Bond 12.500
+                            Lennard sigma/m  3.7802000    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+N1   c N2   c Lenn/es       Lennard epsilon 0.33564070E-02eV        3Bond 12.500
+                            Lennard sigma/m  3.6621000    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+N2   c N2   c Lenn/es       Lennard epsilon 0.33564070E-02eV        3Bond 12.500
+                            Lennard sigma/m  3.6621000    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+H1   c O2   c Lenn/es       Lennard epsilon 0.16539083E-02eV        3Bond 12.500
+                            Lennard sigma/m  3.2998000    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+H2   c O2   c Lenn/es       Lennard epsilon 0.13414968E-03eV        3Bond 12.500
+                            Lennard sigma/m  3.2998000    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+C2   c O2   c Lenn/es       Lennard epsilon 0.41369464E-02eV        3Bond 12.500
+                            Lennard sigma/m  3.6514500    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+C1   c O2   c Lenn/es       Lennard epsilon 0.41369464E-02eV        3Bond 12.500
+                            Lennard sigma/m  3.6514500    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+N1   c O2   c Lenn/es       Lennard epsilon 0.37321588E-02eV        3Bond 12.500
+                            Lennard sigma/m  3.5333500    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+N2   c O2   c Lenn/es       Lennard epsilon 0.37321588E-02eV        3Bond 12.500
+                            Lennard sigma/m  3.5333500    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+O2   c O2   c Lenn/es       Lennard epsilon 0.41499761E-02eV        3Bond 12.500
+                            Lennard sigma/m  3.4046000    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+H1   c O1   c Lenn/es       Lennard epsilon 0.16539083E-02eV        3Bond 12.500
+                            Lennard sigma/m  3.2998000    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+H2   c O1   c Lenn/es       Lennard epsilon 0.13414968E-03eV        3Bond 12.500
+                            Lennard sigma/m  3.2998000    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+C2   c O1   c Lenn/es       Lennard epsilon 0.41369464E-02eV        3Bond 12.500
+                            Lennard sigma/m  3.6514500    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+C1   c O1   c Lenn/es       Lennard epsilon 0.41369464E-02eV        3Bond 12.500
+                            Lennard sigma/m  3.6514500    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+N1   c O1   c Lenn/es       Lennard epsilon 0.37321588E-02eV        3Bond 12.500
+                            Lennard sigma/m  3.5333500    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+N2   c O1   c Lenn/es       Lennard epsilon 0.37321588E-02eV        3Bond 12.500
+                            Lennard sigma/m  3.5333500    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+O1   c O2   c Lenn/es       Lennard epsilon 0.41499761E-02eV        3Bond 12.500
+                            Lennard sigma/m  3.4046000    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+O1   c O1   c Lenn/es       Lennard epsilon 0.41499761E-02eV        3Bond 12.500
+                            Lennard sigma/m  3.4046000    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+H1   c O3   c Lenn/es       Lennard epsilon 0.16539083E-02eV        3Bond 12.500
+                            Lennard sigma/m  3.2998000    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+H2   c O3   c Lenn/es       Lennard epsilon 0.13414968E-03eV        3Bond 12.500
+                            Lennard sigma/m  3.2998000    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+C2   c O3   c Lenn/es       Lennard epsilon 0.41369464E-02eV        3Bond 12.500
+                            Lennard sigma/m  3.6514500    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+C1   c O3   c Lenn/es       Lennard epsilon 0.41369464E-02eV        3Bond 12.500
+                            Lennard sigma/m  3.6514500    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+N1   c O3   c Lenn/es       Lennard epsilon 0.37321588E-02eV        3Bond 12.500
+                            Lennard sigma/m  3.5333500    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+N2   c O3   c Lenn/es       Lennard epsilon 0.37321588E-02eV        3Bond 12.500
+                            Lennard sigma/m  3.5333500    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+O2   c O3   c Lenn/es       Lennard epsilon 0.41499761E-02eV        3Bond 12.500
+                            Lennard sigma/m  3.4046000    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+O1   c O3   c Lenn/es       Lennard epsilon 0.41499761E-02eV        3Bond 12.500
+                            Lennard sigma/m  3.4046000    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+O3   c O3   c Lenn/es       Lennard epsilon 0.41499761E-02eV        3Bond 12.500
+                            Lennard sigma/m  3.4046000    Ang       
+                            Exponent m        12          None
+                            Exponent n         6          None
+--------------------------------------------------------------------------------
+
+  Intramolecular potentials :
+
+--------------------------------------------------------------------------------
+Atom  Types   Potential      Parameter       Value         Units   Cutoffs(Ang)
+  1     2                                                            Min /  Max 
+--------------------------------------------------------------------------------
+H1   c H1   c Harmonic      Harmonic k2      30.355102    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0     0.65000000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+H1   c H2   c Harmonic      Harmonic k2      30.355102    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0     0.65000000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+H2   c H2   c Harmonic      Harmonic k2      30.355102    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0     0.65000000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+H1   c C2   c Harmonic      Harmonic k2      30.355102    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0      1.0900000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+H2   c C2   c Harmonic      Harmonic k2      30.355102    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0      1.0900000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+C2   c C2   c Harmonic      Harmonic k2      30.355102    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0      1.5300000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+H1   c C1   c Harmonic      Harmonic k2      30.355102    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0      1.0200000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+H2   c C1   c Harmonic      Harmonic k2      30.355102    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0      1.0200000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+C1   c C2   c Harmonic      Harmonic k2      30.355102    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0      1.4600000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+C1   c C1   c Harmonic      Harmonic k2      45.532654    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0      1.3900000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+H1   c N1   c Harmonic      Harmonic k2      30.355102    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0      1.0220000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+H2   c N1   c Harmonic      Harmonic k2      30.355102    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0      1.0220000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+C2   c N1   c Harmonic      Harmonic k2      30.355102    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0      1.4620000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+C1   c N1   c Harmonic      Harmonic k2      30.355102    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0      1.3920000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+N1   c N1   c Harmonic      Harmonic k2      30.355102    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0      1.3940000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+H1   c N2   c Harmonic      Harmonic k2      30.355102    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0     0.97000000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+H2   c N2   c Harmonic      Harmonic k2      30.355102    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0     0.97000000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+C2   c N2   c Harmonic      Harmonic k2      30.355102    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0      1.4100000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+C1   c N2   c Harmonic      Harmonic k2      45.532654    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0      1.3400000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+N1   c N2   c Harmonic      Harmonic k2      30.355102    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0      1.3420000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+N2   c N2   c Harmonic      Harmonic k2      45.532654    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0      1.2900000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+H1   c O2   c Harmonic      Harmonic k2      30.355102    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0     0.98000000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+H2   c O2   c Harmonic      Harmonic k2      30.355102    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0     0.98000000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+C2   c O2   c Harmonic      Harmonic k2      30.355102    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0      1.4200000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+C1   c O2   c Harmonic      Harmonic k2      30.355102    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0      1.3500000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+N1   c O2   c Harmonic      Harmonic k2      30.355102    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0      1.3520000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+N2   c O2   c Harmonic      Harmonic k2      30.355102    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0      1.3000000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+O2   c O2   c Harmonic      Harmonic k2      30.355102    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0      1.3100000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+H1   c O3   c Harmonic      Harmonic k2      30.355102    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0     0.88000000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+H2   c O3   c Harmonic      Harmonic k2      30.355102    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0     0.88000000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+C2   c O3   c Harmonic      Harmonic k2      30.355102    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0      1.3200000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+C1   c O3   c Harmonic      Harmonic k2      60.710205    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0      1.2500000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+N1   c O3   c Harmonic      Harmonic k2      30.355102    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0      1.2520000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+N2   c O3   c Harmonic      Harmonic k2      60.710205    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0      1.2000000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+O2   c O3   c Harmonic      Harmonic k2      30.355102    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0      1.2100000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+O3   c O3   c Harmonic      Harmonic k2      60.710205    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0      1.1100000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+H1   c O1   c Harmonic      Harmonic k2      30.355102    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0     0.98000000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+H2   c O1   c Harmonic      Harmonic k2      30.355102    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0     0.98000000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+C2   c O1   c Harmonic      Harmonic k2      30.355102    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0      1.4200000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+C1   c O1   c Harmonic      Harmonic k2      45.532654    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0      1.3500000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+N1   c O1   c Harmonic      Harmonic k2      30.355102    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0      1.3520000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+N2   c O1   c Harmonic      Harmonic k2      45.532654    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0      1.3000000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+O1   c O2   c Harmonic      Harmonic k2      30.355102    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0      1.3100000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+O1   c O3   c Harmonic      Harmonic k2      60.710205    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0      1.2100000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+O1   c O1   c Harmonic      Harmonic k2      45.532654    eV*Ang^-2 0.000 1 Bond
+                            Harmonic r0      1.3100000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+
+  General Three-body potentials :
+
+--------------------------------------------------------------------------------
+  Atoms       Potential      Parameter       Value         Units   Cutoffs(Ang)
+  1 / 2 / 3                                                          Min /  Max 
+--------------------------------------------------------------------------------
+H1    core    Hydrogen bond Three-body A     162239.27    eV*Ang^m  0.000  3.000
+N1    core                  Three-body B     25743.752    eV*Ang^n  0.000  3.000
+N1    core                                                          0.000  5.000
+--------------------------------------------------------------------------------
+H1    core    Hydrogen bond Three-body A     162239.27    eV*Ang^m  0.000  3.000
+N1    core                  Three-body B     25743.752    eV*Ang^n  0.000  3.000
+N2    core                                                          0.000  5.000
+--------------------------------------------------------------------------------
+H1    core    Hydrogen bond Three-body A     162239.27    eV*Ang^m  0.000  3.000
+N2    core                  Three-body B     25743.752    eV*Ang^n  0.000  3.000
+N2    core                                                          0.000  5.000
+--------------------------------------------------------------------------------
+H1    core    Hydrogen bond Three-body A     162239.27    eV*Ang^m  0.000  3.000
+N1    core                  Three-body B     25743.752    eV*Ang^n  0.000  3.000
+O2    core                                                          0.000  5.000
+--------------------------------------------------------------------------------
+H1    core    Hydrogen bond Three-body A     162239.27    eV*Ang^m  0.000  3.000
+N2    core                  Three-body B     25743.752    eV*Ang^n  0.000  3.000
+O2    core                                                          0.000  5.000
+--------------------------------------------------------------------------------
+H1    core    Hydrogen bond Three-body A     162239.27    eV*Ang^m  0.000  3.000
+O2    core                  Three-body B     25743.752    eV*Ang^n  0.000  3.000
+O2    core                                                          0.000  5.000
+--------------------------------------------------------------------------------
+H1    core    Hydrogen bond Three-body A     162239.27    eV*Ang^m  0.000  3.000
+N1    core                  Three-body B     25743.752    eV*Ang^n  0.000  3.000
+O3    core                                                          0.000  5.000
+--------------------------------------------------------------------------------
+H1    core    Hydrogen bond Three-body A     162239.27    eV*Ang^m  0.000  3.000
+N2    core                  Three-body B     25743.752    eV*Ang^n  0.000  3.000
+O3    core                                                          0.000  5.000
+--------------------------------------------------------------------------------
+H1    core    Hydrogen bond Three-body A     162239.27    eV*Ang^m  0.000  3.000
+O2    core                  Three-body B     25743.752    eV*Ang^n  0.000  3.000
+O3    core                                                          0.000  5.000
+--------------------------------------------------------------------------------
+H1    core    Hydrogen bond Three-body A     162239.27    eV*Ang^m  0.000  3.000
+O3    core                  Three-body B     25743.752    eV*Ang^n  0.000  3.000
+O3    core                                                          0.000  5.000
+--------------------------------------------------------------------------------
+H1    core    Hydrogen bond Three-body A     162239.27    eV*Ang^m  0.000  3.000
+N1    core                  Three-body B     25743.752    eV*Ang^n  0.000  3.000
+O1    core                                                          0.000  5.000
+--------------------------------------------------------------------------------
+H1    core    Hydrogen bond Three-body A     162239.27    eV*Ang^m  0.000  3.000
+N2    core                  Three-body B     25743.752    eV*Ang^n  0.000  3.000
+O1    core                                                          0.000  5.000
+--------------------------------------------------------------------------------
+H1    core    Hydrogen bond Three-body A     162239.27    eV*Ang^m  0.000  3.000
+O1    core                  Three-body B     25743.752    eV*Ang^n  0.000  3.000
+O2    core                                                          0.000  5.000
+--------------------------------------------------------------------------------
+H1    core    Hydrogen bond Three-body A     162239.27    eV*Ang^m  0.000  3.000
+O1    core                  Three-body B     25743.752    eV*Ang^n  0.000  3.000
+O3    core                                                          0.000  5.000
+--------------------------------------------------------------------------------
+H1    core    Hydrogen bond Three-body A     162239.27    eV*Ang^m  0.000  3.000
+O1    core                  Three-body B     25743.752    eV*Ang^n  0.000  3.000
+O1    core                                                          0.000  5.000
+--------------------------------------------------------------------------------
+H2    core    Hydrogen bond Three-body A     162239.27    eV*Ang^m  0.000  3.000
+N1    core                  Three-body B     25743.752    eV*Ang^n  0.000  3.000
+N1    core                                                          0.000  5.000
+--------------------------------------------------------------------------------
+H2    core    Hydrogen bond Three-body A     162239.27    eV*Ang^m  0.000  3.000
+N1    core                  Three-body B     25743.752    eV*Ang^n  0.000  3.000
+N2    core                                                          0.000  5.000
+--------------------------------------------------------------------------------
+H2    core    Hydrogen bond Three-body A     162239.27    eV*Ang^m  0.000  3.000
+N2    core                  Three-body B     25743.752    eV*Ang^n  0.000  3.000
+N2    core                                                          0.000  5.000
+--------------------------------------------------------------------------------
+H2    core    Hydrogen bond Three-body A     162239.27    eV*Ang^m  0.000  3.000
+N1    core                  Three-body B     25743.752    eV*Ang^n  0.000  3.000
+O2    core                                                          0.000  5.000
+--------------------------------------------------------------------------------
+H2    core    Hydrogen bond Three-body A     162239.27    eV*Ang^m  0.000  3.000
+N2    core                  Three-body B     25743.752    eV*Ang^n  0.000  3.000
+O2    core                                                          0.000  5.000
+--------------------------------------------------------------------------------
+H2    core    Hydrogen bond Three-body A     162239.27    eV*Ang^m  0.000  3.000
+O2    core                  Three-body B     25743.752    eV*Ang^n  0.000  3.000
+O2    core                                                          0.000  5.000
+--------------------------------------------------------------------------------
+H2    core    Hydrogen bond Three-body A     162239.27    eV*Ang^m  0.000  3.000
+N1    core                  Three-body B     25743.752    eV*Ang^n  0.000  3.000
+O3    core                                                          0.000  5.000
+--------------------------------------------------------------------------------
+H2    core    Hydrogen bond Three-body A     162239.27    eV*Ang^m  0.000  3.000
+N2    core                  Three-body B     25743.752    eV*Ang^n  0.000  3.000
+O3    core                                                          0.000  5.000
+--------------------------------------------------------------------------------
+H2    core    Hydrogen bond Three-body A     162239.27    eV*Ang^m  0.000  3.000
+O2    core                  Three-body B     25743.752    eV*Ang^n  0.000  3.000
+O3    core                                                          0.000  5.000
+--------------------------------------------------------------------------------
+H2    core    Hydrogen bond Three-body A     162239.27    eV*Ang^m  0.000  3.000
+O3    core                  Three-body B     25743.752    eV*Ang^n  0.000  3.000
+O3    core                                                          0.000  5.000
+--------------------------------------------------------------------------------
+H2    core    Hydrogen bond Three-body A     162239.27    eV*Ang^m  0.000  3.000
+N1    core                  Three-body B     25743.752    eV*Ang^n  0.000  3.000
+O1    core                                                          0.000  5.000
+--------------------------------------------------------------------------------
+H2    core    Hydrogen bond Three-body A     162239.27    eV*Ang^m  0.000  3.000
+N2    core                  Three-body B     25743.752    eV*Ang^n  0.000  3.000
+O1    core                                                          0.000  5.000
+--------------------------------------------------------------------------------
+H2    core    Hydrogen bond Three-body A     162239.27    eV*Ang^m  0.000  3.000
+O1    core                  Three-body B     25743.752    eV*Ang^n  0.000  3.000
+O2    core                                                          0.000  5.000
+--------------------------------------------------------------------------------
+H2    core    Hydrogen bond Three-body A     162239.27    eV*Ang^m  0.000  3.000
+O1    core                  Three-body B     25743.752    eV*Ang^n  0.000  3.000
+O3    core                                                          0.000  5.000
+--------------------------------------------------------------------------------
+H2    core    Hydrogen bond Three-body A     162239.27    eV*Ang^m  0.000  3.000
+O1    core                  Three-body B     25743.752    eV*Ang^n  0.000  3.000
+O1    core                                                          0.000  5.000
+--------------------------------------------------------------------------------
+
+  Intramolecular Three-body potentials :
+
+--------------------------------------------------------------------------------
+  Atoms       Potential      Parameter       Value         Units   Cutoffs(Ang)
+  1 / 2 / 3                                                          Min /  Max 
+--------------------------------------------------------------------------------
+C2    core    Harmonic      Three-body cnst  4.3364432    eV*rad^-2 0.000 1 Bond
+X     core                  Three-body angl  109.47100    degrees   0.000 1 Bond
+X     core                  Three-body k4    0.0000000    eV*rad^-4 0.000 1 Bond
+                            Three-body k3    0.0000000    eV*rad^-3 
+--------------------------------------------------------------------------------
+C1    core    Harmonic      Three-body cnst  4.3364432    eV*rad^-2 0.000 1 Bond
+X     core                  Three-body angl  120.00000    degrees   0.000 1 Bond
+X     core                  Three-body k4    0.0000000    eV*rad^-4 0.000 1 Bond
+                            Three-body k3    0.0000000    eV*rad^-3 
+--------------------------------------------------------------------------------
+N1    core    Harmonic      Three-body cnst  4.3364432    eV*rad^-2 0.000 1 Bond
+X     core                  Three-body angl  106.70000    degrees   0.000 1 Bond
+X     core                  Three-body k4    0.0000000    eV*rad^-4 0.000 1 Bond
+                            Three-body k3    0.0000000    eV*rad^-3 
+--------------------------------------------------------------------------------
+N2    core    Harmonic      Three-body cnst  4.3364432    eV*rad^-2 0.000 1 Bond
+X     core                  Three-body angl  120.00000    degrees   0.000 1 Bond
+X     core                  Three-body k4    0.0000000    eV*rad^-4 0.000 1 Bond
+                            Three-body k3    0.0000000    eV*rad^-3 
+--------------------------------------------------------------------------------
+O2    core    Harmonic      Three-body cnst  4.3364432    eV*rad^-2 0.000 1 Bond
+X     core                  Three-body angl  104.51000    degrees   0.000 1 Bond
+X     core                  Three-body k4    0.0000000    eV*rad^-4 0.000 1 Bond
+                            Three-body k3    0.0000000    eV*rad^-3 
+--------------------------------------------------------------------------------
+O3    core    Harmonic      Three-body cnst  4.3364432    eV*rad^-2 0.000 1 Bond
+X     core                  Three-body angl  120.00000    degrees   0.000 1 Bond
+X     core                  Three-body k4    0.0000000    eV*rad^-4 0.000 1 Bond
+                            Three-body k3    0.0000000    eV*rad^-3 
+--------------------------------------------------------------------------------
+O1    core    Harmonic      Three-body cnst  4.3364432    eV*rad^-2 0.000 1 Bond
+X     core                  Three-body angl  120.00000    degrees   0.000 1 Bond
+X     core                  Three-body k4    0.0000000    eV*rad^-4 0.000 1 Bond
+                            Three-body k3    0.0000000    eV*rad^-3 
+--------------------------------------------------------------------------------
+
+  Intramolecular Four-body potentials :
+
+--------------------------------------------------------------------------------
+  Atoms       Potential      Parameter       Value         Units   Cutoffs(Ang)
+  1 - 4                                                             Min /  Max 
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.43364432E-01eV         Bonded
+C2    core Phase = -  3                                              single   
+C2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+C2    core    Standard      Torsional const 0.43364432E-01eV         Bonded
+C1    core Phase = -  3                                              single   
+C2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+C1    core    Standard      Torsional const 0.21682216E-01eV         Bonded
+C1    core Phase = -  6                                              single   
+C2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+N1    core    Standard      Torsional const 0.43364432E-01eV         Bonded
+C1    core Phase = -  3                                              single   
+C2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+N2    core    Standard      Torsional const 0.21682216E-01eV         Bonded
+C1    core Phase = -  6                                              single   
+C2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+O2    core    Standard      Torsional const 0.43364432E-01eV         Bonded
+C1    core Phase = -  3                                              single   
+C2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+O1    core    Standard      Torsional const 0.21682216E-01eV         Bonded
+C1    core Phase = -  6                                              single   
+C2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+O3    core    Standard      Torsional const 0.21682216E-01eV         Bonded
+C1    core Phase = -  6                                              single   
+C2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+H1    core    Standard      Torsional const 0.43364432E-01eV         Bonded
+C1    core Phase = -  3                                              single   
+C2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+H2    core    Standard      Torsional const 0.43364432E-01eV         Bonded
+C1    core Phase = -  3                                              single   
+C2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.54205540    eV         Bonded
+C1    core Phase = -  2                                              single   
+C1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.43364432E-01eV         Bonded
+N1    core Phase = -  3                                              single   
+C2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+C2    core    Standard      Torsional const 0.43364432E-01eV         Bonded
+C1    core Phase = -  3                                              single   
+N1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+C1    core    Standard      Torsional const 0.21682216E-01eV         Bonded
+C1    core Phase = -  6                                              single   
+N1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+N1    core    Standard      Torsional const 0.43364432E-01eV         Bonded
+C1    core Phase = -  3                                              single   
+N1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+N2    core    Standard      Torsional const 0.21682216E-01eV         Bonded
+C1    core Phase = -  6                                              single   
+N1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+O2    core    Standard      Torsional const 0.43364432E-01eV         Bonded
+C1    core Phase = -  3                                              single   
+N1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+O1    core    Standard      Torsional const 0.21682216E-01eV         Bonded
+C1    core Phase = -  6                                              single   
+N1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+O3    core    Standard      Torsional const 0.21682216E-01eV         Bonded
+C1    core Phase = -  6                                              single   
+N1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+H1    core    Standard      Torsional const 0.43364432E-01eV         Bonded
+C1    core Phase = -  3                                              single   
+N1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+H2    core    Standard      Torsional const 0.43364432E-01eV         Bonded
+C1    core Phase = -  3                                              single   
+N1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.43364432E-01eV         Bonded
+N1    core Phase = -  3                                              single   
+N1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+C2    core    Standard      Torsional const 0.43364432E-01eV         Bonded
+N2    core Phase = -  3                                              single   
+C2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+C1    core    Standard      Torsional const 0.21682216E-01eV         Bonded
+N2    core Phase = -  6                                              single   
+C2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+N1    core    Standard      Torsional const 0.43364432E-01eV         Bonded
+N2    core Phase = -  3                                              single   
+C2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+N2    core    Standard      Torsional const 0.21682216E-01eV         Bonded
+N2    core Phase = -  6                                              single   
+C2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+O2    core    Standard      Torsional const 0.43364432E-01eV         Bonded
+N2    core Phase = -  3                                              single   
+C2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+O1    core    Standard      Torsional const 0.21682216E-01eV         Bonded
+N2    core Phase = -  6                                              single   
+C2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+O3    core    Standard      Torsional const 0.21682216E-01eV         Bonded
+N2    core Phase = -  6                                              single   
+C2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+H1    core    Standard      Torsional const 0.43364432E-01eV         Bonded
+N2    core Phase = -  3                                              single   
+C2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+H2    core    Standard      Torsional const 0.43364432E-01eV         Bonded
+N2    core Phase = -  3                                              single   
+C2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.54205540    eV         Bonded
+N2    core Phase = -  2                                              single   
+C1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+C2    core    Standard      Torsional const 0.43364432E-01eV         Bonded
+N2    core Phase = -  3                                              single   
+N1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+C1    core    Standard      Torsional const 0.21682216E-01eV         Bonded
+N2    core Phase = -  6                                              single   
+N1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+N1    core    Standard      Torsional const 0.43364432E-01eV         Bonded
+N2    core Phase = -  3                                              single   
+N1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+N2    core    Standard      Torsional const 0.21682216E-01eV         Bonded
+N2    core Phase = -  6                                              single   
+N1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+O2    core    Standard      Torsional const 0.43364432E-01eV         Bonded
+N2    core Phase = -  3                                              single   
+N1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+O1    core    Standard      Torsional const 0.21682216E-01eV         Bonded
+N2    core Phase = -  6                                              single   
+N1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+O3    core    Standard      Torsional const 0.21682216E-01eV         Bonded
+N2    core Phase = -  6                                              single   
+N1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+H1    core    Standard      Torsional const 0.43364432E-01eV         Bonded
+N2    core Phase = -  3                                              single   
+N1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+H2    core    Standard      Torsional const 0.43364432E-01eV         Bonded
+N2    core Phase = -  3                                              single   
+N1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.54205540    eV         Bonded
+N2    core Phase = -  2                                              single   
+N2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.43364432E-01eV         Bonded
+O2    core Phase = -  3                                              single   
+C2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.43364432E-01eV         Bonded
+O2    core Phase = -  2                                              single   
+C1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.43364432E-01eV         Bonded
+O2    core Phase = -  3                                              single   
+N1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.43364432E-01eV         Bonded
+O2    core Phase = -  2                                              single   
+N2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.43364432E-01eV         Bonded
+O2    core Phase = -  2                                              single   
+O2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+C2    core    Standard      Torsional const 0.43364432E-01eV         Bonded
+O1    core Phase = -  3                                              single   
+C2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+C1    core    Standard      Torsional const 0.21682216E-01eV         Bonded
+O1    core Phase = -  6                                              single   
+C2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+N1    core    Standard      Torsional const 0.43364432E-01eV         Bonded
+O1    core Phase = -  3                                              single   
+C2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+N2    core    Standard      Torsional const 0.21682216E-01eV         Bonded
+O1    core Phase = -  6                                              single   
+C2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+O2    core    Standard      Torsional const 0.43364432E-01eV         Bonded
+O1    core Phase = -  3                                              single   
+C2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+O1    core    Standard      Torsional const 0.21682216E-01eV         Bonded
+O1    core Phase = -  6                                              single   
+C2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+O3    core    Standard      Torsional const 0.21682216E-01eV         Bonded
+O1    core Phase = -  6                                              single   
+C2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+H1    core    Standard      Torsional const 0.43364432E-01eV         Bonded
+O1    core Phase = -  3                                              single   
+C2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+H2    core    Standard      Torsional const 0.43364432E-01eV         Bonded
+O1    core Phase = -  3                                              single   
+C2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.54205540    eV         Bonded
+O1    core Phase = -  2                                              single   
+C1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+C2    core    Standard      Torsional const 0.43364432E-01eV         Bonded
+O1    core Phase = -  3                                              single   
+N1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+C1    core    Standard      Torsional const 0.21682216E-01eV         Bonded
+O1    core Phase = -  6                                              single   
+N1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+N1    core    Standard      Torsional const 0.43364432E-01eV         Bonded
+O1    core Phase = -  3                                              single   
+N1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+N2    core    Standard      Torsional const 0.21682216E-01eV         Bonded
+O1    core Phase = -  6                                              single   
+N1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+O2    core    Standard      Torsional const 0.43364432E-01eV         Bonded
+O1    core Phase = -  3                                              single   
+N1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+O1    core    Standard      Torsional const 0.21682216E-01eV         Bonded
+O1    core Phase = -  6                                              single   
+N1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+O3    core    Standard      Torsional const 0.21682216E-01eV         Bonded
+O1    core Phase = -  6                                              single   
+N1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+H1    core    Standard      Torsional const 0.43364432E-01eV         Bonded
+O1    core Phase = -  3                                              single   
+N1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+H2    core    Standard      Torsional const 0.43364432E-01eV         Bonded
+O1    core Phase = -  3                                              single   
+N1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.54205540    eV         Bonded
+O1    core Phase = -  2                                              single   
+N2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.43364432E-01eV         Bonded
+O1    core Phase = -  2                                              single   
+O2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.54205540    eV         Bonded
+O1    core Phase = -  2                                              single   
+O1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+C2    core    Standard      Torsional const 0.43364432E-01eV         Bonded
+O3    core Phase = -  3                                              single   
+C2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+C1    core    Standard      Torsional const 0.21682216E-01eV         Bonded
+O3    core Phase = -  6                                              single   
+C2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+N1    core    Standard      Torsional const 0.43364432E-01eV         Bonded
+O3    core Phase = -  3                                              single   
+C2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+N2    core    Standard      Torsional const 0.21682216E-01eV         Bonded
+O3    core Phase = -  6                                              single   
+C2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+O2    core    Standard      Torsional const 0.43364432E-01eV         Bonded
+O3    core Phase = -  3                                              single   
+C2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+O1    core    Standard      Torsional const 0.21682216E-01eV         Bonded
+O3    core Phase = -  6                                              single   
+C2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+O3    core    Standard      Torsional const 0.21682216E-01eV         Bonded
+O3    core Phase = -  6                                              single   
+C2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+H1    core    Standard      Torsional const 0.43364432E-01eV         Bonded
+O3    core Phase = -  3                                              single   
+C2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+H2    core    Standard      Torsional const 0.43364432E-01eV         Bonded
+O3    core Phase = -  3                                              single   
+C2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.54205540    eV         Bonded
+O3    core Phase = -  2                                              single   
+C1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+C2    core    Standard      Torsional const 0.43364432E-01eV         Bonded
+O3    core Phase = -  3                                              single   
+N1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+C1    core    Standard      Torsional const 0.21682216E-01eV         Bonded
+O3    core Phase = -  6                                              single   
+N1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+N1    core    Standard      Torsional const 0.43364432E-01eV         Bonded
+O3    core Phase = -  3                                              single   
+N1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+N2    core    Standard      Torsional const 0.21682216E-01eV         Bonded
+O3    core Phase = -  6                                              single   
+N1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+O2    core    Standard      Torsional const 0.43364432E-01eV         Bonded
+O3    core Phase = -  3                                              single   
+N1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+O1    core    Standard      Torsional const 0.21682216E-01eV         Bonded
+O3    core Phase = -  6                                              single   
+N1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+O3    core    Standard      Torsional const 0.21682216E-01eV         Bonded
+O3    core Phase = -  6                                              single   
+N1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+H1    core    Standard      Torsional const 0.43364432E-01eV         Bonded
+O3    core Phase = -  3                                              single   
+N1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+H2    core    Standard      Torsional const 0.43364432E-01eV         Bonded
+O3    core Phase = -  3                                              single   
+N1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.54205540    eV         Bonded
+O3    core Phase = -  2                                              single   
+N2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.43364432E-01eV         Bonded
+O3    core Phase = -  2                                              single   
+O2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.54205540    eV         Bonded
+O3    core Phase = -  2                                              single   
+O1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.10841108    eV         Bonded
+O3    core Phase = -  2                                              single   
+O3    core                                                              
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.54205540    eV         Bonded
+C1    core Phase = -  2                                              double   
+C1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.54205540    eV         Bonded
+N2    core Phase = -  2                                              double   
+C1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.54205540    eV         Bonded
+N2    core Phase = -  2                                              double   
+N2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.54205540    eV         Bonded
+O1    core Phase = -  2                                              double   
+C1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.54205540    eV         Bonded
+O1    core Phase = -  2                                              double   
+N2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.54205540    eV         Bonded
+O1    core Phase = -  2                                              double   
+O1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.54205540    eV         Bonded
+O3    core Phase = -  2                                              double   
+C1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.54205540    eV         Bonded
+O3    core Phase = -  2                                              double   
+N2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.54205540    eV         Bonded
+O3    core Phase = -  2                                              double   
+O1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.97569972    eV         Bonded
+O3    core Phase = -  2                                              double   
+O3    core                                                              
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.54205540    eV         Bonded
+C1    core Phase = -  2                                              resonant 
+C1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.54205540    eV         Bonded
+N2    core Phase = -  2                                              resonant 
+C1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.54205540    eV         Bonded
+N2    core Phase = -  2                                              resonant 
+N2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.54205540    eV         Bonded
+O1    core Phase = -  2                                              resonant 
+C1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.54205540    eV         Bonded
+O1    core Phase = -  2                                              resonant 
+N2    core                                                              
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.54205540    eV         Bonded
+O1    core Phase = -  2                                              resonant 
+O1    core                                                              
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.54205540    eV         Bonded
+C1    core Phase = -  2                                              resonant 
+C1    core                                                           exo
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.54205540    eV         Bonded
+N2    core Phase = -  2                                              resonant 
+C1    core                                                           exo
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.54205540    eV         Bonded
+N2    core Phase = -  2                                              resonant 
+N2    core                                                           exo
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.54205540    eV         Bonded
+O1    core Phase = -  2                                              resonant 
+C1    core                                                           exo
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.54205540    eV         Bonded
+O1    core Phase = -  2                                              resonant 
+N2    core                                                           exo
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.54205540    eV         Bonded
+O1    core Phase = -  2                                              resonant 
+O1    core                                                           exo
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.21682216    eV         Bonded
+C1    core Phase = -  2                                              single   
+C1    core                                                           exo
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.21682216    eV         Bonded
+N2    core Phase = -  2                                              single   
+C1    core                                                           exo
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.21682216    eV         Bonded
+N2    core Phase = -  2                                              single   
+N2    core                                                           exo
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.21682216    eV         Bonded
+O1    core Phase = -  2                                              single   
+C1    core                                                           exo
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.21682216    eV         Bonded
+O1    core Phase = -  2                                              single   
+N2    core                                                           exo
+X     core
+--------------------------------------------------------------------------------
+X     core    Standard      Torsional const 0.21682216    eV         Bonded
+O1    core Phase = -  2                                              single   
+O1    core                                                           exo
+X     core
+--------------------------------------------------------------------------------
+C1    core    Inversion     Inversion K      1.7345773    eV         Bonded
+X     core                                                                    
+X     core                                                              
+X     core
+--------------------------------------------------------------------------------
+N2    core    Inversion     Inversion K      1.7345773    eV         Bonded
+X     core                                                                    
+X     core                                                              
+X     core
+--------------------------------------------------------------------------------
+O1    core    Inversion     Inversion K      1.7345773    eV         Bonded
+X     core                                                                    
+X     core                                                              
+X     core
+--------------------------------------------------------------------------------
+O3    core    Inversion     Inversion K      1.7345773    eV         Bonded
+X     core                                                                    
+X     core                                                              
+X     core
+--------------------------------------------------------------------------------
+
+********************************************************************************
+*  Output for configuration   1 : ACBUOL                                       *
+********************************************************************************
+
+
+  Components of energy : 
+
+--------------------------------------------------------------------------------
+  Interatomic potentials     =           1.64435120 eV    
+  Three-body potentials      =           0.41548328 eV    
+  Four-body potentials       =           0.15876394 eV    
+  Improper torsions          =           0.00000000 eV    
+  Out of plane potentials    =           0.00249089 eV    
+  Monopole - monopole (real) =          -3.58977992 eV    
+--------------------------------------------------------------------------------
+  Total lattice energy       =          -1.36869061 eV    
+--------------------------------------------------------------------------------
+  Total lattice energy       =            -132.0577 kJ/mol
+--------------------------------------------------------------------------------
+
+  MSI Archive (version 3) written as example50_0D.arc
+
+
+
+
+  Final Cartesian derivatives :
+
+--------------------------------------------------------------------------------
+   No.  Atomic          x             y             z           Radius
+        Label       (eV/Angs)     (eV/Angs)    (eV/Angs)      (eV/Angs)
+--------------------------------------------------------------------------------
+      1 C1    c       0.000000      0.000000      0.000000      0.000000
+      2 C1    c       0.029428      0.007994      0.040243      0.000000
+      3 C1    c       0.019023      0.073169      0.075559      0.000000
+      4 C1    c       0.095245     -0.095189      0.074172      0.000000
+      5 C1    c       0.127767      0.001630      0.086904      0.000000
+      6 C1    c      -0.065024      0.009781     -0.065943      0.000000
+      7 O1    c       0.250709     -0.039152     -0.062874      0.000000
+      8 C2    c      -0.005997      0.023485      0.025996      0.000000
+      9 C2    c       0.004786      0.034629      0.095017      0.000000
+     10 O2    c      -0.217965     -0.038220     -0.211028      0.000000
+     11 C2    c      -0.041737     -0.084398      0.010414      0.000000
+     12 H1    c       0.122710      0.027837      0.194029      0.000000
+     13 N1    c       0.039322     -0.042339     -0.983936      0.000000
+     14 C2    c       0.021371      0.009035      0.019766      0.000000
+     15 C2    c       0.263532     -0.135369      0.457790      0.000000
+     16 C2    c      -0.422584      0.189579      0.207103      0.000000
+     17 C1    c      -0.258425      0.141258     -0.031666      0.000000
+     18 O3    c      -0.208858      0.043682     -0.108128      0.000000
+     19 C2    c       0.075862     -0.111874     -0.060891      0.000000
+     20 N2    c      -0.024387     -0.039016     -0.053756      0.000000
+     21 C1    c      -0.184285      0.074124      0.029045      0.000000
+     22 O3    c      -0.028433      0.302058     -0.052517      0.000000
+     23 C2    c       0.012122      0.081907     -0.161328      0.000000
+     24 C2    c       0.257587      0.097791      0.095973      0.000000
+     25 C2    c      -0.104411      0.063934      0.122371      0.000000
+     26 H1    c       0.033090     -0.071838      0.101426      0.000000
+     27 H1    c       0.047490     -0.040417      0.035570      0.000000
+     28 H1    c      -0.003094     -0.069172     -0.060556      0.000000
+     29 H1    c      -0.032341      0.009115     -0.008536      0.000000
+     30 H1    c      -0.114408     -0.057565     -0.043936      0.000000
+     31 H1    c      -0.046257      0.045622     -0.010333      0.000000
+     32 H2    c       0.168315      0.139026      0.117051      0.000000
+     33 H1    c       0.105597      0.039951      0.070958      0.000000
+     34 H2    c      -0.147992     -0.140779     -0.033321      0.000000
+     35 H2    c      -0.165151     -0.136517      0.119416      0.000000
+     36 H1    c       0.168608      0.262376     -0.085423      0.000000
+     37 H1    c      -0.004681     -0.026396     -0.003109      0.000000
+     38 H1    c       0.017373      0.012550      0.017962      0.000000
+     39 H1    c      -0.020567     -0.018456      0.009406      0.000000
+     40 H1    c       0.000041      0.026429      0.007927      0.000000
+     41 H1    c      -0.001564     -0.022752      0.014381      0.000000
+     42 H1    c      -0.027606     -0.016600     -0.001305      0.000000
+     43 H1    c       0.117274      0.057128      0.125429      0.000000
+     44 H1    c       0.086436      0.052483      0.046814      0.000000
+     45 H1    c       0.042562      0.004653      0.113124      0.000000
+     46 H2    c       0.025585     -0.175362      0.006098      0.000000
+     47 H1    c      -0.136469     -0.035732     -0.112411      0.000000
+     48 H1    c      -0.068034     -0.048172     -0.043824      0.000000
+     49 H1    c       0.065042     -0.063970      0.114417      0.000000
+     50 H1    c      -0.031698     -0.234080      0.046475      0.000000
+     51 H1    c       0.046771      0.024568     -0.082026      0.000000
+     52 H1    c       0.014392      0.049779     -0.070957      0.000000
+     53 H1    c      -0.021776      0.011774     -0.109538      0.000000
+--------------------------------------------------------------------------------
+  Maximum abs         0.422584      0.302058      0.983936      0.000000
+--------------------------------------------------------------------------------
+
+
+  Time to end of gradients =       0.0769 seconds
+
+
+  Peak dynamic memory used =       2.16 MB 
+
+
+  Timing analysis for GULP :
+
+--------------------------------------------------------------------------------
+  Task / Subroutine                                          Time (Seconds)
+--------------------------------------------------------------------------------
+  Calculation of real space energy and derivatives                0.0008
+  Calculation of three-body energy and derivatives                0.0001
+  Calculation of four-body energy and derivatives                 0.0002
+--------------------------------------------------------------------------------
+  Total CPU time                                                  0.0769
+--------------------------------------------------------------------------------
+
+
+  Job Finished at 11:50.42  8th July       2020                               
+

@@ -1,0 +1,205 @@
+********************************************************************************
+*                       GENERAL UTILITY LATTICE PROGRAM                        *
+*                                 Julian Gale                                  *
+*                       Curtin Institute for Computation                       *
+*                    School of Molecular and Life Sciences                     *
+*                    Curtin University, Western Australia                      *
+********************************************************************************
+* Version = 6.0.0 * Last modified =   7th July 2020                            *
+********************************************************************************
+*  single       - perform a single point run                                   *
+*  phonon       - calculate phonons for final geometry                         *
+*  eckart       - remove rotation/translation from vibrations of molecules     *
+*  msd          - calculate phonon mean squared displacements                  *
+********************************************************************************
+
+  Job Started  at 11:59.34  8th July       2020                               
+
+  Number of CPUs =     1
+
+  Host name      = M-A0034725                              
+
+
+  Total number of configurations input =      1
+
+********************************************************************************
+*  Input for Configuration =   1                                               *
+********************************************************************************
+
+  Formula = HCl                                                         
+
+  Number of irreducible atoms/shells =       2
+
+
+  Total number atoms/shells =       2
+
+  Dimensionality = 0               :  Cluster
+
+
+  Charge on cluster =   0.000000
+
+
+  Initial cluster dipoles : x =      0.000000 e.Angs
+                            y =      0.000000 e.Angs
+                            z =      0.000000 e.Angs
+
+  Temperature of configuration =   300.     K 
+
+  Symmetry number =      1
+
+  Cartesian coordinates of cluster :
+
+--------------------------------------------------------------------------------
+   No.  Atomic       x           y          z         Charge      Occupancy
+        Label      (Angs)      (Angs)     (Angs)        (e)         (Frac)  
+--------------------------------------------------------------------------------
+      1 H     c      0.0000      0.0000      0.0000     0.00000    1.000000    
+      2 Cl    c      1.2700      0.0000      0.0000     0.00000    1.000000    
+--------------------------------------------------------------------------------
+
+
+  Brillouin zone sampling points :
+
+--------------------------------------------------------------------------------
+  Point number          x          y          z            Weight
+--------------------------------------------------------------------------------
+        1           0.000000   0.000000   0.000000     1.00000000
+--------------------------------------------------------------------------------
+
+
+********************************************************************************
+*  General input information                                                   *
+********************************************************************************
+
+  Species output for all configurations : 
+
+--------------------------------------------------------------------------------
+  Species    Type    Atomic    Atomic    Charge       Radii (Angs)     Library
+                     Number     Mass       (e)     Cova   Ionic  VDW   Symbol
+--------------------------------------------------------------------------------
+    H        Core        1       1.00   0.000000   0.370  0.000  1.080          
+    Cl       Core       17      35.00   0.000000   0.990  0.000  1.650          
+--------------------------------------------------------------------------------
+
+
+  Accuracy factor for short range sums = 12.000
+
+  Electrostatics method = Direct Coulomb
+
+  Analytic derivatives to be used
+
+  Time limit = Infinity
+
+  Maximum range for interatomic potentials =    100000.000000 Angstroms
+
+  General interatomic potentials :
+
+--------------------------------------------------------------------------------
+Atom  Types   Potential      Parameter       Value         Units   Cutoffs(Ang)
+  1     2                                                            Min /  Max 
+--------------------------------------------------------------------------------
+H    c Cl   c Harmonic      Harmonic k2      32.000000    eV*Ang^-2 0.000  2.000
+                            Harmonic r0      1.2700000    Ang       
+                            Harmonic k3      0.0000000    eV*Ang^-3 
+                            Harmonic k4      0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+
+********************************************************************************
+*  Output for configuration   1                                                *
+********************************************************************************
+
+
+  Components of energy : 
+
+--------------------------------------------------------------------------------
+  Interatomic potentials     =           0.00000000 eV    
+  Monopole - monopole (real) =           0.00000000 eV    
+--------------------------------------------------------------------------------
+  Total lattice energy       =           0.00000000 eV    
+--------------------------------------------------------------------------------
+  Total lattice energy       =               0.0000 kJ/mol
+--------------------------------------------------------------------------------
+
+
+  Moment of inertia tensor (10^-46 x kgm^2): 
+
+-------------------------------------------------------------------------------
+                x           y           z           Principal axis system
+-------------------------------------------------------------------------------
+       x          0.00        0.00        0.00            0.000000
+       y          0.00        0.26        0.00            0.260393
+       z          0.00        0.00        0.26            0.260393
+-------------------------------------------------------------------------------
+  Centre of mass (Ang) =     1.234722     0.000000     0.000000
+-------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+  Thermodynamics from rotation and translation at T =     300.0000 K  
+                                              and p =       1.0000 atm  
+-------------------------------------------------------------------------------
+  Rotational    partition function =           2.966491
+  Translational partition function =          70.738735
+  Rotational free energy           =          -0.076690 eV
+                                   =          -7.399381 kJ/mol
+  Translational free energy        =          -0.413215 eV
+                                   =         -39.868850 kJ/mol
+  Total free energy                =          -0.489904 eV
+                                   =         -47.268231 kJ/mol
+-------------------------------------------------------------------------------
+
+
+  Vibrational Frequency Calculation : 
+
+--------------------------------------------------------------------------------
+
+  Frequencies (cm-1) : 
+
+   -0.00    0.00    0.00    0.00    0.00 2991.72
+
+
+--------------------------------------------------------------------------------
+  Vibrational properties (for cluster):  Temperature  =     300.000 K
+--------------------------------------------------------------------------------
+  Zero point energy            =        0.185464 eV
+  Entropy                      =        0.000000 eV/K
+                               =        0.000075 J/(mol.K)
+  Helmholtz free-energy        =        0.185464 eV
+                               =       17.894458 kJmol-1
+  Free energy (equipartition)  =        0.068860 eV
+  - T*S       (equipartition)  =        0.043008 eV
+  Uvib        (equipartition)  =        0.025852 eV
+  Mean kinetic energy          =        0.092732 eV
+  Heat capacity - const volume =        0.000000 eV/K
+                               =        0.001005 J/(mol.K)
+--------------------------------------------------------------------------------
+
+  Mean-squared displacements for phonons (Ang**2) : 
+
+--------------------------------------------------------------------------------
+   Atom             x            y            z
+--------------------------------------------------------------------------------
+       1         0.005478     0.000000     0.000000
+       2         0.000004     0.000000     0.000000
+--------------------------------------------------------------------------------
+
+
+
+  Time to end of properties =       0.0048 seconds
+
+
+  Peak dynamic memory used =       1.78 MB 
+
+
+  Timing analysis for GULP :
+
+--------------------------------------------------------------------------------
+  Task / Subroutine                                          Time (Seconds)
+--------------------------------------------------------------------------------
+  Calculation of phonons                                          0.0002
+--------------------------------------------------------------------------------
+  Total CPU time                                                  0.0048
+--------------------------------------------------------------------------------
+
+
+  Job Finished at 11:59.34  8th July       2020                               
+

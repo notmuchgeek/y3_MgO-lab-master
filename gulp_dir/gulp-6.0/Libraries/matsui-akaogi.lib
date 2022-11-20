@@ -1,0 +1,13 @@
+#
+#  MATSUI AKAOGI-library of potentials for GULP
+#
+#  from Matsui and Akaogi, Mol. Simul. 6, 239 (1991)
+#
+species
+Ti core  2.196
+O  core -1.098
+
+buckingham kcal
+Ti core Ti core  717653.95712 0.154 120.997 20.0 
+Ti core O  core  391052.74416 0.194 290.392 20.0 
+O  core O  core  271718.83107 0.234 696.941 20.0

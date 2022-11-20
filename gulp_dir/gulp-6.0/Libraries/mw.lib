@@ -1,0 +1,14 @@
+#
+#  Stillinger-Weber potential for water : MW
+#
+#  Molinero and Moore, J. Phys. Chem. B, 113, 4008 (2009)
+#
+species
+O core 0.0
+sw2gen kcal
+O core O core 43.629703798353 2.3925 0.6022245584 4 0 0.0 4.30650
+sw3 kcal
+O O O 143.27535 109.47 2.871 2.871 0.0 4.3065 0.0 4.3065 0.0 8.613
+element
+mass O 18.0
+end

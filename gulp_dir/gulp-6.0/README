@@ -1,0 +1,52 @@
+Distribution for GULP 6.0 :
+===========================
+
+The following is a guide to the directories that should be present in this distribution :
+
+Docs        : documentation and information relating to the program
+Examples    : example input files for the program
+Libraries   : library files for the program
+Src         : source code and files relating to the installation of the program
+Utils       : utility routines associated with GULP
+
+To install GULP on most Unix/Linux machines :
+
+(1) Go to Src/
+(2) Type "./mkgulp"
+    NB: There are several flags that can be added depending on what options are
+        required. The main options are:
+        -h => print help text to list the options below
+        -m => parallel compilation with MPI
+        -d => compile with debug options
+        -f => compile with FFTW3 for Smooth Particle Mesh Ewald
+        -k => compile with OpenKIM (needs version 2.0)
+        -p => compile with Plumed plug-in
+        -c ARG => change the compiler to "ARG". gfortran (default) and intel are supported.
+        -j ARG => specify the number of cores to be used for task (i.e. make -j)
+
+        -t ARG => change the task to ARG. gulp (default), clean, lib, tar, fox-clean
+(3) If the above fails - edit "mkgulp" and correct the settings for your machine
+    NB: Look for the string "USER" for places where you may need to edit things that
+        are specific to your machine. Usually the libraries are in a different location
+        or not installed if compilation fails.
+(4) Set the following environment variables to indicate where the program files can
+    be found:
+
+    GULP_LIB    The location of the Libraries directory
+    GULP_DOC    The location of the Doc directory
+    ALAMODE_DIR The main directory for the alamode code for thermal conductivity calculations
+                NB: The current version works with either Alamode version 0.9.8, 1.0.2 or 1.1.0
+
+Compiler notes:
+---------------
+1) gfortran: Compilation requires version 4.6 or more recent 
+             NB: If using gfortran v10 it compilation in serial should be fine. If you want to 
+                 compile in parallel then you need to make sure that "-fallow-argument-mismatch" 
+                 is added to mpif90/mpicc in mkgulp.
+2) Intel: Some old versions may fail to compile, but the following have been tested and verified to work:
+   2019.3.199
+   2018.1.163
+   2017.4.056
+   17.0.0.098
+   16.0.1.150
+   15.0.0.090

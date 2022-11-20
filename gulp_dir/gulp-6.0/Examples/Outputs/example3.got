@@ -1,0 +1,226 @@
+********************************************************************************
+*                       GENERAL UTILITY LATTICE PROGRAM                        *
+*                                 Julian Gale                                  *
+*                       Curtin Institute for Computation                       *
+*                    School of Molecular and Life Sciences                     *
+*                    Curtin University, Western Australia                      *
+********************************************************************************
+* Version = 6.0.0 * Last modified =   7th July 2020                            *
+********************************************************************************
+*  single       - perform a single point run                                   *
+*  potential    - calculate electrostatic site potentials                      *
+*  efg          - calculate electrostatic electric field gradient              *
+*  eem          - electronegativity equalisation method (new parameters)       *
+*  bond         - calculate bond lengths                                       *
+********************************************************************************
+
+  Job Started  at 13:45.56  8th July       2020                               
+
+  Number of CPUs =     1
+
+  Host name      = M-A0034725                              
+
+
+  Total number of configurations input =      1
+
+********************************************************************************
+*  Input for Configuration =   1                                               *
+********************************************************************************
+
+  Formula = Si3O6                                                       
+
+  Number of irreducible atoms/shells =       2
+
+
+  Total number atoms/shells =       9
+
+  Dimensionality = 3               :  Bulk   
+
+
+  Symmetry :
+
+  Crystal family                   :  Hexagonal   
+  Crystal class  (Groth - 1921)    :  Trigonal Trapezohedral               
+
+  Space group (noncentrosymmetric) :  P 31 2 1        
+
+  Patterson group                  :  P -3 m 1 
+
+  Cartesian lattice vectors (Angstroms) :
+
+        4.914850    0.000000    0.000000
+       -2.457425    4.256385    0.000000
+        0.000000    0.000000    5.406290
+
+  Cell parameters (Angstroms/Degrees):
+
+  a =       4.9148    alpha =  90.0000
+  b =       4.9148    beta  =  90.0000
+  c =       5.4063    gamma = 120.0000
+
+  Initial cell volume =         113.096849 Angs**3
+
+  Temperature of configuration =   0.00     K 
+
+  Pressure of configuration =         0.000 GPa 
+
+  Fractional coordinates of asymmetric unit :
+
+--------------------------------------------------------------------------------
+   No.  Atomic       x           y          z         Charge      Occupancy
+        Label      (Frac)      (Frac)     (Frac)        (e)         (Frac)  
+--------------------------------------------------------------------------------
+      1 Si    c    0.468200    0.000000    0.333333     0.00000    1.000000    
+      2 O     c    0.413100    0.266100    0.213100     0.00000    1.000000    
+--------------------------------------------------------------------------------
+
+
+
+  Bond calculation :
+
+--------------------------------------------------------------------------------
+  Asymmetric unit site  Full lattice sites    No.  Distance      Bond Type      
+                                                    (Angs)                      
+--------------------------------------------------------------------------------
+  No bonds found for any atoms in the system
+--------------------------------------------------------------------------------
+
+
+
+********************************************************************************
+*  General input information                                                   *
+********************************************************************************
+
+  Species output for all configurations : 
+
+--------------------------------------------------------------------------------
+  Species    Type    Atomic    Atomic    Charge       Radii (Angs)     Library
+                     Number     Mass       (e)     Cova   Ionic  VDW   Symbol
+--------------------------------------------------------------------------------
+    Si       Core       14      28.09   0.000000   1.200  0.000  2.100          
+    O        Core        8      16.00   0.000000   0.730  0.000  1.360          
+--------------------------------------------------------------------------------
+
+
+
+  Charge equilibration parameters for EEM: 
+
+--------------------------------------------------------------------------------
+  Element   Chi         Mu         Q0        E0         Qmin        Qmax 
+            (eV)       (eV)       (au)      (eV)        (au)        (au) 
+--------------------------------------------------------------------------------
+   O      8.50000    11.08287    0.0000    0.000        -           -   
+   Si     1.33182     6.49259    0.0000    0.000        -           -   
+--------------------------------------------------------------------------------
+
+
+  Lattice summation method               =    Ewald          (3-D)
+                                         =    Parry          (2-D)
+                                         =    Saunders et al (1-D)
+  Accuracy factor for lattice sums       =   12.000
+
+
+  Analytic derivatives to be used
+
+  Time limit = Infinity
+
+********************************************************************************
+*  Output for configuration   1                                                *
+********************************************************************************
+
+
+
+  Final charges from EEM :
+
+--------------------------------------------------------------------------------
+    Atom no.            Atomic No.             Charge
+--------------------------------------------------------------------------------
+         1                  14                 1.6807092
+         2                   8                -0.8403546
+--------------------------------------------------------------------------------
+  Electronegativity =         2.825771 eV
+  Self energy       =        65.837660 eV
+--------------------------------------------------------------------------------
+
+  Components of energy : 
+
+--------------------------------------------------------------------------------
+  Interatomic potentials     =           0.00000000 eV    
+  Monopole - monopole (real) =         -38.69513225 eV    
+  Monopole - monopole (recip)=         -45.21396612 eV    
+  Monopole - monopole (total)=         -83.90909838 eV    
+  Self energy (EEM/QEq/SM)   =          65.83765957 eV    
+--------------------------------------------------------------------------------
+  Total lattice energy       =         -18.07143880 eV    
+--------------------------------------------------------------------------------
+  Total lattice energy       =           -1743.6176 kJ/(mole unit cells)
+--------------------------------------------------------------------------------
+
+
+  Final charges from EEM :
+
+--------------------------------------------------------------------------------
+    Atom no.            Atomic No.             Charge
+--------------------------------------------------------------------------------
+         1                  14                 1.6807092
+         2                   8                -0.8403546
+--------------------------------------------------------------------------------
+  Electronegativity =         2.825771 eV
+  Self energy       =        65.837660 eV
+--------------------------------------------------------------------------------
+
+
+  Electrostatic potential at atomic positions :
+
+-------------------------------------------------------------------------------
+ Site  Atomic      Potential                Derivatives (V/Angs)
+ No.   Label          (V)                 x           y           z
+-------------------------------------------------------------------------------
+     1 Si    c    -20.330360           0.266330   -0.000001    0.000005
+     2 O     c     12.952852           3.462283    0.098905   -1.669205
+-------------------------------------------------------------------------------
+
+
+  Electric Field Gradients at atomic positions :
+
+-------------------------------------------------------------------------------
+   Site no.                      EFGs (V/Angs**2)
+                xx        xy        yy        xz        yz        zz
+-------------------------------------------------------------------------------
+        1     -1.0653    0.0000    0.9093    0.0000    0.2285    0.1560
+        2     -4.8286   -6.9616    4.7773    4.0760  -11.6484    0.0513
+-------------------------------------------------------------------------------
+
+
+  EFG Tensor properties :
+
+-------------------------------------------------------------------------------
+   Site no.    Diagonalised EFGs (V/Angs**2)          eVzz/h        Asymmetry
+                 xx        yy        zz             (MHz/barn)      Parameter
+-------------------------------------------------------------------------------
+        1       0.0921    0.9732   -1.0653             2.5759        0.8272
+        2      -7.1262  -10.0658   17.1920            41.5697        0.1710
+-------------------------------------------------------------------------------
+
+  Total time to end of atomic site potentials =       0.0047 s
+
+
+  Peak dynamic memory used =       1.80 MB 
+
+
+  Timing analysis for GULP :
+
+--------------------------------------------------------------------------------
+  Task / Subroutine                                          Time (Seconds)
+--------------------------------------------------------------------------------
+  Calculation of real space energy using symmetry                 0.0002
+  Calculation of site potentials                                  0.0002
+  Electronegativity equalisation                                  0.0004
+  Symmetry generation of equivalent positions                     0.0002
+--------------------------------------------------------------------------------
+  Total CPU time                                                  0.0047
+--------------------------------------------------------------------------------
+
+
+  Job Finished at 13:45.56  8th July       2020                               
+
