@@ -1,0 +1,24 @@
+#
+#  Bond order potentials for water
+#
+#  Machine-learning generated bond order potential for water
+#  NB: This is a coarse-grained model with only O present
+#  NB: This is the ML-BOP variant without dihedrals
+#
+#  H. Chan et al, Nature Comm., 10, 379 (2019)
+#
+species
+O  core 0.0
+botwobody
+O  core O  core 1684.301476 473.621419  2.750522 2.199640 &
+  3.012250 3.553272 
+borepulsive
+O  core O  core 0.0 1 0.770018 0.00000 
+boattractive theta
+O  core O  core 1.0d-6 1 0.770018 0.00000 77638.534354 16.148387 -0.471029
+#
+#  Correct the mass of O to be that of water
+#
+element
+mass O 18.0
+end

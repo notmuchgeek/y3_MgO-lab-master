@@ -1,0 +1,542 @@
+********************************************************************************
+*                       GENERAL UTILITY LATTICE PROGRAM                        *
+*                                 Julian Gale                                  *
+*                       Curtin Institute for Computation                       *
+*                    School of Molecular and Life Sciences                     *
+*                    Curtin University, Western Australia                      *
+********************************************************************************
+* Version = 6.0.0 * Last modified =   7th July 2020                            *
+********************************************************************************
+*  single       - perform a single point run                                   *
+*  md           - perform molecular dynamics run                               *
+*  conv         - constant volume calculation                                  *
+********************************************************************************
+* Example of using multiple temperature ramps in an MD run                     *
+********************************************************************************
+
+
+  Job Started  at 12:00.57  8th July       2020                               
+
+  Number of CPUs =     1
+
+  Host name      = M-A0034725                              
+
+
+  Total number of configurations input =      1
+
+********************************************************************************
+*  Input for Configuration =   1                                               *
+********************************************************************************
+
+  Formula = Mg32O32                                                     
+
+  Number of irreducible atoms/shells =      64
+
+
+  Total number atoms/shells =      64
+
+  Dimensionality = 3               :  Bulk   
+
+
+
+  Supercell dimensions :  x =   2  y =   2  z =   2
+
+  Cartesian lattice vectors (Angstroms) :
+
+        8.424000    0.000000    0.000000
+        0.000000    8.424000    0.000000
+        0.000000    0.000000    8.424000
+
+  Cell parameters (Angstroms/Degrees):
+
+  a =       8.4240    alpha =  90.0000
+  b =       8.4240    beta  =  90.0000
+  c =       8.4240    gamma =  90.0000
+
+  Initial cell volume =         597.798849 Angs**3
+
+  Temperature of configuration =   300.     K 
+
+  Pressure of configuration =         0.000 GPa 
+
+  Fractional coordinates of asymmetric unit :
+
+--------------------------------------------------------------------------------
+   No.  Atomic       x           y          z         Charge      Occupancy
+        Label      (Frac)      (Frac)     (Frac)        (e)         (Frac)  
+--------------------------------------------------------------------------------
+      1 Mg    c    0.000000 *  0.000000 *  0.000000 *   2.00000    1.000000    
+      2 Mg    c    0.000000 *  0.000000 *  0.500000 *   2.00000    1.000000    
+      3 Mg    c    0.000000 *  0.500000 *  0.000000 *   2.00000    1.000000    
+      4 Mg    c    0.000000 *  0.500000 *  0.500000 *   2.00000    1.000000    
+      5 Mg    c    0.500000 *  0.000000 *  0.000000 *   2.00000    1.000000    
+      6 Mg    c    0.500000 *  0.000000 *  0.500000 *   2.00000    1.000000    
+      7 Mg    c    0.500000 *  0.500000 *  0.000000 *   2.00000    1.000000    
+      8 Mg    c    0.500000 *  0.500000 *  0.500000 *   2.00000    1.000000    
+      9 Mg    c    0.000000 *  0.250000 *  0.250000 *   2.00000    1.000000    
+     10 Mg    c    0.000000 *  0.250000 *  0.750000 *   2.00000    1.000000    
+     11 Mg    c    0.000000 *  0.750000 *  0.250000 *   2.00000    1.000000    
+     12 Mg    c    0.000000 *  0.750000 *  0.750000 *   2.00000    1.000000    
+     13 Mg    c    0.500000 *  0.250000 *  0.250000 *   2.00000    1.000000    
+     14 Mg    c    0.500000 *  0.250000 *  0.750000 *   2.00000    1.000000    
+     15 Mg    c    0.500000 *  0.750000 *  0.250000 *   2.00000    1.000000    
+     16 Mg    c    0.500000 *  0.750000 *  0.750000 *   2.00000    1.000000    
+     17 Mg    c    0.250000 *  0.000000 *  0.250000 *   2.00000    1.000000    
+     18 Mg    c    0.250000 *  0.000000 *  0.750000 *   2.00000    1.000000    
+     19 Mg    c    0.250000 *  0.500000 *  0.250000 *   2.00000    1.000000    
+     20 Mg    c    0.250000 *  0.500000 *  0.750000 *   2.00000    1.000000    
+     21 Mg    c    0.750000 *  0.000000 *  0.250000 *   2.00000    1.000000    
+     22 Mg    c    0.750000 *  0.000000 *  0.750000 *   2.00000    1.000000    
+     23 Mg    c    0.750000 *  0.500000 *  0.250000 *   2.00000    1.000000    
+     24 Mg    c    0.750000 *  0.500000 *  0.750000 *   2.00000    1.000000    
+     25 Mg    c    0.250000 *  0.250000 *  0.000000 *   2.00000    1.000000    
+     26 Mg    c    0.250000 *  0.250000 *  0.500000 *   2.00000    1.000000    
+     27 Mg    c    0.250000 *  0.750000 *  0.000000 *   2.00000    1.000000    
+     28 Mg    c    0.250000 *  0.750000 *  0.500000 *   2.00000    1.000000    
+     29 Mg    c    0.750000 *  0.250000 *  0.000000 *   2.00000    1.000000    
+     30 Mg    c    0.750000 *  0.250000 *  0.500000 *   2.00000    1.000000    
+     31 Mg    c    0.750000 *  0.750000 *  0.000000 *   2.00000    1.000000    
+     32 Mg    c    0.750000 *  0.750000 *  0.500000 *   2.00000    1.000000    
+     33 O     c    0.250000 *  0.250000 *  0.250000 *  -2.00000    1.000000    
+     34 O     c    0.250000 *  0.250000 *  0.750000 *  -2.00000    1.000000    
+     35 O     c    0.250000 *  0.750000 *  0.250000 *  -2.00000    1.000000    
+     36 O     c    0.250000 *  0.750000 *  0.750000 *  -2.00000    1.000000    
+     37 O     c    0.750000 *  0.250000 *  0.250000 *  -2.00000    1.000000    
+     38 O     c    0.750000 *  0.250000 *  0.750000 *  -2.00000    1.000000    
+     39 O     c    0.750000 *  0.750000 *  0.250000 *  -2.00000    1.000000    
+     40 O     c    0.750000 *  0.750000 *  0.750000 *  -2.00000    1.000000    
+     41 O     c    0.250000 *  0.000000 *  0.000000 *  -2.00000    1.000000    
+     42 O     c    0.250000 *  0.000000 *  0.500000 *  -2.00000    1.000000    
+     43 O     c    0.250000 *  0.500000 *  0.000000 *  -2.00000    1.000000    
+     44 O     c    0.250000 *  0.500000 *  0.500000 *  -2.00000    1.000000    
+     45 O     c    0.750000 *  0.000000 *  0.000000 *  -2.00000    1.000000    
+     46 O     c    0.750000 *  0.000000 *  0.500000 *  -2.00000    1.000000    
+     47 O     c    0.750000 *  0.500000 *  0.000000 *  -2.00000    1.000000    
+     48 O     c    0.750000 *  0.500000 *  0.500000 *  -2.00000    1.000000    
+     49 O     c    0.000000 *  0.250000 *  0.000000 *  -2.00000    1.000000    
+     50 O     c    0.000000 *  0.250000 *  0.500000 *  -2.00000    1.000000    
+     51 O     c    0.000000 *  0.750000 *  0.000000 *  -2.00000    1.000000    
+     52 O     c    0.000000 *  0.750000 *  0.500000 *  -2.00000    1.000000    
+     53 O     c    0.500000 *  0.250000 *  0.000000 *  -2.00000    1.000000    
+     54 O     c    0.500000 *  0.250000 *  0.500000 *  -2.00000    1.000000    
+     55 O     c    0.500000 *  0.750000 *  0.000000 *  -2.00000    1.000000    
+     56 O     c    0.500000 *  0.750000 *  0.500000 *  -2.00000    1.000000    
+     57 O     c    0.000000 *  0.000000 *  0.250000 *  -2.00000    1.000000    
+     58 O     c    0.000000 *  0.000000 *  0.750000 *  -2.00000    1.000000    
+     59 O     c    0.000000 *  0.500000 *  0.250000 *  -2.00000    1.000000    
+     60 O     c    0.000000 *  0.500000 *  0.750000 *  -2.00000    1.000000    
+     61 O     c    0.500000 *  0.000000 *  0.250000 *  -2.00000    1.000000    
+     62 O     c    0.500000 *  0.000000 *  0.750000 *  -2.00000    1.000000    
+     63 O     c    0.500000 *  0.500000 *  0.250000 *  -2.00000    1.000000    
+     64 O     c    0.500000 *  0.500000 *  0.750000 *  -2.00000    1.000000    
+--------------------------------------------------------------------------------
+
+
+
+********************************************************************************
+*  General input information                                                   *
+********************************************************************************
+
+  Species output for all configurations : 
+
+--------------------------------------------------------------------------------
+  Species    Type    Atomic    Atomic    Charge       Radii (Angs)     Library
+                     Number     Mass       (e)     Cova   Ionic  VDW   Symbol
+--------------------------------------------------------------------------------
+    Mg       Core       12      24.31   2.000000   1.100  0.000  1.640          
+    O        Core        8      16.00  -2.000000   0.730  0.000  1.360          
+--------------------------------------------------------------------------------
+
+
+  Lattice summation method               =    Ewald          (3-D)
+                                         =    Parry          (2-D)
+                                         =    Saunders et al (1-D)
+  Accuracy factor for lattice sums       =   12.000
+
+
+  Analytic derivatives to be used
+
+  Time limit = Infinity
+
+  Maximum range for interatomic potentials =        12.000000 Angstroms
+
+  Taper potentials to zero over   3.0000 Angstroms using M-D-F
+
+  General interatomic potentials :
+
+--------------------------------------------------------------------------------
+Atom  Types   Potential      Parameter       Value         Units   Cutoffs(Ang)
+  1     2                                                            Min /  Max 
+--------------------------------------------------------------------------------
+O    c Mg   c Buckingham    Buckingham A     1295.5534    eV        0.000 12.000
+                            Buckingham rho  0.30000000    Ang       
+                            Buckingham C     0.0000000    eV*Ang^6  
+--------------------------------------------------------------------------------
+O    c O    c Buckingham    Buckingham A     22764.000    eV        0.000 12.000
+                            Buckingham rho  0.14900000    Ang       
+                            Buckingham C     27.880000    eV*Ang^6  
+--------------------------------------------------------------------------------
+
+********************************************************************************
+*  Output for configuration   1                                                *
+********************************************************************************
+
+
+  Components of energy : 
+
+--------------------------------------------------------------------------------
+  Interatomic potentials     =         215.08638298 eV    
+  Monopole - monopole (real) =        -910.60764793 eV    
+  Monopole - monopole (recip)=        -618.85912212 eV    
+  Monopole - monopole (total)=       -1529.46677006 eV    
+--------------------------------------------------------------------------------
+  Total lattice energy       =       -1314.38038708 eV    
+--------------------------------------------------------------------------------
+  Total lattice energy       =         -126817.6152 kJ/(mole unit cells)
+--------------------------------------------------------------------------------
+
+  Equations of motion will be integrated using stochastic algorithm.
+
+********************************************************************************
+*  Molecular Dynamics                                                          *
+********************************************************************************
+
+  Canonical ensemble (NVT) to be used
+
+  Relaxation time for thermostat=           0.010000 ps
+  No. of mobile ions        =                 64
+
+  No. of degrees of freedom =                189
+
+  Time step                 =           0.001000 ps
+  Equilibration time        =           1.000000 ps
+  Production time           =           1.000000 ps
+  Scaling time              =           1.000000 ps
+  Scaling frequency         =           0.001000 ps
+  Sampling frequency        =           0.050000 ps
+  Write frequency           =           0.050000 ps
+  Temperature ramp    1 : 
+    Start of T change       =           0.500000 ps
+    End   of T change       =           1.500000 ps
+    Size  of T change       =         100.000000 K/ps
+  Temperature ramp    2 : 
+    Start of T change       =           1.700000 ps
+    End   of T change       =           2.200000 ps
+    Size  of T change       =         -50.000000 K/ps
+  TD-Force start time       =           0.000000 ps
+  TD-Field start time       =           0.000000 ps
+
+
+
+  Molecular dynamics equilibration :
+
+  ** Time :            0.05000 ps :
+     Properties:                   Instantaneous       Averaged        Target
+       Kinetic energy    (eV) =       2.480056          2.480056
+       Potential energy  (eV) =   -1311.138068      -1311.138068
+       Total energy      (eV) =   -1308.658012      -1308.658012
+       Temperature       (K)  =     304.548360        304.548360      300.0000
+       Pressure         (GPa) =       2.292518          2.292518
+  ** Time :            0.10000 ps :
+     Properties:                   Instantaneous       Averaged        Target
+       Kinetic energy    (eV) =       2.568112          2.524084
+       Potential energy  (eV) =   -1311.934615      -1311.536341
+       Total energy      (eV) =   -1309.366503      -1309.012258
+       Temperature       (K)  =     315.361597        309.954978      300.0000
+       Pressure         (GPa) =       1.741970          2.017244
+  ** Time :            0.15000 ps :
+     Properties:                   Instantaneous       Averaged        Target
+       Kinetic energy    (eV) =       2.627696          2.558621
+       Potential energy  (eV) =   -1312.388456      -1311.820380
+       Total energy      (eV) =   -1309.760760      -1309.261759
+       Temperature       (K)  =     322.678432        314.196130      300.0000
+       Pressure         (GPa) =       1.591209          1.875232
+  ** Time :            0.20000 ps :
+     Properties:                   Instantaneous       Averaged        Target
+       Kinetic energy    (eV) =       2.118367          2.448558
+       Potential energy  (eV) =   -1311.757310      -1311.804612
+       Total energy      (eV) =   -1309.638943      -1309.356055
+       Temperature       (K)  =     260.133424        300.680453      300.0000
+       Pressure         (GPa) =       1.817231          1.860732
+  ** Time :            0.25000 ps :
+     Properties:                   Instantaneous       Averaged        Target
+       Kinetic energy    (eV) =       2.833040          2.525454
+       Potential energy  (eV) =   -1312.733883      -1311.990466
+       Total energy      (eV) =   -1309.900843      -1309.465012
+       Temperature       (K)  =     347.894457        310.123254      300.0000
+       Pressure         (GPa) =       1.185237          1.725633
+  ** Time :            0.30000 ps :
+     Properties:                   Instantaneous       Averaged        Target
+       Kinetic energy    (eV) =       3.215271          2.640424
+       Potential energy  (eV) =   -1312.537816      -1312.081691
+       Total energy      (eV) =   -1309.322545      -1309.441268
+       Temperature       (K)  =     394.832112        324.241397      300.0000
+       Pressure         (GPa) =       1.410730          1.673149
+  ** Time :            0.35000 ps :
+     Properties:                   Instantaneous       Averaged        Target
+       Kinetic energy    (eV) =       3.230762          2.724758
+       Potential energy  (eV) =   -1311.423584      -1311.987676
+       Total energy      (eV) =   -1308.192821      -1309.262918
+       Temperature       (K)  =     396.734417        334.597543      300.0000
+       Pressure         (GPa) =       2.499918          1.791259
+  ** Time :            0.40000 ps :
+     Properties:                   Instantaneous       Averaged        Target
+       Kinetic energy    (eV) =       2.038826          2.639016
+       Potential energy  (eV) =   -1311.701587      -1311.951915
+       Total energy      (eV) =   -1309.662761      -1309.312899
+       Temperature       (K)  =     250.365808        324.068576      300.0000
+       Pressure         (GPa) =       1.896051          1.804358
+  ** Time :            0.45000 ps :
+     Properties:                   Instantaneous       Averaged        Target
+       Kinetic energy    (eV) =       1.754046          2.540686
+       Potential energy  (eV) =   -1312.009509      -1311.958314
+       Total energy      (eV) =   -1310.255463      -1309.417628
+       Temperature       (K)  =     215.395154        311.993751      300.0000
+       Pressure         (GPa) =       1.592520          1.780821
+  ** Time :            0.50000 ps :
+     Properties:                   Instantaneous       Averaged        Target
+       Kinetic energy    (eV) =       2.723212          2.558939
+       Potential energy  (eV) =   -1312.369257      -1311.999409
+       Total energy      (eV) =   -1309.646045      -1309.440470
+       Temperature       (K)  =     334.407745        314.235151      300.0000
+       Pressure         (GPa) =       1.746301          1.777369
+  ** Time :            0.55000 ps :
+     Properties:                   Instantaneous       Averaged        Target
+       Kinetic energy    (eV) =       2.968599          2.596181
+       Potential energy  (eV) =   -1312.127647      -1312.011067
+       Total energy      (eV) =   -1309.159048      -1309.414886
+       Temperature       (K)  =     364.540992        318.808409      305.0000
+       Pressure         (GPa) =       1.657003          1.766426
+  ** Time :            0.60000 ps :
+     Properties:                   Instantaneous       Averaged        Target
+       Kinetic energy    (eV) =       2.266791          2.568732
+       Potential energy  (eV) =   -1312.093494      -1312.017936
+       Total energy      (eV) =   -1309.826703      -1309.449204
+       Temperature       (K)  =     278.359709        315.437684      310.0000
+       Pressure         (GPa) =       1.588238          1.751577
+  ** Time :            0.65000 ps :
+     Properties:                   Instantaneous       Averaged        Target
+       Kinetic energy    (eV) =       3.099291          2.609544
+       Potential energy  (eV) =   -1312.063545      -1312.021444
+       Total energy      (eV) =   -1308.964254      -1309.411900
+       Temperature       (K)  =     380.589865        320.449390      315.0000
+       Pressure         (GPa) =       1.952219          1.767011
+  ** Time :            0.70000 ps :
+     Properties:                   Instantaneous       Averaged        Target
+       Kinetic energy    (eV) =       2.987022          2.636507
+       Potential energy  (eV) =   -1312.018871      -1312.021260
+       Total energy      (eV) =   -1309.031849      -1309.384754
+       Temperature       (K)  =     366.803393        323.760390      320.0000
+       Pressure         (GPa) =       1.684101          1.761089
+  ** Time :            0.75000 ps :
+     Properties:                   Instantaneous       Averaged        Target
+       Kinetic energy    (eV) =       2.980845          2.659462
+       Potential energy  (eV) =   -1311.827110      -1312.008317
+       Total energy      (eV) =   -1308.846265      -1309.348854
+       Temperature       (K)  =     366.044796        326.579351      325.0000
+       Pressure         (GPa) =       1.888355          1.769574
+  ** Time :            0.80000 ps :
+     Properties:                   Instantaneous       Averaged        Target
+       Kinetic energy    (eV) =       2.896765          2.674294
+       Potential energy  (eV) =   -1311.533551      -1311.978644
+       Total energy      (eV) =   -1308.636787      -1309.304350
+       Temperature       (K)  =     355.719813        328.400630      330.0000
+       Pressure         (GPa) =       2.246991          1.799412
+  ** Time :            0.85000 ps :
+     Properties:                   Instantaneous       Averaged        Target
+       Kinetic energy    (eV) =       3.176659          2.703845
+       Potential energy  (eV) =   -1312.046174      -1311.982616
+       Total energy      (eV) =   -1308.869515      -1309.278772
+       Temperature       (K)  =     390.090583        332.029450      335.0000
+       Pressure         (GPa) =       1.650518          1.790654
+  ** Time :            0.90000 ps :
+     Properties:                   Instantaneous       Averaged        Target
+       Kinetic energy    (eV) =       3.218367          2.732429
+       Potential energy  (eV) =   -1311.295540      -1311.944445
+       Total energy      (eV) =   -1308.077172      -1309.212016
+       Temperature       (K)  =     395.212325        335.539610      340.0000
+       Pressure         (GPa) =       2.228670          1.814988
+  ** Time :            0.95000 ps :
+     Properties:                   Instantaneous       Averaged        Target
+       Kinetic energy    (eV) =       2.831646          2.737651
+       Potential energy  (eV) =   -1311.073262      -1311.898594
+       Total energy      (eV) =   -1308.241616      -1309.160942
+       Temperature       (K)  =     347.723304        336.180857      345.0000
+       Pressure         (GPa) =       2.061983          1.827988
+  ** Time :            1.00000 ps :
+     Properties:                   Instantaneous       Averaged        Target
+       Kinetic energy    (eV) =       2.810100          2.741274
+       Potential energy  (eV) =   -1311.806291      -1311.893979
+       Total energy      (eV) =   -1308.996191      -1309.152705
+       Temperature       (K)  =     345.077472        336.625688      350.0000
+       Pressure         (GPa) =       1.859969          1.829587
+
+  Molecular dynamics production :
+
+  ** Time :            0.05000 ps :
+     Properties:                   Instantaneous       Averaged        Target
+       Kinetic energy    (eV) =       2.572159          2.572159
+       Potential energy  (eV) =   -1311.539008      -1311.539008
+       Total energy      (eV) =   -1308.966849      -1308.966849
+       Temperature       (K)  =     315.858571        315.858571      355.0000
+       Pressure         (GPa) =       2.302627          2.302627
+  ** Time :            0.10000 ps :
+     Properties:                   Instantaneous       Averaged        Target
+       Kinetic energy    (eV) =       3.072809          2.822484
+       Potential energy  (eV) =   -1311.457731      -1311.498369
+       Total energy      (eV) =   -1308.384922      -1308.675885
+       Temperature       (K)  =     377.337892        346.598231      360.0000
+       Pressure         (GPa) =       2.127610          2.215118
+  ** Time :            0.15000 ps :
+     Properties:                   Instantaneous       Averaged        Target
+       Kinetic energy    (eV) =       2.431131          2.692033
+       Potential energy  (eV) =   -1311.879076      -1311.625272
+       Total energy      (eV) =   -1309.447945      -1308.933239
+       Temperature       (K)  =     298.540482        330.578982      365.0000
+       Pressure         (GPa) =       1.749500          2.059912
+  ** Time :            0.20000 ps :
+     Properties:                   Instantaneous       Averaged        Target
+       Kinetic energy    (eV) =       3.584210          2.915077
+       Potential energy  (eV) =   -1311.243871      -1311.529922
+       Total energy      (eV) =   -1307.659661      -1308.614844
+       Temperature       (K)  =     440.137461        357.968601      370.0000
+       Pressure         (GPa) =       2.152490          2.083057
+  ** Time :            0.25000 ps :
+     Properties:                   Instantaneous       Averaged        Target
+       Kinetic energy    (eV) =       2.733918          2.878845
+       Potential energy  (eV) =   -1311.762146      -1311.576366
+       Total energy      (eV) =   -1309.028227      -1308.697521
+       Temperature       (K)  =     335.722436        353.519368      375.0000
+       Pressure         (GPa) =       1.928000          2.052045
+  ** Time :            0.30000 ps :
+     Properties:                   Instantaneous       Averaged        Target
+       Kinetic energy    (eV) =       2.456467          2.808449
+       Potential energy  (eV) =   -1311.254494      -1311.522721
+       Total energy      (eV) =   -1308.798027      -1308.714272
+       Temperature       (K)  =     301.651734        344.874763      380.0000
+       Pressure         (GPa) =       2.060569          2.053466
+  ** Time :            0.35000 ps :
+     Properties:                   Instantaneous       Averaged        Target
+       Kinetic energy    (eV) =       2.581519          2.776031
+       Potential energy  (eV) =   -1310.618253      -1311.393511
+       Total energy      (eV) =   -1308.036734      -1308.617481
+       Temperature       (K)  =     317.008021        340.893800      385.0000
+       Pressure         (GPa) =       2.140061          2.065837
+  ** Time :            0.40000 ps :
+     Properties:                   Instantaneous       Averaged        Target
+       Kinetic energy    (eV) =       3.300023          2.841530
+       Potential energy  (eV) =   -1311.471900      -1311.403310
+       Total energy      (eV) =   -1308.171877      -1308.561780
+       Temperature       (K)  =     405.239557        348.937019      390.0000
+       Pressure         (GPa) =       1.968894          2.053719
+  ** Time :            0.45000 ps :
+     Properties:                   Instantaneous       Averaged        Target
+       Kinetic energy    (eV) =       2.823168          2.839489
+       Potential energy  (eV) =   -1310.814036      -1311.337835
+       Total energy      (eV) =   -1307.990868      -1308.498346
+       Temperature       (K)  =     346.682211        348.686485      395.0000
+       Pressure         (GPa) =       2.146398          2.064017
+  ** Time :            0.50000 ps :
+     Properties:                   Instantaneous       Averaged        Target
+       Kinetic energy    (eV) =       3.003388          2.855879
+       Potential energy  (eV) =   -1311.050508      -1311.309102
+       Total energy      (eV) =   -1308.047120      -1308.453223
+       Temperature       (K)  =     368.813018        350.699138      400.0000
+       Pressure         (GPa) =       2.197428          2.077358
+  ** Time :            0.55000 ps :
+     Properties:                   Instantaneous       Averaged        Target
+       Kinetic energy    (eV) =       3.296663          2.895951
+       Potential energy  (eV) =   -1311.104953      -1311.290543
+       Total energy      (eV) =   -1307.808290      -1308.394593
+       Temperature       (K)  =     404.827004        355.619853      400.0000
+       Pressure         (GPa) =       2.443482          2.110642
+  ** Time :            0.60000 ps :
+     Properties:                   Instantaneous       Averaged        Target
+       Kinetic energy    (eV) =       3.199047          2.921209
+       Potential energy  (eV) =   -1310.487970      -1311.223662
+       Total energy      (eV) =   -1307.288923      -1308.302454
+       Temperature       (K)  =     392.839826        358.721518      400.0000
+       Pressure         (GPa) =       2.480943          2.141500
+  ** Time :            0.65000 ps :
+     Properties:                   Instantaneous       Averaged        Target
+       Kinetic energy    (eV) =       3.325868          2.952336
+       Potential energy  (eV) =   -1311.502019      -1311.245074
+       Total energy      (eV) =   -1308.176150      -1308.292738
+       Temperature       (K)  =     408.413321        362.543964      400.0000
+       Pressure         (GPa) =       2.026898          2.132685
+  ** Time :            0.70000 ps :
+     Properties:                   Instantaneous       Averaged        Target
+       Kinetic energy    (eV) =       3.259717          2.974292
+       Potential energy  (eV) =   -1310.729845      -1311.208272
+       Total energy      (eV) =   -1307.470128      -1308.233980
+       Temperature       (K)  =     400.289977        365.240108      400.0000
+       Pressure         (GPa) =       2.507421          2.159451
+  ** Time :            0.75000 ps :
+     Properties:                   Instantaneous       Averaged        Target
+       Kinetic energy    (eV) =       3.386094          3.001745
+       Potential energy  (eV) =   -1311.289446      -1311.213684
+       Total energy      (eV) =   -1307.903352      -1308.211938
+       Temperature       (K)  =     415.808993        368.611367      397.5000
+       Pressure         (GPa) =       2.112169          2.156299
+  ** Time :            0.80000 ps :
+     Properties:                   Instantaneous       Averaged        Target
+       Kinetic energy    (eV) =       2.640102          2.979143
+       Potential energy  (eV) =   -1311.053016      -1311.203642
+       Total energy      (eV) =   -1308.412914      -1308.224499
+       Temperature       (K)  =     324.201877        365.835774      395.0000
+       Pressure         (GPa) =       2.287563          2.164503
+  ** Time :            0.85000 ps :
+     Properties:                   Instantaneous       Averaged        Target
+       Kinetic energy    (eV) =       2.586769          2.956062
+       Potential energy  (eV) =   -1310.863435      -1311.183630
+       Total energy      (eV) =   -1308.276666      -1308.227568
+       Temperature       (K)  =     317.652655        363.001473      392.5000
+       Pressure         (GPa) =       2.407877          2.178819
+  ** Time :            0.90000 ps :
+     Properties:                   Instantaneous       Averaged        Target
+       Kinetic energy    (eV) =       3.163417          2.967582
+       Potential energy  (eV) =   -1311.325573      -1311.191515
+       Total energy      (eV) =   -1308.162156      -1308.223934
+       Temperature       (K)  =     388.464449        364.416082      390.0000
+       Pressure         (GPa) =       2.448741          2.193815
+  ** Time :            0.95000 ps :
+     Properties:                   Instantaneous       Averaged        Target
+       Kinetic energy    (eV) =       3.095982          2.974340
+       Potential energy  (eV) =   -1311.293048      -1311.196859
+       Total energy      (eV) =   -1308.197066      -1308.222520
+       Temperature       (K)  =     380.183475        365.245945      387.5000
+       Pressure         (GPa) =       2.511244          2.210522
+  ** Time :            1.00000 ps :
+     Properties:                   Instantaneous       Averaged        Target
+       Kinetic energy    (eV) =       3.230274          2.987136
+       Potential energy  (eV) =   -1310.848612      -1311.179447
+       Total energy      (eV) =   -1307.618338      -1308.192311
+       Temperature       (K)  =     396.674474        366.817372      385.0000
+       Pressure         (GPa) =       2.653682          2.232680
+
+  Peak dynamic memory used =       1.99 MB 
+
+
+  Timing analysis for GULP :
+
+--------------------------------------------------------------------------------
+  Task / Subroutine                                          Time (Seconds)
+--------------------------------------------------------------------------------
+  Calculation of reciprocal space energy and derivatives          0.9285
+  Calculation of real space energy and derivatives               20.1382
+  Calculation of matrix inversion                                 0.0014
+  Molecular dynamics - update of geometry                         0.0101
+  Molecular dynamics - predictor                                  0.0034
+  Molecular dynamics - corrector                                  0.0030
+  Molecular dynamics - velocity correction                        0.0016
+  Global summation overhead                                       0.0012
+--------------------------------------------------------------------------------
+  Total CPU time                                                 21.1397
+--------------------------------------------------------------------------------
+
+
+  Dump file written as example69.res
+
+
+  Job Finished at 12:01.18  8th July       2020                               
+

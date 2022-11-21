@@ -1,0 +1,25 @@
+opti conp dist full nosym prop phon noden defe
+cutd 3.0
+cell
+5.4 5.4 5.4 90 90 90
+frac
+Si core  0.00 0.00 0.00
+Si core  0.25 0.25 0.25
+space
+216
+# NB The space group for Si is 227, but this group also works
+
+centre 0.0 0.0 0.0 
+size 4.0 10.0
+vaca Si 0.0 0.0 0.0
+
+boonebody
+Si core 0.0 0.00000109990 0.78734 0.78734
+botwobody
+Si core Si core 1830.800 471.1800 2.47990 1.7322  2.7 3.0
+borepulsive
+Si core Si core 3 1.0 1.7322
+boattractive theta
+Si core Si core 3 1.0 1.7322 100390.0 16.2180 -0.59826
+
+dump every example28.grs

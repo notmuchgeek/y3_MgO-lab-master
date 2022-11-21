@@ -1,0 +1,17 @@
+grad conv hess phon noden debug 
+finite 0.0001
+
+cart
+Si1 core 0.0 0.0 0.0
+O1  core -2.5 0.0 0.0
+O1  core 2.7 0.0 0.0
+O1  core 0.0 2.5 0.0
+O1  core 0.0 -2.6 0.0
+O1  core 0.0 0.0 2.5
+
+Species
+O1 core O 
+Si1 core Si 
+
+library tersoff_zrl
+

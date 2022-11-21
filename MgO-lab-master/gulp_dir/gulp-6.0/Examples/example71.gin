@@ -1,0 +1,16 @@
+fit conp
+cart
+Ca core 0.0  0.0 0.0 
+O  core 2.5  0.0 0.0
+O  shel 2.3  0.0 0.0
+species
+Ca core 2.0
+O  core 0.8
+O  shel -2.8
+gradients sum_shell 1
+2  3.4 0.0 0.0
+buck
+Ca core O shel 2300.0 0.3 0.0 0.0 10.0 1 0 0
+spring
+O 75.0 0
+dump every example71.res

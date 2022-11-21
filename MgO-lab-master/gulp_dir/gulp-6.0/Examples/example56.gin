@@ -1,0 +1,6 @@
+grad conp
+cart
+Pb core 0.000  0.000  0.000
+O  core 0.800  0.100  0.000
+zbl
+Pb core O core 0.0 10.0 

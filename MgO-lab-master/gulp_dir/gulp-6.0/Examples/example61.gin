@@ -1,0 +1,19 @@
+opti conp nosym ehar
+title
+alumina test file
+end
+cell
+4.7602   4.7602  12.9933  90.000000  90.000000 120.0
+frac
+Al core 0.000000   0.000000   0.352160 
+O  core 0.306240   0.000000   0.250000 
+space
+167
+species
+Al core  3.000
+O  core -2.000
+fix_atom last
+buckingham
+Al core O core  2409.505 0.2649  0.00 0.0 10.0
+O  core O core    25.410 0.6937 32.32 0.0 12.0
+dump every example61.res

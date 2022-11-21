@@ -1,0 +1,286 @@
+#
+#  Modified Embedded Atom Model parameters: MEAM-2NN version with QEq
+#
+#  This library contains parameters for the combination of MEAM-2NN with
+#  charge equilibration via QEq.
+#
+#  Parameters for Li-Mn-O system:
+#
+#  E. Lee, K.-R. Lee and B.-J. Lee, J. Phys. Chem. C, 121, 13008 (2017)
+#
+#  Parameters for Li-Co-O system:
+#
+#  E. Lee, K.-R. Lee and B.-J. Lee, Comp. Mat. Sci., 142, 47 (2018)
+#
+#  Parameters for Ti-O / Si-O system:
+#
+#  E. Lee, K.-R. Lee, M.I. Baskes and B.-J. Lee, Phys. Rev. B, 93, 144110 (2016)
+#
+#  For the effective two-body potential, Baskes, an iterative solution of the
+#  equations is used. Here the number of iterations is set to 12, which seems
+#  to converge the energy and forces to the precision output by GULP for most
+#  cases, but increasing this value will ensure further convergence if issues
+#  are encountered. 
+#
+#  NB: The cutoff for the baskes twobody potential is set uniformly at 8 Angstrom
+#      with a taper function applied. This may differ from the original 
+#      implementation. 
+#
+species
+O  core  0.0
+Li core  0.0
+Si core  0.0
+Ti core  0.0
+Mn core  0.0
+Co core  0.0
+#
+#  Keywords
+#
+keyword eembond molq sm allbonds qiter
+#
+#  QEq parameters
+#
+smelectronegativity qmax
+Li   90.50    75.00  10.0 0.00  0.0   50.00 -1.0
+Si 4009.11  1055.32  0.48 0.44  0.0 4006.14 -2.0
+Ti 4014.748 1012.188 0.83 1.408 0.0 4007.97 -2.0
+Mn  214.88    71.65  1.52 0.91  0.0  210.00 -2.0
+Co  271.87    89.71  4.00 0.00  0.0  235.00 -2.0 
+O   221.37    65.88  2.39 0.00  0.0  205.63 -2.0
+smelectronegativity qmin
+Li  -109.50    75.00  10.0 0.00  0.0   50.00  1.0
+Si -4015.45  1055.32  0.48 0.44  0.0 4006.14  2.0
+Ti -4017.132 1012.188 0.83 1.408 0.0 4007.97  2.0
+Mn  -225.12    71.65  1.52 0.91  0.0  210.00  2.0 
+Co  -268.13    89.71  4.00 0.00  0.0  235.00  2.0
+O   -201.15    65.88  2.39 0.00  0.0  205.63  2.0
+smelectronegativity qrange
+Li   -9.50  25.00  10.0 0.00  0.0   0.00 -1.0  1.0
+Si    9.11  11.46  0.48 0.44  0.0   6.14 -2.0 -1.0
+Si   -3.17   5.32  0.48 0.44  0.0   0.00 -1.0  1.0
+Si  -15.45  11.46  0.48 0.44  0.0   6.14  1.0  2.0
+Ti   14.748 12.188 0.83 1.408 0.0   7.97 -2.0 -1.0
+Ti   -1.192  4.218 0.83 1.408 0.0   0.00 -1.0  1.0
+Ti  -17.132 12.188 0.83 1.408 0.0   7.97  1.0  2.0
+Mn   14.88  21.65  1.52 0.91  0.0  10.00 -2.0 -1.0
+Mn   -5.12  11.65  1.52 0.91  0.0   0.00 -1.0  1.0
+Mn  -25.12  21.65  1.52 0.91  0.0  10.00  1.0  2.0
+Co   71.87  39.71  4.00 0.00  0.0  35.00 -2.0 -1.0
+Co    1.87   4.71  4.00 0.00  0.0   0.00 -1.0  1.0
+Co  -68.13  39.71  4.00 0.00  0.0  35.00  1.0  2.0
+O    21.37  15.88  2.39 0.00  0.0   5.63 -2.0 -1.0
+O    10.11  10.25  2.39 0.00  0.0   0.00 -1.0  1.0
+O    -1.15  15.88  2.39 0.00  0.0   5.63  1.0  2.0
+#
+#  Specify self many body interactions. For alloys, cross terms need
+#  to be explicitly added.
+#
+#  A taper of 0.1 Angstroms is used here, as per the literature.
+#
+manybody
+Mn core Mn core  0.1 0.0 4.8
+Co core Co core  0.1 0.0 4.8
+Mn core Li core  0.1 0.0 4.8
+Co core Li core  0.1 0.0 4.8
+Li core Li core  0.1 0.0 4.8
+Si core Si core  0.1 0.0 4.8
+Ti core Ti core  0.1 0.0 4.8
+Mn core O  core  0.1 0.0 4.8
+Co core O  core  0.1 0.0 4.8
+Li core O  core  0.1 0.0 4.8
+Si core O  core  0.1 0.0 4.8
+Ti core O  core  0.1 0.0 4.8
+O  core O  core  0.1 0.0 4.8
+#
+#  MEAM functional - here the parameter is A*E0 from the original paper
+#
+meam_functional baskes 3 
+Mn core  2.900 0.70 10.882918
+         1.00  4.00 -3.00 -4.00
+Co core  4.410 0.70 12.022054
+         1.00  3.00  5.00 -1.00
+Li core  1.650 0.95  6.1719215
+         1.00  2.30  5.00   0.5
+Si core  4.630 0.58  5.3983462
+         1.00  1.80  5.25  -2.61
+Ti core  4.870 0.66 11.833344
+         1.00  6.80 -2.00 -12.0
+O  core  2.56  1.44 13.037404
+         1.00  0.10  0.11   0.0
+#
+#  MEAM density
+#
+meam_density baskes 3
+Mn core  1.0 4.30 2.530 
+         1.0 1.00 2.530 
+         1.0 2.00 2.530 
+         1.0 6.50 2.530 
+Co core  1.0 3.50 2.500 
+         1.0 0.00 2.500 
+         1.0 0.00 2.500 
+         1.0 4.00 2.500 
+Li core  0.5 1.65 3.020
+         0.5 1.00 3.020
+         0.5 4.00 3.020
+         0.5 1.00 3.020
+Si core  2.7972 3.55 2.350
+         2.7972 2.50 2.350
+         2.7972 0.00 2.350
+         2.7972 7.50 2.350
+Ti core  1.0 2.70 2.920
+         1.0 1.00 2.920
+         1.0 3.00 2.920
+         1.0 1.00 2.920
+O  core 12.0 5.47 1.210
+        12.0 5.30 1.210
+        12.0 5.18 1.210
+        12.0 5.57 1.210
+#
+#  MEAM density type
+#
+meam_rhotype t24 exponential
+#
+#  Effective twobody potential - depends on choice of reference phase
+#
+#  NB: Twobody potential needs to be cut off at nearest neighbour
+#
+#  BCC structures 
+#
+baskes 12 bcc
+Mn core Mn core 2.900 0.70 5.73458 2.530 8 1.0 0.00 0.0 8.0
+                5.6070 1.15470 5.6070 1.15470
+Li core Li core 1.650 0.95 3.09826 3.020 8 1.0 0.05 0.0 8.0
+                5.6070 1.15470 5.6070 1.15470
+#
+#  HCP structures
+#
+baskes 12 hcp
+Co core Co core 4.410 0.90 5.235615 2.500 12 1.0 0.00 0.0 8.0
+                0.00000 1.4142 0.00000 1.4142
+Ti core Ti core 4.870 0.66 4.7195 2.920 12 1.0 0.00 0.0 8.0 
+                0.00000 1.4142 0.00000 1.4142
+#
+#  Diamond structures
+#
+baskes 12 diamond
+Si core Si core 4.630 0.58 4.9036 2.350 4 1.0 0.00 0.0 8.0 
+                0.0 1.6330 0.0 1.6330
+#
+#  Dimer structures
+#
+baskes 12 dimer
+O  core O  core 2.560 1.44 6.8800 1.210 1 1.0 0.00 0.0 8.0
+                0.0 1.0000 0.0 1.0000
+#
+#  Alloys
+#
+baskes 12 bcc
+Li core Mn core 1.7750 1.00 4.3730569 2.6961 8 0.50 0.025 0.0 8.0
+                0.0 1.15470 5.6067 1.15470
+baskes 12 nacl
+Li core Co core 2.1200 1.00 3.9800000 2.3100 6 0.50 0.000 0.0 8.0
+                0.0 1.4142 0.0 1.4142
+Li core O  core 1.6836 1.00 7.3151056 1.9500 6 0.50 0.070 0.0 8.0
+                0.0 1.4142 0.0 1.4142
+Ti core O  core 2.1870 1.00 7.4454528 2.0649 6 0.50 0.010 0.0 8.0
+                0.0 1.4142 0.0 1.4142
+Co core O  core 1.7900 1.00 6.1000000 2.0800 6 0.50 0.020 0.0 8.0
+                0.0 1.4142 0.0 1.4142
+Mn core O  core 1.7829 1.00 5.2936439 2.1276 6 0.50 0.100 0.0 8.0
+                0.0 1.4142 0.1678456 1.4142
+baskes 12 zns
+Si core O  core 1.9550 1.00 8.1433 1.7043 4 0.50 0.03 0.0 8.0
+                0.0 1.6330 0.0 1.6330
+#
+#  Screening functions - pure metals
+#
+meam_screen 
+Mn core Mn core Mn core 0.16 2.80
+Co core Co core Co core 0.49 2.80
+Li core Li core Li core 0.16 2.80
+Si core Si core Si core 1.41 2.80
+Ti core Ti core Ti core 1.00 1.44
+O  core O  core O  core 2.00 2.80
+#
+#  Screening functions - alloys
+#
+#  Li-Mn
+#
+Li core Mn core Mn core 0.16 2.80
+Mn core Li core Li core 0.20 2.00
+Mn core Mn core Li core 0.16 2.80
+Li core Mn core Li core 0.16 2.80
+#
+#  Li-Co
+#
+Li core Co core Co core 0.16 2.80
+Co core Li core Li core 1.80 3.60
+Co core Co core Li core 0.30 2.80
+Li core Co core Li core 0.30 2.80
+#
+#  Li-O
+#
+Li core O  core O  core 0.30 1.55
+O  core Li core Li core 1.00 1.55
+O  core O  core Li core 0.60 2.15
+Li core O  core Li core 0.70 1.35
+#
+#  Si-O
+#
+Si core O  core O  core 0.29 1.27
+O  core Si core Si core 1.41 2.80
+O  core O  core Si core 1.69 2.80
+Si core O  core Si core 1.69 2.80
+#
+#  Ti-O
+#
+Ti core O  core O  core 0.97 2.51
+O  core Ti core Ti core 1.00 2.80
+O  core O  core Ti core 1.46 2.80
+Ti core O  core Ti core 1.46 2.80
+#
+#  Mn-O
+#
+Mn core O  core O  core 0.80 2.80
+O  core Mn core Mn core 4.00 5.00
+O  core O  core Mn core 0.80 2.80
+Mn core O  core Mn core 3.00 4.00
+#
+#  Co-O
+#
+Co core O  core O  core 0.10 1.80
+O  core Co core Co core 4.00 5.00
+O  core O  core Co core 0.50 4.00
+Co core O  core Co core 0.50 4.00
+#
+#  Screening functions for ternary cases
+#
+#  Li-Mn-O
+#
+Li core Mn core O  core 4.00 5.00
+Mn core Li core O  core 0.20 5.00
+O  core Li core Mn core 4.00 5.00
+#
+#  Li-Co-O
+#
+Li core Co core O  core 2.50 5.00
+Co core Li core O  core 4.00 6.00
+O  core Li core Co core 1.20 4.10
+#
+#  Set radii to allow bonds to be found
+#
+element
+cova Li   0.980
+cova O    1.030 
+end
+nobond Li Li
+nobond Li Mn
+nobond Li Co
+nobond Mn Mn
+nobond Mn Co
+nobond Co Co
+nobond Si Si
+nobond Ti Ti
+nobond O  O
+
+cutp 4.8 mdf 1.0

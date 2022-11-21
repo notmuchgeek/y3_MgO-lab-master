@@ -1,0 +1,10 @@
+# 
+#  Simple MgO Ionic Potential 
+# 
+# 
+species 
+Mg core   2.0 
+O  code  -2.0 
+buckingham 
+Mg core O core  1295.553402 0.300  0.00   0.0 12.0 
+O  core O core 22764.000000 0.149  27.88  0.0 12.0

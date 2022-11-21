@@ -1,0 +1,1100 @@
+#
+#  Modified Embedded Atom Model parameters: MEAM-2NN version
+#
+#  M.I. Baskes, 
+#  Modified embedded-atom potentials for cubic materials and impurities,
+#  Phys. Rev. B, 46, 2727 (1992)
+#
+#  Parameters for FCC metals:
+#
+#  B.-J. Lee, J.-H. Shim and M.I. Baskes, Phys. Rev. B, 68, 144112 (2003)
+#
+#  Parameters for BCC metals:
+#
+#  B.-J. Lee, M.I. Baskes, H. Kim and Y.K. Cho, Phys. Rev. B, 64, 184102 (2001)
+#
+#  Parameters for C:
+#
+#  B.-J. Lee and J.W. Lee, Calphad, 29, 7 (2005)
+#
+#  Parameters for Si:
+#
+#  B.-J. Lee, Calphad, 31, 95 (2007)
+#
+#  Parameters for Ge:
+#
+#  E. H. Kim, Y.-H. Shin and B.-J. Lee, Calphad, 32, 34 (2008)
+#
+#  Parameters for In:
+#
+#  E. C. Do, Y.-H. Shin and B.-J. Lee, Calphad, 32, 82 (2008)
+#
+#  Parameters for Mg and Mg-Al:
+#
+#  Y.-M. Kim, N.J. Kim and B.-J. Lee, Calphad, 33, 650-657 (2009)
+#
+#  Parameters for Ti and Zr:
+#
+#  Y.-M. Kim, B.-J. Lee and M.I. Baskes, Physical Rev. B, 74, 014101 (2006)
+#
+#  Changes to Cmin for Au & Si:
+#
+#  S. Ryu, C.R. Weinberger, M.I. Baskes and W. Cai, Model. Simul. Mat. Sci. Eng., 17, 075008 (2009)
+#
+#  Parameters for Li and Li-Mg:
+#
+#  Y.-M. Kim, I.H. Jung and B.-J. Lee, Model. Simul. Mat. Sci. Eng, 20, 035005 (2012)
+#
+#  Parameters for Ga, N, Ga-N, Ga-In, In-N:
+#
+#  E. C. Do, Y.-H. Shin and B.-J. Lee, J. Phys. Cond. Matter, 21, 325801 (2009)
+#
+#  Parameters for Ni-Ti:
+#
+#  K. Saitoh, K. Kubota and T. Sato, Technische Mechanik, 30, 269-279 (2010)
+#
+#  Parameters for Au-Si:
+#
+#  S. Ryu and W. Cai, J. Phys. Cond. Matter, 22, 055401 (2010)
+#  NB: Not all results are reproduced for this potential - treat with caution.
+#
+#  Parameters for Mn and Fe-Mn:
+#
+#  Y.-M. Kim, Y.-H. Shin and B.-J. Lee, Acta Mater., 57, 474-482 (2009)
+#
+#  Parameters for P and Fe-P:
+#
+#  W.-S. Ko, N.J. Kim and B.-J. Lee, J. Phys: Cond. Matter, 24, 225002 (2012)
+#
+#  Parameters for Y:
+#
+#  W.-S. Ko and B.-J. Lee, Modelling Simul. Mater. Sci. Eng., 21, 085008 (2013)
+#
+#  Parameters for Mg-Y, Mg-Sn, Mg-Ca:
+#
+#  K.-H. Kim, J.B. Jeon and B.-J. Lee, Calphad, 48, 27-34 (2015)
+#
+#  Parameters for Co and Co-Al:
+#
+#  W.-P. Dong, H.-K. Kim, W.-S. Ko, B.-M. Lee and B.-J. Lee, Calphad, 38, 7-16 (2012)
+#
+#  Parameters for Cu-Ni:
+#
+#  B.-J. Lee and J.-H. Shim, Calphad, 28, 125-132 (2004)
+#
+#  Parameters for Fe-Cr:
+#
+#  B.-J. Lee, J.-H. Shim and H. M. Park, Calphad, 25, 527-534 (2001)
+#
+#  Parameters for Co-Cu:
+#
+#  J.-H. Shim, B.-J. Lee, J.-P. Ahn, Y. Whan Cho and J.-K.Park, J. Mater. Res., 17, 925-928 (2002)
+#
+#  Parameters for Ni-W:
+#
+#  J.-H. Shim, S. Il Park, Y. Whan Cho and B.-J. Lee, J. Mater. Res., 18, 1863-1867 (2003)
+#
+#  Parameters for Fe-Cu:
+#
+#  B.-J. Lee, B.D. Wirth, J.-H. Shim, J. Kwon, S.C. Kwon, J.-H. Hong, Phys. Rev. B., 71, 184205 (2005)
+#
+#  Parameters for Fe-C:
+#
+#  B.-J. Lee, Acta Materialia, 54, 701-711 (2006)
+#
+#  Parameters for Fe-N:
+#
+#  B.-J. Lee, T.-H. Lee and S.-J. Kim, Acta Materialia, 54, 4597-4607 (2006)
+#
+#  Parameters for Fe-Pt:
+#
+#  J. Kim, Y. Koo and B.-J. Lee, J. Mater. Res., 21, 199-208 (2006)
+#
+#  Parameters for Fe-H:
+#
+#  B.-J. Lee, J.-W. Jang, Acta Materialia, 55, 6779-6788 (2008)
+#
+#  Parameters for Cu-Ti:
+#
+#  Y.-M. Kim and B.-J. Lee, Mater. Sci. Eng. A, 449-451, 733-736 (2007)
+#  NB: Ti parameters were changed slightly in this paper and so results
+#      will not match exactly those from the generic Ti parameters used
+#      for other alloys.
+#
+#  Parameters for Cu-Zr:
+#
+#  Y.-M. Kim and B.-J. Lee, J. Mater. Res., 23, 1095-1104 (2008)
+#
+#  Parameters for Ti-C and Ti-N:
+#
+#  Y.-M. Kim and B.-J. Lee, Acta Materialia, 56, 3481-3489 (2008)
+#
+#  Parameters for Fe-Ti and Fe-Nb:
+#
+#  I. Sa and B.-J. Lee, Scripta Materialia, 59, 595-598 (2008)
+#  NB: Fe-Nb calculation for C14 phase fails to reproduce the data in the
+#      paper. 
+#
+#  Parameters for Cu-Ag and Zr-Ag:
+#
+#  K.-H. Kang, I. Sa, J.-C. Lee, E. Fleury and B.-J. Lee, Scripta Materialia, 61, 801-804 (2009)
+#
+#  Parameters for Fe-Al:
+#
+#  E. Lee and B.-J. Lee, J. Phys.: Cond. Matter 22, 175702 (2010)
+#
+#  Parameters for Nb-C and Nb-N:
+#
+#  H.-K. Kim, W.-S. Jung and B.-J. Lee, J. Mater. Res., 25, 1288-1297 (2010)
+#
+#  Parameters for Al-H and Ni-H:
+#
+#  W.-S. Ko, J.-H. Shim and B.-J. Lee, J. Mater. Res. 26, 1552-1560 (2011)
+#
+#  Parameters for V-H:
+#
+#  J.-H. Shim, Y.-S. Lee, E. Fleury, Y. W. Cho, W.-S. Ko, B.-J. Lee, Calphad, 35, 302-307 (2011)
+#
+#  Parameters for V-Al and V-Ni:
+#
+#  J.-H. Shim et al, J. Membrane Sci., 430, 234-241 (2013)
+#
+#  Parameters for Fe-Ni and Cr-Ni:
+#
+#  C. Wu, B.-J. Lee, X. Su, Calphad, 57, 98–106 (2017)
+#
+#  Parameters for Si-C:
+#
+#  K.-H. Kang, T. Eun, M.-C. Jun and B.-J. Lee, J. Crystal Growth, 389, 120-133 (2014)
+#  NB: The parameters for C are used here instead of the modified CC set and so there
+#      may be small differences in results from the literature. 
+#
+#  For the effective two-body potential, Baskes, an iterative solution of the
+#  equations is used. Here the number of iterations is set to 12, which seems
+#  to converge the energy and forces to the precision output by GULP for most
+#  cases, but increasing this value will ensure further convergence if issues
+#  are encountered. 
+#
+#  NB: The cutoff for the baskes twobody potential is set uniformly at 8 Angstrom
+#      with a taper function applied. This may differ from the original 
+#      implementation. 
+#
+species
+H  core  0.0
+C  core  0.0
+N  core  0.0
+O  core  0.0
+Li core  0.0
+Mg core  0.0
+Al core  0.0
+Si core  0.0
+P  core  0.0
+Ca core  0.0
+Ti core  0.0
+Co core  0.0
+Cr core  0.0
+Mn core  0.0
+Fe core  0.0
+Cu core  0.0
+Ni core  0.0
+Ag core  0.0
+Au core  0.0
+Pd core  0.0
+Pt core  0.0
+Pb core  0.0
+Mo core  0.0
+W  core  0.0
+V  core  0.0
+Nb core  0.0
+Ta core  0.0
+Ga core  0.0
+Ge core  0.0
+In core  0.0
+Sn core  0.0
+Y  core  0.0
+Zr core  0.0
+#
+#  Specify self many body interactions. For alloys, cross terms need
+#  to be explicitly added.
+#
+#  A taper of 0.1 Angstroms is used here, as per the literature.
+#
+manybody
+Cu core Cu core  0.1 0.0 4.0
+Ag core Ag core  0.1 0.0 4.5
+Au core Au core  0.1 0.0 4.5
+Ni core Ni core  0.1 0.0 4.0
+Pd core Pd core  0.1 0.0 4.5
+Pt core Pt core  0.1 0.0 4.5
+Al core Al core  0.1 0.0 4.5
+Pb core Pb core  0.1 0.0 5.5
+Fe core Fe core  0.1 0.0 4.5
+Co core Co core  0.1 0.0 4.5
+Cr core Cr core  0.1 0.0 4.5
+Mn core Mn core  0.1 0.0 4.5
+Mo core Mo core  0.1 0.0 4.5
+W  core W  core  0.1 0.0 4.5
+V  core V  core  0.1 0.0 4.5
+Nb core Nb core  0.1 0.0 4.5
+Ta core Ta core  0.1 0.0 4.5
+C  core C  core  0.1 0.0 2.75
+Si core Si core  0.1 0.0 4.0
+Ge core Ge core  0.1 0.0 4.5
+In core In core  0.1 0.0 4.5
+Mg core Mg core  0.1 0.0 4.8
+Ca core Ca core  0.1 0.0 4.8
+Ti core Ti core  0.1 0.0 4.8
+Zr core Zr core  0.1 0.0 5.2
+Li core Li core  0.1 0.0 4.8
+O  core O  core  0.1 0.0 4.5
+N  core N  core  0.1 0.0 4.5
+P  core P  core  0.1 0.0 4.5
+H  core H  core  0.1 0.0 4.5
+Y  core Y  core  0.1 0.0 4.5
+Ga core Ga core  0.1 0.0 4.0
+Sn core Sn core  0.1 0.0 5.0
+Fe core C  core  0.1 0.0 4.5
+Fe core P  core  0.1 0.0 4.5
+Fe core Pt core  0.1 0.0 4.5
+Fe core Mn core  0.1 0.0 4.5
+Fe core Ti core  0.1 0.0 4.8
+Ge core Si core  0.1 0.0 4.5
+Li core Mg core  0.1 0.0 4.8
+Ca core Mg core  0.1 0.0 4.8
+Sn core Mg core  0.1 0.0 5.0
+Y  core Mg core  0.1 0.0 4.8
+Ga core N  core  0.1 0.0 4.0
+Ga core In core  0.1 0.0 4.0
+N  core In core  0.1 0.0 4.0
+Ni core Ti core  0.1 0.0 3.4
+Au core Si core  0.1 0.0 4.8
+Cu core Ni core  0.1 0.0 4.5
+Fe core Al core  0.1 0.0 4.5
+Fe core Cr core  0.1 0.0 4.5
+Fe core Cu core  0.1 0.0 4.5
+Fe core N  core  0.1 0.0 4.5
+Fe core H  core  0.1 0.0 4.5
+Al core H  core  0.1 0.0 4.5
+Ni core H  core  0.1 0.0 4.5
+Al core Mg core  0.1 0.0 4.5
+V  core H  core  0.1 0.0 4.5
+Ti core C  core  0.1 0.0 4.5
+Ti core N  core  0.1 0.0 4.5
+Ti core Cu core  0.1 0.0 4.5
+Zr core Cu core  0.1 0.0 4.5
+Zr core Ag core  0.1 0.0 4.5
+Ag core Cu core  0.1 0.0 4.5
+Co core Cu core  0.1 0.0 4.5
+W  core Ni core  0.1 0.0 4.5
+Nb core C  core  0.1 0.0 4.5
+Nb core N  core  0.1 0.0 4.5
+Si core C  core  0.1 0.0 4.5
+V  core Pd core  0.1 0.0 4.5
+Pd core Y  core  0.1 0.0 4.5
+Fe core Ni core  0.1 0.0 4.5
+Cr core Ni core  0.1 0.0 4.5
+Si core O  core  0.1 0.0 4.5 # Not tested
+V  core Y  core  0.1 0.0 4.5 # BCC results do not agree and FCC not exactly right
+Co core Al core  0.1 0.0 4.5 # Results do not agree for BCC
+Fe core Nb core  0.1 0.0 4.5 # Needs debugging
+Ni core V  core  0.1 0.0 4.5 # Ni3V wont optimise
+Al core V  core  0.1 0.0 4.5 # Al3V wont optimise
+#
+#  MEAM functional - here the parameter is A*E0 from the original paper
+#
+meam_functional baskes 3 
+Cu core  3.540 0.94 12.0
+         1.00  2.72  3.04  1.95
+Ag core  2.850 0.94 12.0
+         1.00  3.40  3.00  1.50
+Au core  3.930 1.00 12.0
+         1.00  2.90  1.64  2.00
+Ni core  4.450 0.94 12.0
+         1.00  3.10  1.80  4.36
+Pd core  3.910 0.94 12.0
+         1.00  4.50  1.47  4.85
+Pt core  5.770 0.90 12.0
+         1.00  3.94 -2.20  3.84
+Al core  3.360 1.16 12.04023
+         1.00  3.05  0.51  7.75
+Pb core  2.040 1.01 12.0
+         1.00  3.10  3.91  1.25
+Fe core  4.290 0.56  10.8775
+         1.00  2.60  1.80 -7.20
+P  core  2.720 1.83  9.29028
+         1.00  0.50  1.80 -1.00
+Mn core  2.900 0.70  10.8829
+         1.00  4.00 -3.00 -4.00
+Cr core  4.100 0.42  9.7143
+         1.00  0.30  5.90 -10.4
+Mo core  6.810 0.46  9.7372
+         1.00  0.50  3.10 -7.50
+W  core  8.660 0.40  9.9427
+         1.00 -0.60  0.30 -8.70
+V  core  5.300 0.73  10.5666
+         1.00  3.30  3.20 -2.00
+Nb core  7.470 0.72  10.4915
+         1.00  1.70  2.80 -1.60
+Ta core  8.090 0.67  10.7712
+         1.00  1.70  2.10 -3.20
+C  core  7.370 1.18 12.9512
+         1.00  3.20  1.44 -4.48
+Si core  4.630 0.58 5.39654
+         1.00  1.80  5.25 -2.61
+Ge core  3.850 0.66 5.71754
+         1.00  2.90  5.77 -2.20
+In core  2.510 1.00 12.0
+         1.00  3.00  3.10  2.50
+Ga core  2.900 0.97 12.0
+         1.00  2.72  2.06 -4.00
+Mg core  1.550 0.52 11.9392 # Old value was 12.0584
+         1.00  9.00 -2.00 -9.50
+Ca core  1.840 0.40 12.0000
+         1.00  1.70 -7.70  6.00
+Co core  4.410 0.90 11.98611
+         1.00  3.00  5.00  -1.0
+Y  core  4.370 0.90 12.05042
+         1.00  8.00 8.00 -8.50
+Sn core  3.080 1.00 19.2001
+         1.00  4.50 6.50 -0.183
+Ti core  4.870 0.66 11.833344
+         1.00  6.80 -2.00 -12.0
+Zr core  6.360 0.68 11.8611
+         1.00  6.30 -3.30 -10.0
+Li core  1.650 0.95 12.343843
+         1.00  2.30  5.00   0.5
+O  core  2.56  1.36  3.773750
+         1.00  0.01  0.01 -0.01
+N  core  4.88  1.80 36.281119
+         1.00  0.05  1.00  0.00
+H  core  2.37  2.50 19.198225
+         1.00  0.20 -0.10  0.00
+#
+#  MEAM density
+#
+meam_density baskes 3
+Cu core 1.0 3.83 2.555 
+        1.0 2.20 2.555 
+        1.0 6.00 2.555 
+        1.0 2.20 2.555 
+Ag core 1.0 4.73 2.880 
+        1.0 2.20 2.880
+        1.0 6.00 2.880
+        1.0 2.20 2.880
+Au core 1.0 5.77 2.880 
+        1.0 2.20 2.880 
+        1.0 6.00 2.880 
+        1.0 2.20 2.880 
+Ni core 1.0 2.56 2.490 
+        1.0 1.50 2.490 
+        1.0 6.00 2.490 
+        1.0 2.20 2.490 
+Pd core 1.0 5.15 2.750 
+        1.0 2.20 2.750 
+        1.0 6.00 2.750 
+        1.0 2.20 2.750 
+Pt core 1.0 4.92 2.770 
+        1.0 2.20 2.770 
+        1.0 6.00 2.770 
+        1.0 2.20 2.770 
+Al core 1.0 3.20 2.860 
+        1.0 2.60 2.860 
+        1.0 6.00 2.860 
+        1.0 2.60 2.860 
+Pb core 1.0 5.42 3.500 
+        1.0 2.20 3.500 
+        1.0 6.00 3.500 
+        1.0 2.20 3.500 
+Fe core 1.0 4.15 2.480 
+        1.0 1.00 2.480 
+        1.0 1.00 2.480 
+        1.0 1.00 2.480 
+P  core 1.0 2.44 2.600 
+        1.0 5.00 2.600 
+        1.0 1.00 2.600 
+        1.0 1.00 2.600 
+Mn core 1.0 4.30 2.530 
+        1.0 1.00 2.530 
+        1.0 2.00 2.530 
+        1.0 6.50 2.530 
+Cr core 1.0 6.81 2.495 
+        1.0 1.00 2.495 
+        1.0 1.00 2.495 
+        1.0 1.00 2.495 
+Mo core 1.0 7.03 2.725 
+        1.0 1.00 2.725 
+        1.0 1.00 2.725 
+        1.0 1.00 2.725 
+W  core 1.0 6.54 2.740 
+        1.0 1.00 2.740 
+        1.0 1.00 2.740 
+        1.0 1.00 2.740 
+V  core 1.0 4.74 2.625 
+        1.0 1.00 2.625 
+        1.0 2.50 2.625 
+        1.0 1.00 2.625 
+Nb core 1.0 5.08 2.860 
+        1.0 1.00 2.860 
+        1.0 2.50 2.860 
+        1.0 1.00 2.860 
+Ta core 1.0 4.49 2.860 
+        1.0 1.00 2.860 
+        1.0 1.00 2.860 
+        1.0 1.00 2.860 
+C  core 6.0 4.25 1.540
+        6.0 2.80 1.540
+        6.0 2.00 1.540
+        6.0 5.00 1.540
+Si core 1.88 3.55 2.350
+        1.88 2.50 2.350
+        1.88 0.00 2.350
+        1.88 7.50 2.350
+Ge core 1.88 3.95 2.450
+        1.88 2.00 2.450
+        1.88 0.00 2.450
+        1.88 7.50 2.450
+In core 1.0 5.06 3.328
+        1.0 5.50 3.328
+        1.0 5.46 3.328
+        1.0 2.00 3.328
+Ga core 1.0 4.80 3.003
+        1.0 3.10 3.003
+        1.0 6.00 3.003
+        1.0 0.50 3.003
+Mg core 1.0 2.30 3.200
+        1.0 1.00 3.200
+        1.0 3.00 3.200
+        1.0 1.00 3.200
+Ti core 1.0 2.70 2.920
+        1.0 1.00 2.920
+        1.0 3.00 2.920
+        1.0 1.00 2.920
+Zr core 1.0 2.45 3.200
+        1.0 1.00 3.200
+        1.0 3.00 3.200
+        1.0 1.00 3.200
+Li core 1.0 1.65 3.020
+        1.0 1.00 3.020
+        1.0 4.00 3.020
+        1.0 1.00 3.020
+O  core 3.75 4.55 1.210
+        3.75 2.00 1.210
+        3.75 2.00 1.210
+        3.75 2.00 1.210
+N  core 27.0 2.20 1.100
+        27.0 1.70 1.100
+        27.0 1.65 1.100
+        27.0 4.00 1.100
+H  core 18.0 2.96 0.741
+        18.0 3.00 0.741
+        18.0 3.00 0.741
+        18.0 2.50 0.741
+Ca core 1.0 4.00 3.946
+        1.0 2.20 3.946
+        1.0 2.00 3.946
+        1.0 2.20 3.946
+Y  core 1.0 2.00 3.607
+        1.0 1.00 3.607
+        1.0 1.00 3.607
+        1.0 3.50 3.607
+Sn core 1.6 6.20 3.440
+        1.6 6.00 3.440
+        1.6 6.00 3.440
+        1.6 6.00 3.440
+Co core 1.0 3.50 2.500
+        1.0 0.00 2.500
+        1.0 0.00 2.500
+        1.0 4.00 2.500
+#
+#  MEAM density type
+#
+meam_rhotype t24 exponential
+#
+#  Effective twobody potential - depends on choice of reference phase
+#
+#  NB: Twobody potential needs to be cut off at nearest neighbour
+#
+#  FCC structures
+#
+baskes 12 fcc
+Cu core Cu core 3.540 0.94 5.15483 2.555 12 1.0 0.05 0.0 8.0
+                0.0 1.4142 0.0 1.4142
+Ag core Ag core 2.850 0.94 6.01552 2.880 12 1.0 0.05 0.0 8.0
+                0.0 1.4142 0.0 1.4142
+Au core Au core 3.930 1.00 6.59767 2.880 12 1.0 0.05 0.0 8.0
+                0.0012 1.4142 0.0012 1.4142
+Ni core Ni core 4.450 0.94 5.08422 2.490 12 1.0 0.05 0.0 8.0
+                0.00086 1.4142 0.00086 1.4142
+Pd core Pd core 3.910 0.94 6.42646 2.750 12 1.0 0.05 0.0 8.0
+                0.0 1.4142 0.0 1.4142
+Pt core Pt core 5.770 0.90 6.49561 2.770 12 1.0 0.05 0.0 8.0
+                0.0 1.4142 0.0 1.4142
+Al core Al core 3.360 1.16 4.68560 2.860 12 1.0 0.05 0.0 8.0
+                0.15142 1.4142 0.15142 1.4142
+Pb core Pb core 2.040 1.01 6.38287 3.500 12 1.0 0.00 0.0 8.0
+                0.00086 1.4142 0.00086 1.4142
+In core In core 2.510 1.00 5.02324 3.328 12 1.0 0.05 0.0 8.0
+                0.0 1.4142 0.0 1.4142
+Ga core Ga core 2.900 0.97 4.42177 3.003 12 1.0 0.097 0.0 8.0
+                0.0 1.4142 0.0 1.4142
+Ca core Ca core 1.840 0.40 4.92633 3.946 12 1.0 0.05 0.0 8.0
+                0.0 1.4142 0.0 1.4142
+Sn core Sn core 3.080 1.00 6.19989 3.440 12 1.0 0.00 0.0 8.0
+                0.0012 1.4142 0.0012 1.4142
+#
+#  HCP structures
+#
+baskes 12 hcp
+Mg core Mg core 1.550 0.52 5.5663 3.200 12 1.0 0.00 0.0 8.0
+                0.15142 1.4142 0.15142 1.4142
+Ti core Ti core 4.870 0.66 4.7195 2.920 12 1.0 0.00 0.0 8.0 
+                0.00000 1.4142 0.00000 1.4142
+Zr core Zr core 6.360 0.68 4.4502 3.200 12 1.0 0.00 0.0 8.0
+                0.00000 1.4142 0.00000 1.4142
+Co core Co core 4.410 0.90 5.2356 2.500 12 1.0 0.00 0.0 8.0
+                0.00000 1.4142 0.00000 1.4142
+Y  core Y  core 4.370 0.90 4.374428 3.607 12 1.0 0.00 0.0 8.0
+                0.36135 1.4142 0.36135 1.4142
+#
+#  BCC structures 
+#
+baskes 12 bcc
+Fe core Fe core 4.290 0.56 5.15734 2.480 8 1.0 0.05 0.0 8.0
+                5.467244 1.15470 5.467244 1.15470
+P  core P  core 2.720 1.83 5.15734 2.600 8 1.0 0.00 0.0 8.0
+                1.88199 1.15470 1.88199 1.15470
+Mn core Mn core 2.900 0.70 5.73458 2.530 8 1.0 0.00 0.0 8.0
+                5.6070 1.15470 5.6070 1.15470
+Cr core Cr core 4.100 0.42 5.57884 2.495 8 1.0 0.00 0.0 8.0
+                4.9158 1.15470 4.9158 1.15470
+Mo core Mo core 6.810 0.46 5.83516 2.725 8 1.0 0.00 0.0 8.0
+                5.1540 1.15470 5.1540 1.15470
+W  core W  core 8.660 0.40 5.67917 2.740 8 1.0 0.00 0.0 8.0
+                5.3430 1.15470 5.3430 1.15470
+V  core V  core 5.300 0.73 4.81348 2.625 8 1.0 0.00 0.0 8.0
+                5.3430 1.15470 5.3430 1.15470
+Nb core Nb core 7.470 0.72 4.84022 2.860 8 1.0 0.00 0.0 8.0
+                5.4672 1.15470 5.4672 1.15470
+Ta core Ta core 8.090 0.67 4.92526 2.860 8 1.0 0.00 0.0 8.0
+                5.5506 1.15470 5.5506 1.15470
+Li core Li core 1.650 0.95 3.09826 3.020 8 1.0 0.05 0.0 8.0
+                5.6070 1.15470 5.6070 1.15470
+#
+#  Diamond structures
+#
+baskes 12 diamond
+C  core C  core 7.370 1.18 4.3652 1.540 4 1.0 0.00 0.0 8.0
+                0.0 1.6330 0.0 1.6330
+Si core Si core 4.630 0.58 4.8989 2.350 4 1.0 0.05 0.0 8.0
+                0.0 1.6330 0.0 1.6330
+Ge core Ge core 3.850 0.66 5.03672 2.450 4 1.0 0.00 0.0 8.0
+                0.0 1.6330 0.0 1.6330
+#
+#  Dimer structures
+#
+baskes 12 dimer
+O  core O  core 2.560 1.36 5.6000 1.210 1 1.0 0.00 0.0 8.0
+                0.0 1.0000 0.0 1.0000
+N  core N  core 4.880 1.80 5.9600 1.100 1 1.0 0.00 0.0 8.0
+                0.0 1.0000 0.0 1.0000
+H  core H  core 2.370 2.50 2.9600 0.741 1 1.0 0.00 0.0 8.0
+                0.0 1.0000 0.0 1.0000
+#
+#  Alloys
+#
+baskes 12 l12a3b
+Fe core C  core 4.1100 1.00 5.80973 2.364 12 0.75 0.0375 0.0 8.0
+                0.36135 1.4142 5.36164234 1.4142
+Fe core Cu core 3.9445 1.00 5.30390 2.570 12 0.75 0.05 0.0 8.0
+                0.36135 1.4142 0.00000000 1.4142
+Fe core Al core 4.2750 1.00 4.93572 2.590 12 0.75 0.05 0.0 8.0 
+                0.36135 1.4142 0.00000000 1.4142
+Al core Mg core 2.9125 1.00 4.61930 2.951 12 0.75 0.0375 0.0 8.0 
+                0.15142 1.4142 0.15142000 1.4142
+Ni core V  core 4.7575 1.00 5.32204 2.548 12 0.75 0.0375 0.0 8.0 
+                0.00085645 1.4142 0.00000 1.4142
+Pd core Y  core 4.8850 1.00 5.22373 2.910 12 0.75 0.0375 0.0 8.0 
+                0.00000000 1.4142 5.36164234 1.4142
+baskes 12 l12ab3
+Fe core Pt core 5.860 1.00 5.97170 2.7181 12 0.25 0.05 0.0 8.0
+                0.36135 1.4142 0.00000000 1.4142
+Fe core Nb core 6.630 1.00 4.86460 2.8370 12 0.25 0.0125 0.0 8.0
+                0.00000 1.4142 0.36135000 1.4142
+Cu core Ni core 4.1925 1.00 5.1271207 2.506567 12 0.25 0.05 0.0 8.0
+                0.00000 1.4142 0.00085645 1.4142
+Cu core Co core 4.0775 1.00 5.4316323 2.555000 12 0.25 0.0125 0.0 8.0
+                0.00000 1.4142 0.00000000 1.4142
+W  core Ni core 5.5825 1.00 6.1584585 2.557000 12 0.25 0.0375 0.0 8.0
+                0.11736 1.4142 0.00085645 1.4142
+Fe core Ni core 4.4960 1.00 5.0790902 2.513000 12 0.25 0.05 0.0 8.0
+                4.798338 1.4142 0.00085645 1.4142
+Cr core Ni core 4.3425 1.00 5.1991037 2.505000 12 0.25 0.0375 0.0 8.0
+                0.000000 1.4142 0.00085645 1.4142
+baskes 12 bcc
+Fe core Ti core 4.800 1.00 5.4082935 2.58 8 0.50 0.025 0.0 8.0
+                3.53211 1.15470 4.915971468 1.15470
+Mg core Li core 1.640 1.00 3.7548543 2.95 8 0.50 0.025 0.0 8.0
+                4.85512 1.15470 5.606997262 1.15470
+Ni core Ti core 5.020 1.00 6.0321407 2.607 8 0.50 0.025 0.0 8.0
+                0.00000 1.15470 4.855123758 1.15470
+Fe core Mn core 3.595 1.00 5.3869153 2.499 8 0.50 0.025 0.0 8.0
+                5.15409 1.15470 5.15409 1.15470
+Fe core P  core 3.925 1.00 5.6440900 2.435 8 0.50 0.025 0.0 8.0
+                5.467244 1.15470 5.467244 1.15470
+Fe core Cr core 4.098 1.00 5.4299950 2.4875 8 0.50 0.025 0.0 8.0
+                5.467244 1.15470 4.9159715 1.15470
+Mg core Y  core 3.090 1.00 4.6583994 3.2575 8 0.50 0.0 0.0 8.0
+                0.0 1.15470 0.0 1.15470
+Ti core Cu core 4.2650 1.00 5.1987008 2.75 8 0.50 0.025 0.0 8.0
+                6.00000 1.15470 6.00000 1.15470
+Zr core Cu core 5.0700 1.00 4.7834701 2.8221 8 0.50 0.025 0.0 8.0
+                6.00000 1.15470 6.00000 1.15470
+Zr core Ag core 4.6450 1.00 5.1189855 2.9700 8 0.50 0.025 0.0 8.0
+                6.00000 1.15470 6.00000 1.15470
+Co core Al core 4.4500 1.00 4.8908601 2.4768 8 0.50 0.025 0.0 8.0
+                0.00000 1.15470 0.00000 1.15470
+Y  core V  core 4.1150 1.00 4.7179836 3.0200 8 0.50 0.000 0.0 8.0
+                0.00000 1.15470 0.00000 1.15470
+baskes 12 zns
+Ge core Si core 4.240 1.00 4.9739327 2.3977 4 0.50 0.025 0.0 8.0
+                0.0 1.6330 0.0 1.6330
+Ga core N  core 4.450 1.00 5.3270894 1.9400 4 0.50 0.000 0.0 8.0
+                0.0 1.6330 0.0 1.6330
+N  core In core 3.860 1.00 5.5680466 2.1564 4 0.50 0.000 0.0 8.0
+                0.0 1.6330 0.0 1.6330
+Si core C  core 6.3753 1.00 4.5835592 1.8877 4 0.50 0.00 0.0 8.0
+                0.0 1.6330 0.0 1.6330
+baskes 12 nacl
+Ga core In core 2.5695 1.00 4.8698019 2.8276 6 0.50 0.0735 0.0 8.0
+                0.0 1.4142 0.223688 1.4142
+Ca core Mg core 1.3500 1.00 5.2187654 3.3115 6 0.50 0.0000 0.0 8.0
+                2.9448946 1.4142 2.9448946 1.4142
+Mg core Sn core 1.8170 1.00 5.9814538 3.1550 6 0.50 0.0000 0.0 8.0
+                4.5310865 1.4142 0.0 1.4142
+Fe core N  core 3.8850 1.00 5.3827654 2.0900 6 0.50 0.0250 0.0 8.0
+                11.343695 1.4142 4.5310865 1.4142
+Fe core H  core 3.1660 1.00 5.6866774 1.8350 6 0.50 0.0250 0.0 8.0
+                10.731268 1.4142 0.0 1.4142
+Al core H  core 2.1850 1.00 4.3595982 1.8750 6 0.50 0.0250 0.0 8.0
+                0.862286 1.4142 5.0484733 1.4142
+Ni core H  core 3.3700 1.00 4.3255012 1.8650 6 0.50 0.0250 0.0 8.0
+                9.063407 1.4142 1.9063248 1.4142
+V  core H  core 3.9550 1.00 4.6820131 1.9700 6 0.50 0.0000 0.0 8.0
+                2.944895 1.4142 4.5310865 1.4142
+Ti core C  core 6.9000 1.00 4.6107714 2.2100 6 0.50 0.0000 0.0 8.0
+                8.174647 1.4142 0.8622860 1.4142
+Ti core N  core 6.6150 1.00 5.0922618 2.1210 6 0.50 0.0000 0.0 8.0
+                4.531086 1.4142 5.0484733 1.4142
+Nb core C  core 8.1500 1.00 5.2700825 2.2800 6 0.50 0.0000 0.0 8.0
+                9.939034 1.4142 0.8622860 1.4142
+Nb core N  core 7.4050 1.00 5.3388557 2.1975 6 0.50 0.0000 0.0 8.0
+                6.618086 1.4142 0.1433697 1.4142
+Ag core Cu core 2.8490 1.00 6.1045541 2.5340 6 0.50 0.0500 0.0 8.0
+                0.000000 1.4142 0.0000000 1.4142
+Al core V  core 3.9600 1.00 5.6718308 2.6780 6 0.50 0.0250 0.0 8.0
+                2.944895 1.4142 1.906325 1.4142
+Pd core V  core 4.2250 1.00 5.8097314 2.5550 6 0.50 0.0250 0.0 8.0
+                0.363070 1.4142 0.000000 1.4142
+V  core C  core 7.2850 1.00 4.9697034 2.2000 6 0.50 0.0000 0.0 8.0
+                0.862286 1.4142 0.223688 1.4142
+Si core O  core 4.6350 1.00 4.4376424 2.0500 6 0.50 0.0000 0.0 8.0
+                0.000000 1.4142 1.906325 1.4142
+baskes 12 nacl a4
+Au core Si core 4.155 1.00 5.819 2.7000 6 0.50 0.05 0.26 0.0 8.0
+                0.0 1.4142 0.0 1.4142
+#
+#  Screening functions - pure metals
+#
+meam_screen 
+Cu core Cu core Cu core 1.21 2.80
+Ag core Ag core Ag core 1.38 2.80
+Au core Au core Au core 0.80 2.80    # Original 2NN value was 1.53, but later changed to 0.80
+Ni core Ni core Ni core 0.81 2.80
+Pd core Pd core Pd core 1.69 2.80
+Pt core Pt core Pt core 1.53 2.80
+Al core Al core Al core 0.49 2.80
+Pb core Pb core Pb core 0.81 2.80
+Fe core Fe core Fe core 0.36 2.80
+P  core P  core P  core 1.48 2.80
+Mn core Mn core Mn core 0.16 2.80
+Cr core Cr core Cr core 0.78 2.80
+Mo core Mo core Mo core 0.64 2.80
+W  core W  core W  core 0.49 2.80
+V  core V  core V  core 0.49 2.80
+Nb core Nb core Nb core 0.36 2.80
+Ta core Ta core Ta core 0.25 2.80
+C  core C  core C  core 1.41 2.80
+Si core Si core Si core 1.85 2.80    # Original 2NN value was 1.41, but later changed to 1.85
+Ge core Ge core Ge core 1.41 2.80
+In core In core In core 1.41 2.80
+Ga core Ga core Ga core 1.50 2.80
+Mg core Mg core Mg core 0.49 2.80
+Ca core Ca core Ca core 0.98 2.80
+Sn core Sn core Sn core 0.80 2.80
+Y  core Y  core Y  core 0.36 2.80
+Ti core Ti core Ti core 1.00 1.44
+Zr core Zr core Zr core 1.00 1.44
+Co core Co core Co core 0.49 2.00
+Li core Li core Li core 0.16 2.80
+O  core O  core O  core 1.00 2.80
+N  core N  core N  core 2.00 2.80
+H  core H  core H  core 2.00 2.80
+#
+#  Screening functions - alloys
+#
+#  Fe-Al
+#
+Al core Fe core Fe core 0.36 2.80
+Fe core Al core Al core 1.21 2.80
+Fe core Fe core Al core 1.00 2.80
+Al core Fe core Al core 0.4225 2.80
+#
+#  Fe-Cr
+#
+Cr core Fe core Fe core 0.55 2.80
+Fe core Cr core Cr core 0.55 2.80
+Fe core Fe core Cr core 0.55 2.80
+Cr core Fe core Cr core 0.55 2.80
+#
+#  Fe-C
+#
+C  core Fe core Fe core 0.36 2.80
+Fe core C  core C  core 0.16 1.44
+Fe core Fe core C  core 0.16 2.80
+C  core Fe core C  core 0.16 2.80
+#
+#  Fe-N
+#
+N  core Fe core Fe core 0.16 1.44
+Fe core N  core N  core 0.16 2.80
+Fe core Fe core N  core 0.16 2.80
+N  core Fe core N  core 1.0143 2.80
+#
+#  Fe-H
+#
+H  core Fe core Fe core 0.36 1.44
+Fe core H  core H  core 2.00 2.80
+Fe core Fe core H  core 2.15 2.80
+H  core Fe core H  core 1.0143 2.80
+#
+#  Fe-Mn
+#
+Mn core Fe core Fe core 0.64 2.80
+Fe core Mn core Mn core 0.64 2.80
+Fe core Fe core Mn core 0.49 2.80
+Mn core Fe core Mn core 0.49 2.80
+#
+#  Fe-Pt
+#
+Pt core Fe core Fe core 0.36 2.80
+Fe core Pt core Pt core 1.53 2.80
+Fe core Fe core Pt core 0.84358 2.80
+Pt core Fe core Pt core 0.84358 2.80
+#
+#  Cu-Ni
+#
+Ni core Cu core Cu core 1.21 2.80
+Cu core Ni core Ni core 0.81 2.80
+Cu core Cu core Ni core 1.00 2.80
+Ni core Cu core Ni core 1.00 2.80
+#
+#  Fe-Cu
+#
+Fe core Cu core Cu core 1.21 2.80
+Cu core Fe core Fe core 0.36 2.80
+Cu core Cu core Fe core 0.7225 2.80
+Fe core Cu core Fe core 0.7225 2.80
+#
+#  Fe-Ti
+#
+Ti core Fe core Fe core 1.21 2.80
+Fe core Ti core Ti core 0.78 2.80
+Fe core Fe core Ti core 0.64 2.80
+Ti core Fe core Ti core 0.64 2.80
+#
+#  Fe-P
+#
+P  core Fe core Fe core 0.36 2.80
+Fe core P  core P  core 1.00 2.00
+Fe core Fe core P  core 0.76 2.00
+P  core Fe core P  core 2.00 2.80
+#
+#  Mg-Li
+#
+Li core Mg core Mg core 0.8100 2.80
+Mg core Li core Li core 0.1600 2.80
+Mg core Mg core Li core 0.3025 2.80
+Li core Mg core Li core 0.3025 1.44
+#
+#  Mg-Ca
+#
+Ca core Mg core Mg core 0.3600 2.80
+Mg core Ca core Ca core 0.3600 2.80
+Mg core Mg core Ca core 1.0000 2.80
+Ca core Mg core Ca core 1.0000 2.80
+#
+#  Mg-Sn
+#
+Sn core Mg core Mg core 0.1600 2.80
+Mg core Sn core Sn core 1.0000 2.80
+Mg core Mg core Sn core 1.0000 2.80
+Sn core Mg core Sn core 0.6400 2.80
+#
+#  Mg-Y
+#
+Y  core Mg core Mg core 0.4900 2.00
+Mg core Y  core Y  core 0.4200 2.00
+Mg core Mg core Y  core 0.0000 2.00
+Y  core Mg core Y  core 0.0000 2.00
+#
+#  Mg-Al
+#
+Al core Mg core Mg core 0.4900 2.80
+Mg core Al core Al core 0.4900 2.80
+Mg core Mg core Al core 0.3600 2.80
+Al core Mg core Al core 0.3600 2.80
+#
+#  Ge-Si
+#
+Si core Ge core Ge core 1.4100 2.80
+Ge core Si core Si core 1.4100 2.80
+Ge core Ge core Si core 1.4100 2.80
+Si core Ge core Si core 1.4100 2.80
+#
+#  Al-H
+#
+H  core Al core Al core 0.6400 2.80
+Al core H  core H  core 0.0900 2.80
+Al core Al core H  core 0.4900 2.80
+H  core Al core H  core 0.4900 1.44
+#
+#  Ni-H
+#
+H  core Ni core Ni core 0.0400 2.00
+Ni core H  core H  core 0.4900 2.80
+Ni core Ni core H  core 1.8000 2.80
+H  core Ni core H  core 1.1175 2.80
+#
+#  V-H
+#
+H  core V  core V  core 0.3600 2.80
+V  core H  core H  core 0.1600 2.80
+V  core V  core H  core 0.6400 2.80
+H  core V  core H  core 0.3600 2.80
+#
+#  Ga-N
+#
+N  core Ga core Ga core 1.5000 2.80
+Ga core N  core N  core 2.0000 2.80
+Ga core Ga core N  core 1.6867 2.80
+N  core Ga core N  core 2.0000 2.80
+#
+#  Ga-In
+#
+In core Ga core Ga core 0.7800 2.80
+Ga core In core In core 1.5000 2.80
+Ga core Ga core In core 1.4547 2.80
+In core Ga core In core 2.3000 2.80
+#
+#  N-In
+#
+In core N  core N  core 2.0000 2.80
+N  core In core In core 1.4100 2.80
+N  core N  core In core 2.0000 2.80
+In core N  core In core 1.6921 2.80
+#
+#  Ni-Ti - the following parameters weren't specified in the paper
+#          and they are a guess based on the individual atomic values
+#
+Ni core Ti core Ti core 1.0000 2.80
+Ti core Ni core Ni core 0.8100 2.80
+Ti core Ti core Ni core 0.9025 2.80
+Ni core Ti core Ni core 0.9025 2.80
+#
+#  Au-Si
+#
+Si core Au core Au core 1.9000 2.80
+Au core Si core Si core 1.0000 2.80
+Au core Au core Si core 0.9500 2.80
+Si core Au core Si core 1.8500 2.80
+#
+#  Ti-C
+#
+Ti core C  core C  core 0.6400 2.80
+C  core Ti core Ti core 0.6400 1.44
+C  core C  core Ti core 1.19622 2.80
+Ti core C  core Ti core 1.19622 2.80
+#
+#  Ti-N
+#
+Ti core N  core N  core 0.0900 2.80
+N  core Ti core Ti core 0.1600 2.80
+N  core N  core Ti core 1.45711 2.80
+Ti core N  core Ti core 0.8100 1.44
+#
+#  Ti-Cu
+#
+Ti core Cu core Cu core 0.4900 1.44
+Cu core Ti core Ti core 0.4900 1.44
+Cu core Cu core Ti core 0.4900 2.80
+Ti core Cu core Ti core 1.1500 2.80
+#
+#  Zr-Cu
+#
+Zr core Cu core Cu core 1.2100 1.44
+Cu core Zr core Zr core 1.0000 1.44
+Cu core Cu core Zr core 1.1025 1.44
+Zr core Cu core Zr core 1.1025 2.80
+#
+#  Zr-Ag
+#
+Zr core Ag core Ag core 1.0000 1.44
+Ag core Zr core Zr core 1.0000 1.44
+Ag core Ag core Zr core 1.18237 2.80
+Zr core Ag core Zr core 1.18237 2.80
+#
+#  Ag-Cu
+#
+Ag core Cu core Cu core 1.3800 2.80
+Cu core Ag core Ag core 1.2100 2.80
+Cu core Cu core Ag core 1.2936 2.80
+Ag core Cu core Ag core 1.2936 2.80
+#
+#  Co-Cu
+#
+Co core Cu core Cu core 2.0000 2.80
+Cu core Co core Co core 2.0000 2.80
+Cu core Cu core Co core 2.0000 2.80
+Co core Cu core Co core 2.0000 2.80
+#
+#  Ni-W
+#
+W  core Ni core Ni core 0.8100 2.80
+Ni core W  core W  core 0.5200 2.80
+Ni core Ni core W  core 2.2500 2.80
+W  core Ni core W  core 2.2500 2.80
+#
+#  Nb-C
+#
+C  core Nb core Nb core 0.4900 1.44
+Nb core C  core C  core 0.6400 2.80
+Nb core Nb core C  core 2.0000 2.80
+C  core Nb core C  core 2.0000 2.80
+#
+#  Nb-N
+#
+N  core Nb core Nb core 0.3600 2.00
+Nb core N  core N  core 0.8100 2.80
+Nb core Nb core N  core 1.0100 2.80
+N  core Nb core N  core 1.0100 2.80
+#
+#  Nb-Fe
+#
+Fe core Nb core Nb core 0.3600 2.80
+Nb core Fe core Fe core 1.0000 2.80
+Nb core Nb core Fe core 0.3600 2.80
+Fe core Nb core Fe core 0.3600 2.80
+#
+#  V-Al
+#
+V  core Al core Al core 0.3600 2.80
+Al core V  core V  core 0.4900 2.80
+Al core Al core V  core 0.4900 2.80
+V  core Al core V  core 0.2500 2.80
+#
+#  V-Ni
+#
+V  core Ni core Ni core 0.8100 2.80
+Ni core V  core V  core 1.0000 1.44
+Ni core Ni core V  core 1.0000 1.44
+V  core Ni core V  core 1.0000 1.44
+#
+#  Si-C
+#
+Si core C  core C  core 0.6400 1.00
+C  core Si core Si core 2.0000 2.80
+C  core C  core Si core 1.4100 2.80
+Si core C  core Si core 1.4100 2.80
+#
+#  Co-Al
+#
+Co core Al core Al core 1.1000 2.80
+Al core Co core Co core 0.4900 2.00
+Al core Al core Co core 0.4900 2.80
+Co core Al core Co core 0.4900 2.80
+#
+#  Y-V
+#
+Y  core V  core V  core 1.8000 2.80
+V  core Y  core Y  core 1.6000 2.80
+V  core V  core Y  core 0.0900 2.00
+Y  core V  core Y  core 0.3600 1.44
+#
+#  Pd-V
+#
+Pd core V  core V  core 0.7400 2.80
+V  core Pd core Pd core 2.0000 2.80
+V  core V  core Pd core 1.0000 2.80
+Pd core V  core Pd core 0.6400 1.44
+#
+#  Pd-Y
+#
+Pd core Y  core Y  core 0.1600 1.44
+Y  core Pd core Pd core 0.3600 2.80
+Y  core Y  core Pd core 0.3600 1.44
+Pd core Y  core Pd core 0.8000 1.44
+#
+#  Fe-Ni
+#
+Fe core Ni core Ni core 0.6300 1.44
+Ni core Fe core Fe core 0.3600 1.44
+Ni core Ni core Fe core 0.5625 2.80
+Fe core Ni core Fe core 0.5625 2.80
+#
+#  Cr-Ni
+#
+Cr core Ni core Ni core 0.8100 2.80
+Ni core Cr core Cr core 1.0000 2.80
+Ni core Ni core Cr core 0.7590 2.80
+Cr core Ni core Cr core 0.7590 2.80
+#
+#  Si-O
+#
+Si core O  core O  core 0.6400 1.00
+O  core Si core Si core 2.0000 2.80
+O  core O  core Si core 1.4100 2.80
+Si core O  core Si core 1.4100 2.80
+#
+#  Screening functions for ternary cases
+#
+#  Cr-Ni-Fe
+#
+Cr core Fe core Ni core 0.6570 2.80
+Ni core Fe core Cr core 0.6400 2.06
+Fe core Ni core Cr core 0.6570 2.80
+#
+#  V-Y-Pd
+#
+Y  core V  core Pd core 0.9400 2.80
+Pd core V  core Y  core 0.4000 2.06
+V  core Pd core Y  core 1.7900 2.80
+#
+#  Fe-Nb-N
+#
+N  core Fe core Nb core 0.4900 2.06
+Nb core Fe core N  core 0.8200 2.80
+Fe core Nb core N  core 0.8200 2.80
+#
+#  Fe-Nb-C
+#
+C  core Fe core Nb core 0.2500 1.71
+Nb core Fe core C  core 0.4900 2.80
+Fe core Nb core C  core 0.4900 2.80
+#
+#  Cu-Zr-Ag
+#
+Ag core Zr core Cu core 1.0338 2.06
+Zr core Ag core Cu core 1.0247 1.44
+Cu core Ag core Zr core 1.1421 2.06
+
+cutp 8.0 mdf 1.0

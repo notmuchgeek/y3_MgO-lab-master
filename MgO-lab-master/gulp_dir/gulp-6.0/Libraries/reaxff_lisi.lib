@@ -1,0 +1,92 @@
+#
+#  ReaxFF force field
+#
+#  Original paper:
+#
+#  A.C.T. van Duin, S. Dasgupta, F. Lorant and W.A. Goddard III,
+#  J. Phys. Chem. A, 105, 9396-9409 (2001)
+#
+#  These parameters from:
+#
+#  A. Ostadhossein, E.D. Cubuk, G.A. Tritsaris, E. Kaxiras, S. Zhang and A.C.T. van Duin, 
+#  Phys. Chem. Chem. Phys. 17, 3832-3840 (2015)
+#
+#  Cutoffs for VDW & Coulomb terms
+#
+reaxFFvdwcutoff      10.0000
+reaxFFqcutoff        10.0000
+#
+#  Bond order threshold - check anglemin as this is cutof2 given in control file
+#
+reaxFFtol       0.0000100000 0.001
+#
+#  Species independent parameters 
+#
+reaxff0_bond        50.000000     9.546900
+reaxff0_over        50.000000     0.699100     1.058800    12.117600    13.305600
+reaxff0_valence     33.866700     1.851200     1.056300     2.038400
+reaxff0_penalty      6.929000     0.398900     3.995400
+reaxff0_torsion      5.779600    10.000000     1.948700     2.164500
+reaxff0_vdw          1.559100
+reaxff0_lonepair     6.089100
+#
+#  Species parameters 
+#
+reaxff1_radii 
+Si core   2.2977   1.2962  -1.0000
+Li core   1.9255  -0.1000  -1.0000
+reaxff1_valence 
+Si core   4.0000   4.0000   4.0000   4.0000
+Li core   1.0000   1.0000   1.0000   1.0000
+reaxff1_over 
+Si core  23.8188   9.0751   0.8381  -4.1684
+Li core   6.9107   5.4409   0.1973 -25.0000
+reaxff1_under kcal 
+Si core  21.7115
+Li core   0.0000
+reaxff1_lonepair kcal 
+Si core   0.0000   0.0000
+Li core   0.0000   0.0000
+reaxff1_angle 
+Si core   2.0754   2.5791
+Li core   2.2989   2.8103
+reaxff1_morse kcal 
+Si core  11.7318   0.1837   1.8329   5.2054
+Li core   9.3147   0.1109   1.7722   1.2063
+#
+#  Element parameters 
+#
+reaxff_chi  
+Si core   4.2033
+Li core  -6.9345
+reaxff_mu  
+Si core   5.5558
+Li core  15.0000
+reaxff_gamma  
+Si core   0.5947
+Li core   0.4634
+#
+#  Bond parameters 
+#
+reaxff2_bo bo13
+Si core Si core  -0.0965   8.7733  -0.8055   7.1248  -0.3000  16.0000
+reaxff2_bo 
+Si core Li core  -0.1658   5.2531   0.0000  12.0000   0.3000  26.0000
+Li core Li core  -0.1497   4.0597   0.0000  12.0000   0.3000  26.0000
+reaxff2_bond kcal 
+Si core Si core  70.3209  54.0531  30.0000   0.2206   0.0035
+Si core Li core  23.2383   0.0000   0.0000   0.6079   0.0781
+Li core Li core  52.4319   0.0000   0.0000   0.2219   0.9010
+reaxff2_over 
+Si core Si core   0.0159
+Si core Li core   0.7696
+Li core Li core   0.5355
+reaxff2_morse kcal 
+Si core Li core   0.0800  11.5806   2.0062   1.7679   1.0000   1.0000
+#
+#  Angle parameters 
+#
+reaxff3_angle kcal 
+Si core Si core Si core  78.5339  36.4328   1.0067   1.6608   0.1694
+reaxff3_penalty kcal 
+Si core Si core Si core   0.0000

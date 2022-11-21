@@ -1,0 +1,20 @@
+#
+#  Stillinger-Weber potential for water : ML-MW
+#
+#  Original MW water:
+#
+#  Molinero and Moore, J. Phys. Chem. B, 113, 4008 (2009)
+#
+#  Machine learning improved parameters:
+#
+#  H. Chan et al, Nature Comm., 10, 379 (2019)
+#
+species
+O core 0.0
+sw2gen 
+O core O core 2.114164299832 1.884015 1.991526 4.011214 0 0.0 4.003290
+sw3 
+O O O 7.33514885 106.24 2.2757827 2.2757827 0.0 4.00329 0.0 4.00329 0.0 8.00658
+element
+mass O 18.0
+end
