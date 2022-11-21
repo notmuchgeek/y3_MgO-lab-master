@@ -1,0 +1,71 @@
+#
+#  Tersoff bond order potentials 
+#
+#  NB There are several variants of the Tersoff potential - 
+#  the following is Si(C) from:
+#
+#  H  : F. de Brito Mota, J.F. Justo and A. Fazzio, J. Appl. Phys., 86, 1843 (1999)
+#  C  : J. Tersoff, Phys. Rev. Lett., 61, 2879 (1988)
+#  N  : F. de Brito Mota, J.F. Justo and A. Fazzio, J. Appl. Phys., 86, 1843 (1999)
+#  Si : J. Tersoff, Phys. Rev. B, 38, 9902 (1988)
+#  Ge : J. Tersoff, Phys. Rev. B, 39, 5566 (1989)
+#  O  : A. Yasukawa, JSME Int. J. A 39, 313 (1996) [quoted in S.R. Billeter et al, Phys. Rev. B, 73, 155329 (2006)]
+#
+#  Inter-species potentials derived using the combination rules of Tersoff.
+#  Where no chi value is available it is assumed to be one.
+#
+#  Library modified to allow for the fact that borepulsive and boattractive can now
+#  be pair-wise specific.
+#
+#  NB: This Version of the library must be used with GULP 6.0 onwards!!!!
+#
+species
+H  core 0.0
+C  core 0.0
+N  core 0.0
+O  core 0.0
+Si core 0.0
+Ge core 0.0
+boonebody
+H  core 0.0 4.00000000000 1.00000 1.00000 
+C  core 0.0 0.00000015724 0.72751 0.72751 
+N  core 0.0 0.00529380000 1.33041 1.33041 
+O  core 0.0 2.00000000000 1.00000 1.00000 
+Si core 0.0 0.00000109990 0.78734 0.78734 
+Ge core 0.0 0.00000090166 0.75627 0.75627 
+botwobody
+H  core H  core 86.71200  43.5310 3.78790 1.9800  0.8 1.0
+C  core C  core 1393.600 346.7400 3.48790 2.2119  1.8 2.1
+N  core N  core 6368.140 511.7600 5.43673 2.7000  1.8 2.1
+O  core O  core 3331.000 261.2000 5.36000 2.6800  2.7 3.0
+Si core Si core 1830.800 471.1800 2.47990 1.7322  2.7 3.0
+Ge core Ge core 1769.000 419.2300 2.44510 1.7047  2.8 3.1
+botwobody combine
+H  core C  core 1.0 1.00000
+H  core N  core 1.0 0.76000
+H  core O  core 1.0 1.00000
+H  core Si core 1.0 0.78000
+H  core Ge core 1.0 1.00000
+C  core N  core 1.0 1.00000
+C  core Si core 1.0 0.97760
+C  core Ge core 1.0 1.00000
+C  core O  core 1.0 1.00000
+N  core Si core 1.0 0.65000
+N  core Ge core 1.0 1.00000
+N  core O  core 1.0 1.00000
+Si core Ge core 1.0 1.00061
+Si core O  core 1.0 1.00000
+borepulsive
+H  core H  core 3 1.0 1.9800 
+C  core C  core 3 1.0 2.2119 
+N  core N  core 3 1.0 2.7000 
+O  core O  core 3 1.0 2.6800
+Si core Si core 3 1.0 1.7322 
+Ge core Ge core 3 1.0 1.7047 
+boattractive theta
+H  core H  core 3 1.0 1.9800      0.0  1.0000  1.00000 
+C  core C  core 3 1.0 2.2119  38049.0  4.3484 -0.57058 
+N  core N  core 3 1.0 2.7000  20312.0 25.5103 -0.56239 
+O  core O  core 3 1.0 2.6800      0.0  1.0000  0.00000 
+Si core Si core 3 1.0 1.7322 100390.0 16.2180 -0.59826 
+Ge core Ge core 3 1.0 1.7047 106430.0 15.6520 -0.43884 

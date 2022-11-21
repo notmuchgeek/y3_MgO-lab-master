@@ -1,0 +1,16 @@
+#
+#  Potentials for silica from paper of Tsuneyuki et al
+#
+#  Phys. Rev. Lett., 61, 869 (1988)
+#
+species
+Si core  2.4
+O  core -1.2
+tsuneyuki form1
+Si core O core  2.4 -1.6 0.714286 0.0 16.0
+tsuneyuki form2
+O  core O core -1.6 -1.6 0.714286 0.0 16.0
+buck
+Si core Si core   872947111.2374 0.065700     23.3158 0.0 16.0
+O  core Si core       10728.7784 0.208510     70.7824 0.0 16.0
+O  core O  core        1758.0602 0.351320    214.8816 0.0 16.0

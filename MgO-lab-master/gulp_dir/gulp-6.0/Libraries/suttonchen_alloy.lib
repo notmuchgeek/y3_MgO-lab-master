@@ -1,0 +1,244 @@
+#
+#  SUTTON-CHEN - library of potentials for GULP
+#
+#  from A.P. Sutton and J. Chen
+#  Phil. Mag. Lett., 61, 139 (1990)
+#
+#  These potentials use the Embedded Atom Model
+#
+#  NB: Alloys have been added using the default assumptions
+#      for crossterms. Better results may be obtained by 
+#      specifically fitting data for alloys. Note that the
+#      Lennard-Jones repulsion terms are particularly 
+#      approximate since normal combination rules cannot be
+#      used since the powers of distance are not always the
+#      same. Hence a geometric average has to be used. 
+#
+species
+Ni core  0.000
+Cu core  0.000
+Rh core  0.000
+Pd core  0.000
+Ag core  0.000
+Ir core  0.000
+Pt core  0.000
+Au core  0.000
+Pb core  0.000
+Al core  0.000
+######################
+#  Pure metal terms  #
+######################
+manybody
+Ni core Ni core  0.0 12.0
+Cu core Cu core  0.0 12.0
+Rh core Rh core  0.0 12.0
+Pd core Pd core  0.0 12.0
+Ag core Ag core  0.0 12.0
+Ir core Ir core  0.0 12.0
+Pt core Pt core  0.0 12.0
+Au core Au core  0.0 12.0
+Pb core Pb core  0.0 12.0
+Al core Al core  0.0 12.0
+#
+#  EAM functional
+#
+eam_functional square_root
+Ni core  1.000
+Cu core  1.000
+Rh core  1.000
+Pd core  1.000
+Ag core  1.000
+Ir core  1.000
+Pt core  1.000
+Au core  1.000
+Pb core  1.000
+Al core  1.000
+#
+#  Density term
+#
+eam_density power 6
+Ni core   729.6928296
+Cu core   527.6214232
+Rh core  1530.5233630
+Ag core   630.5428597
+Ir core  2157.0662340
+Al core  1303.9271480
+eam_density power 7
+Pd core  2759.359115
+Pb core  4745.406658
+eam_density power 8
+Pt core  25964.75440
+Au core  14878.01402
+#
+#  Repulsive two-body components - second power is a dummy argument
+#
+lennard 9 6 
+Ni core Ni core 1303.09841 0.0 0.0 12.0
+Cu core Cu core 1289.04851 0.0 0.0 12.0
+lennard 12 6
+Rh core Rh core 44758.45463 0.0 0.0 12.0
+Pd core Pd core 50172.71320 0.0 0.0 12.0
+Ag core Ag core 55689.05010 0.0 0.0 12.0
+lennard 14 6
+Ir core Ir core 371200.1922 0.0 0.0 12.0
+lennard 10 6
+Pt core Pt core 16992.17930 0.0 0.0 12.0
+Au core Au core 16352.11869 0.0 0.0 12.0
+Pb core Pb core 49250.84611 0.0 0.0 12.0
+lennard 7 6
+Al core Al core 592.4195621 0.0 0.0 12.0
+#################
+#  Alloy terms  #
+#################
+manybody
+Ni core Cu core  0.0 12.0
+Ni core Rh core  0.0 12.0
+Ni core Pd core  0.0 12.0
+Ni core Ag core  0.0 12.0
+Ni core Ir core  0.0 12.0
+Ni core Pt core  0.0 12.0
+Ni core Au core  0.0 12.0
+Ni core Pb core  0.0 12.0
+Ni core Al core  0.0 12.0
+Cu core Rh core  0.0 12.0
+Cu core Pd core  0.0 12.0
+Cu core Ag core  0.0 12.0
+Cu core Ir core  0.0 12.0
+Cu core Pt core  0.0 12.0
+Cu core Au core  0.0 12.0
+Cu core Pb core  0.0 12.0
+Cu core Al core  0.0 12.0
+Rh core Pd core  0.0 12.0
+Rh core Ag core  0.0 12.0
+Rh core Ir core  0.0 12.0
+Rh core Pt core  0.0 12.0
+Rh core Au core  0.0 12.0
+Rh core Pb core  0.0 12.0
+Rh core Al core  0.0 12.0
+Pd core Ag core  0.0 12.0
+Pd core Ir core  0.0 12.0
+Pd core Pt core  0.0 12.0
+Pd core Au core  0.0 12.0
+Pd core Pb core  0.0 12.0
+Pd core Al core  0.0 12.0
+Ag core Ir core  0.0 12.0
+Ag core Pt core  0.0 12.0
+Ag core Au core  0.0 12.0
+Ag core Pb core  0.0 12.0
+Ag core Al core  0.0 12.0
+Ir core Pt core  0.0 12.0
+Ir core Au core  0.0 12.0
+Ir core Pb core  0.0 12.0
+Ir core Al core  0.0 12.0
+Pt core Au core  0.0 12.0
+Pt core Pb core  0.0 12.0
+Pt core Al core  0.0 12.0
+Au core Pb core  0.0 12.0
+Au core Al core  0.0 12.0
+Pb core Al core  0.0 12.0
+lennard 9 6
+Ni core Cu core 651.549205 0.0 0.0 12.0
+Ni core Rh core 651.549205 0.0 0.0 12.0
+Ni core Pd core 651.549205 0.0 0.0 12.0
+Ni core Ag core 651.549205 0.0 0.0 12.0
+Ni core Ir core 651.549205 0.0 0.0 12.0
+Ni core Pt core 651.549205 0.0 0.0 12.0
+Ni core Au core 651.549205 0.0 0.0 12.0
+Ni core Pb core 651.549205 0.0 0.0 12.0
+Ni core Al core 651.549205 0.0 0.0 12.0
+Cu core Ni core 644.524255 0.0 0.0 12.0
+Cu core Rh core 644.524255 0.0 0.0 12.0
+Cu core Pd core 644.524255 0.0 0.0 12.0
+Cu core Ag core 644.524255 0.0 0.0 12.0
+Cu core Ir core 644.524255 0.0 0.0 12.0
+Cu core Pt core 644.524255 0.0 0.0 12.0
+Cu core Au core 644.524255 0.0 0.0 12.0
+Cu core Pb core 644.524255 0.0 0.0 12.0
+Cu core Al core 644.524255 0.0 0.0 12.0
+lennard 12 6
+Rh core Ni core 22379.227315 0.0 0.0 12.0
+Rh core Cu core 22379.227315 0.0 0.0 12.0
+Rh core Pd core 22379.227315 0.0 0.0 12.0
+Rh core Ag core 22379.227315 0.0 0.0 12.0
+Rh core Ir core 22379.227315 0.0 0.0 12.0
+Rh core Pt core 22379.227315 0.0 0.0 12.0
+Rh core Au core 22379.227315 0.0 0.0 12.0
+Rh core Pb core 22379.227315 0.0 0.0 12.0
+Rh core Al core 22379.227315 0.0 0.0 12.0
+Pd core Ni core 25086.356600 0.0 0.0 12.0
+Pd core Cu core 25086.356600 0.0 0.0 12.0
+Pd core Rh core 25086.356600 0.0 0.0 12.0
+Pd core Ag core 25086.356600 0.0 0.0 12.0
+Pd core Ir core 25086.356600 0.0 0.0 12.0
+Pd core Pt core 25086.356600 0.0 0.0 12.0
+Pd core Au core 25086.356600 0.0 0.0 12.0
+Pd core Pb core 25086.356600 0.0 0.0 12.0
+Pd core Al core 25086.356600 0.0 0.0 12.0
+Ag core Ni core 27844.525050 0.0 0.0 12.0
+Ag core Cu core 27844.525050 0.0 0.0 12.0
+Ag core Rh core 27844.525050 0.0 0.0 12.0
+Ag core Ag core 27844.525050 0.0 0.0 12.0
+Ag core Ir core 27844.525050 0.0 0.0 12.0
+Ag core Pt core 27844.525050 0.0 0.0 12.0
+Ag core Au core 27844.525050 0.0 0.0 12.0
+Ag core Pb core 27844.525050 0.0 0.0 12.0
+Ag core Al core 27844.525050 0.0 0.0 12.0
+lennard 14 6
+Ir core Ni core 185600.09610 0.0 0.0 12.0
+Ir core Cu core 185600.09610 0.0 0.0 12.0
+Ir core Rh core 185600.09610 0.0 0.0 12.0
+Ir core Pd core 185600.09610 0.0 0.0 12.0
+Ir core Ag core 185600.09610 0.0 0.0 12.0
+Ir core Pt core 185600.09610 0.0 0.0 12.0
+Ir core Au core 185600.09610 0.0 0.0 12.0
+Ir core Pb core 185600.09610 0.0 0.0 12.0
+Ir core Al core 185600.09610 0.0 0.0 12.0
+lennard 10 6
+Pt core Ni core  8496.089650 0.0 0.0 12.0
+Pt core Cu core  8496.089650 0.0 0.0 12.0
+Pt core Rh core  8496.089650 0.0 0.0 12.0
+Pt core Pd core  8496.089650 0.0 0.0 12.0
+Pt core Ag core  8496.089650 0.0 0.0 12.0
+Pt core Ir core  8496.089650 0.0 0.0 12.0
+Pt core Au core  8496.089650 0.0 0.0 12.0
+Pt core Pb core  8496.089650 0.0 0.0 12.0
+Pt core Al core  8496.089650 0.0 0.0 12.0
+Au core Ni core  8176.059345 0.0 0.0 12.0
+Au core Cu core  8176.059345 0.0 0.0 12.0
+Au core Rh core  8176.059345 0.0 0.0 12.0
+Au core Pd core  8176.059345 0.0 0.0 12.0
+Au core Ag core  8176.059345 0.0 0.0 12.0
+Au core Ir core  8176.059345 0.0 0.0 12.0
+Au core Pt core  8176.059345 0.0 0.0 12.0
+Au core Pb core  8176.059345 0.0 0.0 12.0
+Au core Al core  8176.059345 0.0 0.0 12.0
+Pb core Ni core 24625.423055 0.0 0.0 12.0
+Pb core Cu core 24625.423055 0.0 0.0 12.0
+Pb core Rh core 24625.423055 0.0 0.0 12.0
+Pb core Pd core 24625.423055 0.0 0.0 12.0
+Pb core Ag core 24625.423055 0.0 0.0 12.0
+Pb core Ir core 24625.423055 0.0 0.0 12.0
+Pb core Pt core 24625.423055 0.0 0.0 12.0
+Pb core Au core 24625.423055 0.0 0.0 12.0
+Pb core Al core 24625.423055 0.0 0.0 12.0
+lennard 7 6
+Al core Ni core 296.20978105 0.0 0.0 12.0
+Al core Cu core 296.20978105 0.0 0.0 12.0
+Al core Rh core 296.20978105 0.0 0.0 12.0
+Al core Pd core 296.20978105 0.0 0.0 12.0
+Al core Ag core 296.20978105 0.0 0.0 12.0
+Al core Ir core 296.20978105 0.0 0.0 12.0
+Al core Pt core 296.20978105 0.0 0.0 12.0
+Al core Au core 296.20978105 0.0 0.0 12.0
+Al core Pb core 296.20978105 0.0 0.0 12.0
+eam_alloy
+Ni core  1.000
+Cu core  1.000
+Rh core  1.000
+Pd core  1.000
+Ag core  1.000
+Ir core  1.000
+Pt core  1.000
+Au core  1.000
+Pb core  1.000
+Al core  1.000

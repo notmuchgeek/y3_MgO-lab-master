@@ -1,0 +1,27 @@
+#
+#  EDIP Potential Library for silicon
+#  By Christopher H. Baker
+#  from:
+#  J. F. Justo, M. Z. Bazant, E. Kaxiras, V. V. Bulatov, and S. Yip
+#    "Interatomic potential for silicon defects and disordered phases"
+#    Physical Review B 58, 2539 (1998)
+# 
+
+species
+Si core 0.0
+
+edip_coordination
+#               alpha     c         a         
+Si core Si core 3.1083847 2.5609104 3.1213820 
+
+edip_twobody
+#   A         B         p         beta      sigma     a         zero
+Si core Si core &
+7.9821730 1.5075463 1.2085196 0.0070975 0.5774108 3.1213820 0.0
+
+edip_threebody original
+#                       lambda    mu         eta        gamma     one Q0         
+Si core Si core Si core 1.4533108 0.6966326  0.2523244  1.1247945 1.0 312.1341346 
+
+edip_zmax 8
+# max_coordination

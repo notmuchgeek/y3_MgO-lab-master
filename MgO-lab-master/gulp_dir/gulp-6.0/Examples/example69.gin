@@ -1,0 +1,34 @@
+conv md
+title
+Example of using multiple temperature ramps in an MD run
+end
+cell
+4.212   4.212   4.212  90.000000  90.000000  90.000000 
+fractional    8
+Mg   core  0.00000000   0.00000000   0.00000000 
+Mg   core  0.00000000   0.50000000   0.50000000 
+Mg   core  0.50000000   0.00000000   0.50000000 
+Mg   core  0.50000000   0.50000000   0.00000000 
+O    core  0.50000000   0.50000000   0.50000000 
+O    core  0.50000000   0.00000000   0.00000000 
+O    core  0.00000000   0.50000000   0.00000000 
+O    core  0.00000000   0.00000000   0.50000000 
+species   2
+Mg    core    2.000000
+O     core   -2.000000
+super 2 2 2
+buck
+O    core Mg   core    1295.553402 0.300000    0.00000  0.000 12.000
+buck
+O    core O    core   22764.000000 0.149000   27.88000  0.000 12.000
+cutp 12.0 mdf 3.0
+ensemble nvt
+temperature multi 300 0.1 1000 500
+                     -0.05 500 200
+tau_thermostat 0.01 ps
+equilbration 1.0 ps
+production   1.0 ps
+timestep     0.001 ps
+sample       0.050 ps
+write        0.050 ps
+dump every   1 example69.res

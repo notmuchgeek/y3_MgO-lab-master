@@ -1,0 +1,211 @@
+********************************************************************************
+*                       GENERAL UTILITY LATTICE PROGRAM                        *
+*                                 Julian Gale                                  *
+*                       Curtin Institute for Computation                       *
+*                    School of Molecular and Life Sciences                     *
+*                    Curtin University, Western Australia                      *
+********************************************************************************
+* Version = 6.0.0 * Last modified =   7th July 2020                            *
+********************************************************************************
+*  optimise     - perform optimisation run                                     *
+*  conp         - constant pressure calculation                                *
+*  nosymmetry   - turn off symmetry after initial structure generation         *
+********************************************************************************
+* alumina test file                                                            *
+********************************************************************************
+
+
+  Job Started  at 11:59.25  8th July       2020                               
+
+  Number of CPUs =     1
+
+  Host name      = M-A0034725                              
+
+
+  Total number of configurations input =      1
+
+********************************************************************************
+*  Input for Configuration =   1                                               *
+********************************************************************************
+
+  Formula = Al4O6                                                       
+
+  Number of irreducible atoms/shells =      10
+
+
+  Total number atoms/shells =      10
+
+  Dimensionality = 3               :  Bulk   
+
+
+
+  Cartesian lattice vectors (Angstroms) :
+
+        2.380100    1.374151    4.331100
+       -2.380100    1.374151    4.331100
+        0.000000   -2.748303    4.331100
+
+  Cell parameters (Angstroms/Degrees):
+
+  a =       5.1295    alpha =  55.2915
+  b =       5.1295    beta  =  55.2915
+  c =       5.1295    gamma =  55.2915
+
+  Initial cell volume =          84.992234 Angs**3
+
+  Temperature of configuration =   0.00     K 
+
+  Pressure of configuration =         0.000 GPa 
+
+  Fractional coordinates of asymmetric unit :
+
+--------------------------------------------------------------------------------
+   No.  Atomic       x           y          z         Charge      Occupancy
+        Label      (Frac)      (Frac)     (Frac)        (e)         (Frac)  
+--------------------------------------------------------------------------------
+      1 Al    c    0.352160 *  0.352160 *  0.352160 *   3.00000    1.000000    
+      2 Al    c    0.147840 *  0.147840 *  0.147840 *   3.00000    1.000000    
+      3 Al    c    0.647840 *  0.647840 *  0.647840 *   3.00000    1.000000    
+      4 Al    c    0.852160 *  0.852160 *  0.852160 *   3.00000    1.000000    
+      5 O     c    0.556240 *  0.943760 *  0.250000 *  -2.00000    1.000000    
+      6 O     c    0.250000 *  0.556240 *  0.943760 *  -2.00000    1.000000    
+      7 O     c    0.943760 *  0.250000 *  0.556240 *  -2.00000    1.000000    
+      8 O     c    0.443760 *  0.056240 *  0.750000 *  -2.00000    1.000000    
+      9 O     c    0.750000 *  0.443760 *  0.056240 *  -2.00000    1.000000    
+     10 O     c    0.056240    0.750000    0.443760    -2.00000    1.000000    
+--------------------------------------------------------------------------------
+
+
+
+********************************************************************************
+*  General input information                                                   *
+********************************************************************************
+
+  Species output for all configurations : 
+
+--------------------------------------------------------------------------------
+  Species    Type    Atomic    Atomic    Charge       Radii (Angs)     Library
+                     Number     Mass       (e)     Cova   Ionic  VDW   Symbol
+--------------------------------------------------------------------------------
+    Al       Core       13      26.98   3.000000   1.350  0.000  2.050          
+    O        Core        8      16.00  -2.000000   0.730  0.000  1.360          
+--------------------------------------------------------------------------------
+
+
+  Lattice summation method               =    Ewald          (3-D)
+                                         =    Parry          (2-D)
+                                         =    Saunders et al (1-D)
+  Accuracy factor for lattice sums       =   12.000
+
+
+  Analytic derivatives to be used
+
+  Time limit = Infinity
+
+  Maximum range for interatomic potentials =    100000.000000 Angstroms
+
+  General interatomic potentials :
+
+--------------------------------------------------------------------------------
+Atom  Types   Potential      Parameter       Value         Units   Cutoffs(Ang)
+  1     2                                                            Min /  Max 
+--------------------------------------------------------------------------------
+O    c Al   c Buckingham    Buckingham A     2409.5050    eV        0.000 10.000
+                            Buckingham rho  0.26490000    Ang       
+                            Buckingham C     0.0000000    eV*Ang^6  
+--------------------------------------------------------------------------------
+O    c O    c Buckingham    Buckingham A     25.410000    eV        0.000 12.000
+                            Buckingham rho  0.69370000    Ang       
+                            Buckingham C     32.320000    eV*Ang^6  
+--------------------------------------------------------------------------------
+
+********************************************************************************
+*  Output for configuration   1                                                *
+********************************************************************************
+
+
+  Components of energy : 
+
+--------------------------------------------------------------------------------
+  Interatomic potentials     =          63.08516927 eV    
+  Monopole - monopole (real) =        -140.46804733 eV    
+  Monopole - monopole (recip)=        -237.31524089 eV    
+  Monopole - monopole (total)=        -377.78328821 eV    
+  Harmonic relaxation energy =          -0.48122679 eV    
+--------------------------------------------------------------------------------
+  Total lattice energy       =        -315.17934573 eV    
+--------------------------------------------------------------------------------
+  Total lattice energy       =          -30409.9889 kJ/(mole unit cells)
+--------------------------------------------------------------------------------
+
+
+  Final Cartesian lattice vectors (Angstroms) :
+
+        2.380100    1.374151    4.331100
+       -2.380100    1.374151    4.331100
+        0.000000   -2.748303    4.331100
+
+
+  Final cell parameters and derivatives :
+
+--------------------------------------------------------------------------------
+       a            5.129483 Angstrom     dE/de1(xx)    -5.193686 eV/strain
+       b            5.129483 Angstrom     dE/de2(yy)    -5.193686 eV/strain
+       c            5.129483 Angstrom     dE/de3(zz)    -7.515864 eV/strain
+       alpha       55.291548 Degrees      dE/de4(yz)     0.000000 eV/strain
+       beta        55.291548 Degrees      dE/de5(xz)    -0.000000 eV/strain
+       gamma       55.291548 Degrees      dE/de6(xy)    -0.000000 eV/strain
+--------------------------------------------------------------------------------
+
+  Primitive cell volume =            84.992234 Angs**3
+
+  Density of cell =      3.984158 g/cm**3
+
+  Non-primitive cell volume =            84.992234 Angs**3
+
+
+  Final internal derivatives :
+
+--------------------------------------------------------------------------------
+   No.  Atomic          a             b             c           Radius
+        Label          (eV)          (eV)          (eV)        (eV/Angs)
+--------------------------------------------------------------------------------
+      1 Al    c      -8.528204     -8.528204     -8.528204      0.000000
+      2 Al    c       8.528204      8.528204      8.528204      0.000000
+      3 Al    c       8.528204      8.528204      8.528204      0.000000
+      4 Al    c      -8.528204     -8.528204     -8.528204      0.000000
+      5 O     c       3.821647     -3.821647      0.000000      0.000000
+      6 O     c      -0.000000      3.821647     -3.821647      0.000000
+      7 O     c      -3.821647      0.000000      3.821647      0.000000
+      8 O     c      -3.821647      3.821647     -0.000000      0.000000
+      9 O     c       0.000000     -3.821647      3.821647      0.000000
+     10 O     c       0.000000      0.000000      0.000000      0.000000
+--------------------------------------------------------------------------------
+  Maximum abs         8.528204      8.528204      8.528204      0.000000
+--------------------------------------------------------------------------------
+
+
+  Time to end of optimisation =       0.0151 seconds
+
+
+  Peak dynamic memory used =       1.83 MB 
+
+
+  Timing analysis for GULP :
+
+--------------------------------------------------------------------------------
+  Task / Subroutine                                          Time (Seconds)
+--------------------------------------------------------------------------------
+  Calculation of reciprocal space energy and derivatives          0.0006
+  Calculation of real space energy and derivatives                0.0089
+  Symmetry generation of equivalent positions                     0.0002
+--------------------------------------------------------------------------------
+  Total CPU time                                                  0.0151
+--------------------------------------------------------------------------------
+
+
+  Dump file written as example61.res
+
+
+  Job Finished at 11:59.25  8th July       2020                               
+

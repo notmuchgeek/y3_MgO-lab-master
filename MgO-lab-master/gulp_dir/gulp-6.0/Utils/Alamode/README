@@ -1,0 +1,36 @@
+This directory contains a script that is designed to help the user
+run calculations of thermal conductivity via coupling GULP and Alamode.
+Provided the initial input file is setup correctly, this script should
+call GULP and Alamode several times until the calculation is complete. 
+
+Notes:
+------
+1) As an example, a copy of example67 is provided that is modified to work
+with this script. To run the example:
+
+./runalamode -i example67
+
+or in parallel on 4 processors, for example:
+
+./runalamode -i example67 -p 4
+
+2) It is essential that the original GULP input file contains the following option:
+
+ala_mode pattern
+
+3) The software package Alamode is available from:
+
+https://sourceforge.net/projects/alamode/
+
+or
+
+https://github.com/ttadano/alamode
+
+4) Ideally both GULP and Alamode should be compiled in parallel as these calculations
+can be expensive. It is assumed that the command to run MPI on your system is "mpirun";
+if this is not the case then edit the script accordingly.
+
+5) The executables for "gulp", "alm" and "anphon" must be visible in your path. Otherwise
+you will need to edit the script to specify the executable name including the path.
+
+Julian Gale, September 2019

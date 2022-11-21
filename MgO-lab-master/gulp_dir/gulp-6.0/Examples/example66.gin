@@ -1,0 +1,10 @@
+opti conp full nosym bond prop phon noden
+cell
+4.66 4.66 4.66 90 90 90
+frac
+O  core 0.00 0.00 0.00
+Li core 0.25 0.25 0.25
+space
+225
+library ../Libraries/meam_2nn_qeq
+dump every example66.res

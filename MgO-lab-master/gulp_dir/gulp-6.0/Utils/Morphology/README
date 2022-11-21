@@ -1,0 +1,159 @@
+Emorph:
+-------
+
+This is code to predict the energy of a nanoparticle based on its
+morphology as computed from the Wulff construction. The bulk energy
+and that of the surfaces and edges is included.
+
+NB: The code is written for simplicity rather than efficiency given
+that most calculations are undemanding. The maximum number of 
+surfaces and vertices are hard coded as parameters, but can be
+readily changed by altering maxhkl (maximum number of surfaces)
+and maxvertex (maximum number of vertices) at the top of the code
+and recompiling.
+
+Julian Gale, Curtin University, October 2018
+
+Units:
+------
+
+As long as the vectors, bulk energy and surface energies are in 
+consistent units then the final energies and distances will be
+in the same implied units. Note that the option "jm2" is included
+since it's quite common to have cell vectors in Angstroms, a 
+bulk energy in eV and surface energies in J/m^2. If "jm2" is 
+specified then the final quantities are in eV for energy and
+Angstrom for length.
+
+Install:
+--------
+
+To compile with gfortran installed:
+
+gfortran -o emorph emorph.f90 matinv.f90
+
+Run:
+----
+
+./emorph < input.emf
+
+where input.emf is an input file.
+
+Options for input (order doesn't matter):
+-----------------------------------------
+
+1) size
+
+Format:
+size
+value
+
+Use:
+Scale factor for size of the particle.
+
+Notes:
+Should only be specified once. Last value will be used.
+
+Default = 1.0
+
+2) vectors
+
+Format:
+vectors
+r1x r1y r1z
+r2x r2y r2z
+r3x r3y r3z
+
+Use:
+Specifies the lattice vectors for the system.
+
+Notes:
+Should only be specified once.
+
+Default = none
+
+3) surf
+
+Format:
+surface
+h k l E
+
+Use:
+Specifies the Miller indices (hkl) for the surface and its energy, E.
+
+Notes:
+Can be specified as many times as necessary to include all surfaces.
+
+Default = none
+
+4) bulk
+
+Format:
+bulk
+Ebulk
+
+Use:
+Specifies the bulk energy, Ebulk, for the unit cell given in "vectors".
+
+Notes:
+Should only be specified once.
+
+Default = 0.0
+
+5) jm2
+
+Format:
+jm2
+
+Use:
+Specifies that the surface energy is in J/m2 while the bulk energy is
+in eV, and the vectors in Angstroms, which is a common scenario. 
+Otherwise the energies and vectors are assumed to be in consistent
+units.
+
+Notes:
+Should only be specified once.
+
+Default = 1.0
+
+6) edge
+
+Format:
+edge
+h1 k1 l1 h2 k2 l2 E
+
+Use:
+Specifies the energy, E, for the edge between two surfaces with 
+Miller indices of (h1k1l1) and (h2k2l2).
+
+Notes:
+Can be specified as many times as necessary to include all edges.
+
+
+Example of input:
+-----------------
+
+Below is an example of an input file for NaCl:
+
+size
+2.0
+vectors
+5.4 0.0 0.0
+0.0 5.4 0.0
+0.0 0.0 5.4
+jm2
+surf
+1 0 0  0.4
+surf
+0 1 0  0.4
+surf
+0 0 1  0.4
+surf
+-1 0 0  0.4
+surf
+0 -1 0  0.4
+surf
+0 0 -1  0.4
+bulk
+-31.96
+
