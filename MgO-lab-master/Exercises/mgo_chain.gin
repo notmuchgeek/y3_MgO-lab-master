@@ -1,0 +1,19 @@
+conp phon eigenvectors
+title
+ASE calculation
+end
+
+cell
+3.4703 10.0 10.0 90.0 90.0 90.0
+cell
+ 3.470260 10.000000 10.000000 90.00000 90.00000 90.00000
+frac
+ Mg core  0.0000000   0.0000000   0.0000000
+ O  core  0.5000000   0.0000000   0.0000000
+
+library ionic.lib
+shrink 10 1 1
+dispersion 1 10
+-1.0 0.0 0.0 to 0.0 0.0 0.0 to 1.0 0.0 0.0
+output phon mgo_chain
+output eig mgo_chain
